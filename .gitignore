@@ -12,3 +12,11 @@ output/vosviewer/02_co_occurrence_all_keywords.csv
 output/vosviewer/03_co_occurrence_title_abstract.csv
 output/vosviewer/04_co_authorship_authors.csv
 output/vosviewer/05_co_citation_references.csv
+output/data/Data_A_all_search_results_cleaned.xlsx
+output/data/Data_B_paperid_abstracts_only.xlsx
+/output/bibliometrix
+output/data/Manual_review_candidates.xlsx
+Project-Analysis.log
+Project-Analysis.tex
+Reports/.DS_Store
+.DS_Store

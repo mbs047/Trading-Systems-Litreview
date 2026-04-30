@@ -5,6 +5,9 @@
 #   data/*.zip  — Scopus CSV export(s) zipped together  [required]
 #   data/ALL SEARCH RESULTS - v01g (1).xlsx              [optional]
 
+# Set the work space folder : Mandatory
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
 # ---- Packages ---------------------------------------------------------------
 required_packages <- c(
   "shiny", "shinyjs", "shinyFiles",
