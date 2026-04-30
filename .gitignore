@@ -1,2 +1,14 @@
 /data/search_results_unzipped
-/output
+
+output/data/Data_A_cleaned.xlsx
+output/data/Data_B_abstracts.xlsx
+output/data/Manual_review.xlsx
+/output/figures
+/output/logs
+/output/raw_scopus_files
+/output/tables
+output/vosviewer/01_co_occurrence_author_keywords.csv
+output/vosviewer/02_co_occurrence_all_keywords.csv
+output/vosviewer/03_co_occurrence_title_abstract.csv
+output/vosviewer/04_co_authorship_authors.csv
+output/vosviewer/05_co_citation_references.csv

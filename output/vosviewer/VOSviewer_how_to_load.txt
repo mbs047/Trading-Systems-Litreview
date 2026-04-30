@@ -1,0 +1,51 @@
+BANA 420 — VOSviewer How-To-Load Guide
+======================================
+
+We prepared five Scopus-style CSVs under output/vosviewer/, one per
+analysis. We open VOSviewer once, then for each analysis we use:
+
+  File -> Create -> Create a map based on bibliographic data
+       -> Read data from bibliographic database files
+       -> Scopus tab -> add the corresponding CSV
+
+The five analyses we set up:
+
+1) Co-occurrence of author keywords
+   File:        01_co_occurrence_author_keywords.csv
+   Type:        Co-occurrence
+   Unit:        Author keywords
+   Counting:    Full counting
+   Threshold:   Min. occurrences = 5 (we adjust if too few/many terms)
+
+2) Co-occurrence of all keywords (author + index keywords merged)
+   File:        02_co_occurrence_all_keywords.csv
+   Type:        Co-occurrence
+   Unit:        All keywords
+   Counting:    Full counting
+   Threshold:   Min. occurrences = 10
+
+3) Co-occurrence of title + abstract terms (text data)
+   File:        03_co_occurrence_title_abstract.csv
+   Type:        Co-occurrence
+   Source:      Title and abstract fields
+   Counting:    Binary counting
+   Filter:      Min. occurrences = 10; ignore copyright statements;
+               structured-abstract labels on; relevance score on (top 60%).
+
+4) Co-authorship of authors
+   File:        04_co_authorship_authors.csv
+   Type:        Co-authorship
+   Unit:        Authors
+   Counting:    Full counting
+   Threshold:   Min. documents per author = 2
+
+5) Co-citation of cited references
+   File:        05_co_citation_references.csv
+   Type:        Co-citation
+   Unit:        Cited references
+   Counting:    Full counting
+   Threshold:   Min. citations = 5
+
+After each map renders we save the .map and .net files via
+File -> Save -> Save map ..., and we capture the figure via
+File -> Screenshot -> Save screenshot, into output/vosviewer/figures/.
