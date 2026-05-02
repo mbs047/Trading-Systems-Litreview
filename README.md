@@ -121,49 +121,114 @@ Every run writes its artefacts under `data/{interim,processed}/` and `results/`:
 
 Final knitted reports (PDF and Word) are kept under `reports/pdf/` and `reports/docx/`. The VOSviewer-ready CSVs that feed `vosviewer_analysis/` are produced inside the bibliometrix run and saved under `results/bibliometrix/`.
 
-## Quick start — R Markdown notebook
+## How to use & run
+
+The repository ships three R entry points plus the external VOSviewer tool. They all read the same Scopus zip under `data/raw/` and write to `data/{interim,processed}/` and `results/`. Pick the one that matches what you want to do.
+
+### 0. Get the repo
 
 ```bash
 git clone https://github.com/<your-username>/trading-systems-litreview.git
 cd trading-systems-litreview
 ```
 
-Then in RStudio:
+Confirm `data/raw/search_results_renamed.zip` is in place. Missing CRAN packages are installed automatically on first run of any of the three scripts.
 
-1. Open `src/project_analysis.Rmd`.
-2. Confirm `data/raw/search_results_renamed.zip` is in place.
-3. Click **Knit** (or `Ctrl/Cmd + Shift + K`) and choose PDF, HTML, or Word.
+### 1. `src/project_analysis.Rmd` — main R Markdown notebook
 
-Missing CRAN packages are installed automatically on first knit.
+The canonical, knit-to-report version of the pipeline. Use this when you want a polished PDF / Word / HTML deliverable and the prose narration that explains every step.
 
-## Quick start — Shiny app
+**Run it**
+
+```r
+# In RStudio:
+#   1. Open src/project_analysis.Rmd
+#   2. Click Knit (or Ctrl/Cmd + Shift + K) and pick PDF, Word, or HTML.
+
+# From the R console (headless):
+rmarkdown::render("src/project_analysis.Rmd", output_format = "pdf_document")
+```
+
+**What it produces**
+
+Cleaned datasets under `data/processed/`, all five required figures + tables under `results/figures/` and `results/tables/`, descriptive summaries, the `bibliometrix_converted_data.csv` cross-check, and `results/logs/run_log.txt` + `run_info.csv`. The knitted PDF/DOCX should be copied into `reports/pdf/project_analysis.pdf` / `reports/docx/project_analysis.docx`.
+
+### 2. `src/shiny_app.R` — interactive Shiny dashboard
+
+The **primary interactive entry point**. Use this when you want to explore the corpus, tweak parameters, and download artefacts on demand.
+
+**Run it**
 
 ```r
 shiny::runApp("src/shiny_app.R")
 ```
 
-In the app:
+**Workflow inside the app**
 
 1. Confirm the project directory in the sidebar (defaults to the repo root).
-2. Click **Run full pipeline**.
-3. Browse each tab — Data A, Data B, manual review, top-20 terms (table + bar chart + word cloud), correlation heatmap, document map, term map, descriptive summaries, run metadata.
-4. Download any deliverable from the sidebar buttons.
+2. Adjust the side-panel sliders if needed:
+   - **Top N terms** — how many top-frequency terms feed the bar chart, word cloud, heatmap, and term map (default 20).
+   - **Min term frequency** — minimum per-term count for inclusion in the document map (default 3).
+   - **Max term frequency** — drops over-dominant terms above this cap (default 180); useful when generic words like "data", "trading", or "system" swamp the analysis.
+3. Click **Run full pipeline**.
+4. Browse each tab — Data A, Data B, manual review, top-20 terms (table + bar chart + word cloud), correlation heatmap, document map, term map, descriptive summaries, run metadata.
+5. Download any deliverable (cleaned XLSX, top-terms CSV, correlation table, map coordinates, run info, full Word report) from the sidebar buttons.
 
-## Quick start — bibliometrix application
+**What it produces**
+
+Same artefact set as the Rmd, written to the same paths, plus an on-demand Word report (`BANA420_Report_<timestamp>.docx`) generated via `officer` + `flextable`.
+
+### 3. `src/bibliometrix_app.R` — bibliometrix add-on (work in progress)
+
+> **Status: experimental, not yet 100% ready.** This script is an **additional** entry point that runs a parallel analysis using only the [`bibliometrix`](https://www.bibliometrix.org/) package, so we can compare its results against what the Shiny dashboard produces from the same Scopus inputs. It is **not part of the required deliverable** — the main Shiny app and the Rmd are. Some sections still need work (parameter exposure, error handling on small corpora, polishing the biblioshiny launch flow), so expect rough edges.
+
+**Why it exists**
+
+`bibliometrix` is the field-standard R package for bibliometric analysis. Running it side-by-side with our hand-rolled pipeline lets us:
+
+- Cross-check our Data A / Data B against `convert2df()` ingest.
+- Add bibliometric outputs the main pipeline doesn't provide (Bradford / Lotka laws, h-index per author and source, thematic map, trend topics, country collaboration, historiograph, etc.).
+- Launch `biblioshiny()` — bibliometrix's official GUI — on the same cleaned dataset for interactive exploration outside our app.
+
+**Run it**
 
 ```r
-shiny::runApp("src/bibliometrix_app.R")
+# From the R console, with the project root as the working directory:
+source("src/bibliometrix_app.R")
 ```
 
-A standalone app focused on the bibliometric side of the pipeline — annual production, author productivity, source ranking, Bradford / Lotka laws, keyword growth, thematic map, trend topics, and conceptual structure. It writes its outputs under `results/bibliometrix/`.
+The script unzips the Scopus archive, runs every standard `bibliometrix` analysis, writes outputs under `results/bibliometrix/{figures,tables,network}/`, persists the cleaned data frame as `results/bibliometrix/m_clean.rds`, and finally launches `biblioshiny()`. Inside the GUI choose: **Load data → RData (.rds) → results/bibliometrix/m_clean.rds → Start**.
 
-## VOSviewer workflow
+**Known limitations**
 
-1. Install VOSviewer from <https://www.vosviewer.com/download>.
-2. Run the main pipeline so the bibliometrix CSVs are up to date.
-3. Open VOSviewer → **Create a map based on network data** → load the relevant CSV.
-4. See [`vosviewer_analysis/HOW_TO_USE.md`](vosviewer_analysis/HOW_TO_USE.md) for the full walkthrough on re-opening or rebuilding the saved maps.
-5. Save the resulting map / network files into the matching `vosviewer_analysis/<analysis>/` folder alongside a `vosviewer_screenshot.png`.
+- No side-panel UI — all parameters are hard-coded in the script.
+- Some plots fail silently if the corpus is too small for the chosen analysis (e.g. thematic map, conceptual structure).
+- The biblioshiny auto-launch sometimes needs a manual `biblioshiny()` call afterwards.
+- Output filenames are not yet fully snake_case-aligned with the rest of the repo.
+
+If you only need the required BANA 420 deliverables, **stick with `project_analysis.Rmd` or `shiny_app.R`**.
+
+### 4. VOSviewer — the external mapping tool
+
+VOSviewer produces the five saved maps under `vosviewer_analysis/`. It is a separate Java application, not an R script.
+
+**Install**
+
+Download from <https://www.vosviewer.com/download> and unzip / install. Java is required.
+
+**Run a saved map**
+
+1. Launch VOSviewer.
+2. **File → Open…** → select `vosviewer_map.txt` and `vosviewer_network.txt` from the relevant `vosviewer_analysis/<analysis>/` subfolder.
+3. The saved layout, clusters, and labels load exactly as committed.
+
+Or drag the matching `vosviewer_map.json` onto **VOSviewer Online** at <https://app.vosviewer.com> to view it in the browser without installing anything.
+
+**Rebuild a map**
+
+See [`vosviewer_analysis/HOW_TO_USE.md`](vosviewer_analysis/HOW_TO_USE.md) for the full walkthrough — different procedure for the text-based abstract analysis (`01_…`) versus the network-based ones (`02_…`–`05_…`), plus the load parameters used for each.
+
+When done, save back into the same subfolder so the screenshot, map, network, and JSON stay consistent.
 
 ## Reference run snapshot
 

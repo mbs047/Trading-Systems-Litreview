@@ -1,11 +1,27 @@
 # BANA 420 Project — Pure bibliometrix Analysis + biblioshiny GUI
 #
-# We rebuilt the analysis using ONLY the bibliometrix package, following
-# its standard workflow. The package ships its own GUI (biblioshiny) which
-# we launch automatically at the end of the script so we can browse the
-# same cleaned dataset interactively.
+# ============================================================================
+# STATUS: experimental, NOT yet 100% ready.
+# ============================================================================
+# This is an ADDITIONAL entry point, not part of the required BANA 420
+# deliverable. It runs a parallel analysis using only the `bibliometrix`
+# package so we can compare its output against what `shiny_app.R` produces
+# from the same Scopus inputs.
 #
-# The script does four things:
+# Use the main Shiny dashboard (`src/shiny_app.R`) or the R Markdown
+# notebook (`src/project_analysis.Rmd`) for the required deliverables.
+#
+# Known limitations:
+#   - All parameters are hard-coded; there is no side-panel UI.
+#   - Some plots fail silently on small corpora (thematic map,
+#     conceptual structure).
+#   - The biblioshiny auto-launch occasionally needs a manual
+#     `biblioshiny()` call afterwards.
+#   - Output filenames are not yet fully snake_case-aligned with
+#     the rest of the repo.
+# ============================================================================
+#
+# What it does:
 #   1. Loads our Scopus exports through bibliometrix::convert2df().
 #   2. Runs every standard biblioshiny analysis programmatically and saves
 #      every table/figure under results/bibliometrix/.
