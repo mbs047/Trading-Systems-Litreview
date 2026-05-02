@@ -254,7 +254,7 @@ This project was built for **BANA 420 — Final Project**. It implements the fiv
 
 | Name | Student ID |
 |------|------------|
-| Mohammed Baobab | 202031137 |
+| Mohammed Baobaid | 202031137 |
 | Majid Tayfour | 202219094 |
 | Hamed Alsaedi | 202008437 |
 | Omero Moheyeldin | 700042090 |
