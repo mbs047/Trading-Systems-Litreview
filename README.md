@@ -206,10 +206,11 @@ This is a standalone app focused on the bibliometric side of the pipeline — an
 
 ## VOSviewer workflow
 
-1. Run the main pipeline so the CSVs in `output/vosviewer/` are up to date.
-2. Open VOSviewer → **Create a map based on network data** → load the relevant CSV.
-3. See `output/vosviewer/VOSviewer_how_to_load.txt` for per-file load settings.
-4. Save the resulting map / network files into the matching `VOSviewer analysis/<analysis>/` folder alongside a `vosviewer_screenshot.png`.
+1. Install VOSviewer from <https://www.vosviewer.com/download>.
+2. Run the main pipeline so the CSVs in `output/vosviewer/` are up to date.
+3. Open VOSviewer → **Create a map based on network data** → load the relevant CSV.
+4. See `output/vosviewer/VOSviewer_how_to_load.txt` for per-file load settings, and **`VOSviewer analysis/HOW_TO_USE.md`** for the full walkthrough on re-opening or rebuilding the saved maps.
+5. Save the resulting map / network files into the matching `VOSviewer analysis/<analysis>/` folder alongside a `vosviewer_screenshot.png`.
 
 ## Reference run snapshot
 
@@ -230,7 +231,7 @@ Strongest term-pair correlations: **market – stock** (0.348), **analysis – d
 
 - R >= 4.2 and RStudio.
 - CRAN packages: `dplyr`, `readr`, `readxl`, `openxlsx`, `stringr`, `tidyr`, `purrr`, `tibble`, `janitor`, `tidytext`, `widyr`, `ggplot2`, `ggrepel`, `Matrix`, `wordcloud`, `RColorBrewer`, `shiny`, `DT`, `bibliometrix`.
-- External: [VOSviewer](https://www.vosviewer.com/) for opening the CSVs in `output/vosviewer/` and producing the maps stored under `VOSviewer analysis/`.
+- External: [VOSviewer](https://www.vosviewer.com/download) for opening the CSVs in `output/vosviewer/` and producing the maps stored under `VOSviewer analysis/`. See `VOSviewer analysis/HOW_TO_USE.md` for step-by-step instructions.
 
 All required CRAN packages are installed automatically on first run.
 
