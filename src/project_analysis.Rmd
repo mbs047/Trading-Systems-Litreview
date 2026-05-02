@@ -46,37 +46,49 @@ bibliometrix_available <- requireNamespace("bibliometrix", quietly = TRUE)
 
 # Paths and folders
 
-We keep our two input files in the working directory: `ALL SEARCH RESULTS - v01g (1).xlsx` (the combined export we were given) and `search results - renamed.zip` (our renamed per-search exports). From there we set up a clean folder structure under `output/` so the figures, tables, cleaned data, raw conversions, bibliometrix artefacts, and run logs each live in their own subfolder.
+The repository follows the Cookiecutter Data Science layout. Raw Scopus exports live under `data/raw/`, intermediate concatenations under `data/interim/`, the cleaned analysis-ready tables under `data/processed/`, and every figure, table, log, and bibliometrix artefact is written under `results/`. The Rmd itself sits in `src/`, so all paths are computed relative to the parent of the source folder.
 
 ```{r paths}
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-project_dir <- getwd()
+# When knitted from RStudio, the doc context tells us where the .Rmd lives;
+# falling back to the current working directory keeps things working from
+# the command line / rmarkdown::render().
+src_dir <- tryCatch(
+  dirname(rstudioapi::getActiveDocumentContext()$path),
+  error = function(e) getwd()
+)
+if (!nzchar(src_dir)) src_dir <- getwd()
+setwd(src_dir)
+project_dir <- normalizePath(file.path(src_dir, ".."))
 
-input_dir <- file.path(project_dir, "data")
-input_xlsx <- file.path(input_dir, "ALL SEARCH RESULTS - v01g (1).xlsx")
+# --- inputs ---------------------------------------------------------------
+raw_dir       <- file.path(project_dir, "data", "raw")
+interim_dir   <- file.path(project_dir, "data", "interim")
+processed_dir <- file.path(project_dir, "data", "processed")
+input_xlsx    <- file.path(raw_dir, "ALL SEARCH RESULTS - v01g (1).xlsx")  # optional sanity-check
 
 zip_candidates <- list.files(
-  input_dir,
-  pattern = "search results.*\\.zip$",
+  raw_dir,
+  pattern = "search_results.*\\.zip$",
   full.names = TRUE,
   ignore.case = TRUE
 )
 
 if (length(zip_candidates) == 0) {
-  stop("Zip file not found in working directory.")
+  stop("Zip file not found in data/raw/.")
 }
 
-zip_path <- zip_candidates[1]
-unzip_dir <- file.path(input_dir, "search_results_unzipped")
-output_dir <- file.path(project_dir, "output")
-fig_dir <- file.path(output_dir, "figures")
-table_dir <- file.path(output_dir, "tables")
-data_dir <- file.path(output_dir, "data")
-log_dir <- file.path(output_dir, "logs")
-raw_dir <- file.path(output_dir, "raw_scopus_files")
-biblio_dir <- file.path(output_dir, "bibliometrix")
+zip_path  <- zip_candidates[1]
+unzip_dir <- file.path(raw_dir, "search_results_unzipped")
 
-for (p in c(unzip_dir, output_dir, fig_dir, table_dir, data_dir, log_dir, raw_dir, biblio_dir)) {
+# --- outputs --------------------------------------------------------------
+results_dir <- file.path(project_dir, "results")
+fig_dir     <- file.path(results_dir, "figures")
+table_dir   <- file.path(results_dir, "tables")
+log_dir     <- file.path(results_dir, "logs")
+biblio_dir  <- file.path(results_dir, "bibliometrix")
+
+for (p in c(unzip_dir, interim_dir, processed_dir,
+            results_dir, fig_dir, table_dir, log_dir, biblio_dir)) {
   dir.create(p, recursive = TRUE, showWarnings = FALSE)
 }
 
@@ -130,7 +142,7 @@ first_existing <- function(df, candidates, new_name, default = NA_character_) {
 
 # Read the Scopus search files
 
-We unzip the renamed search-results archive (only if it has not already been unpacked), read every CSV inside as character data to avoid type-coercion surprises, and tag each row with the originating search number and file name so we never lose track of provenance. The combined raw table is written to `output/raw_scopus_files/` before any cleaning happens.
+We unzip the renamed search-results archive (only if it has not already been unpacked), read every CSV inside as character data to avoid type-coercion surprises, and tag each row with the originating search number and file name so we never lose track of provenance. The combined raw table is written to `data/interim/` before any cleaning happens.
 
 ```{r unzip-and-read}
 existing_files <- list.files(unzip_dir, recursive = TRUE, full.names = TRUE)
@@ -158,7 +170,7 @@ raw_list <- lapply(seq_along(csv_files), function(i) {
 })
 
 raw_combined <- dplyr::bind_rows(raw_list)
-readr::write_csv(raw_combined, file.path(raw_dir, "raw_combined_from_zip.csv"))
+readr::write_csv(raw_combined, file.path(interim_dir, "raw_combined_from_zip.csv"))
 write_message("CSV files loaded: ", length(csv_files), " | Combined rows: ", nrow(raw_combined))
 ```
 
@@ -261,14 +273,14 @@ data_b_export <- data_a_export |>
 
 openxlsx::write.xlsx(
   data_a_export,
-  file = file.path(data_dir, "Data_A_all_search_results_cleaned.xlsx"),
+  file = file.path(processed_dir, "data_a_cleaned.xlsx"),
   asTable = TRUE,
   overwrite = TRUE
 )
 
 openxlsx::write.xlsx(
   data_b_export,
-  file = file.path(data_dir, "Data_B_paperid_abstracts_only.xlsx"),
+  file = file.path(processed_dir, "data_b_abstracts.xlsx"),
   asTable = TRUE,
   overwrite = TRUE
 )
@@ -276,7 +288,7 @@ openxlsx::write.xlsx(
 if (nrow(manual_review) > 0) {
   openxlsx::write.xlsx(
     manual_review,
-    file = file.path(data_dir, "Manual_review_candidates.xlsx"),
+    file = file.path(processed_dir, "manual_review_candidates.xlsx"),
     asTable = TRUE,
     overwrite = TRUE
   )
@@ -286,7 +298,7 @@ cat("Data A rows:", nrow(data_a_export), "\n")
 cat("Data B rows:", nrow(data_b_export), "\n")
 ```
 # Interpretation — `{r export-data}`
-We can see that the export step completed cleanly and gave us the two deliverables we were aiming for. We got 511 rows in Data A and 511 rows in Data B, which tells us that after joining the Scopus CSVs, harmonising column names, filtering out rows without a title, and de-duplicating on the normalised title key, our final corpus consists of 511 unique papers. The fact that both numbers match is exactly what we wanted to see — it confirms that every paper in Data A also has a non-empty abstract in Data B, so none were lost when we filtered out blank-abstract rows, and our text-mining pipeline will operate on the full 511-paper corpus rather than a reduced subset. At this point we have `Data_A_all_search_results_cleaned.xlsx` (the full master table with identifiers, provenance, and all 30 fields) and `Data_B_paperid_abstracts_only.xlsx` (the slim PaperID + abstract table) saved to our data output folder, both linked by the same `paper_id` key we created earlier, which means the two files are now fully reproducible and ready for the term frequency, word cloud, correlation, and mapping analyses that follow.
+We can see that the export step completed cleanly and gave us the two deliverables we were aiming for. We got 511 rows in Data A and 511 rows in Data B, which tells us that after joining the Scopus CSVs, harmonising column names, filtering out rows without a title, and de-duplicating on the normalised title key, our final corpus consists of 511 unique papers. The fact that both numbers match is exactly what we wanted to see — it confirms that every paper in Data A also has a non-empty abstract in Data B, so none were lost when we filtered out blank-abstract rows, and our text-mining pipeline will operate on the full 511-paper corpus rather than a reduced subset. At this point we have `data/processed/data_a_cleaned.xlsx` (the full master table with identifiers, provenance, and all 30 fields) and `data/processed/data_b_abstracts.xlsx` (the slim PaperID + abstract table), both linked by the same `paper_id` key we created earlier, which means the two files are now fully reproducible and ready for the term frequency, word cloud, correlation, and mapping analyses that follow.
 
 ---
 
@@ -625,7 +637,7 @@ We can see that the two descriptive tables give us a quick snapshot of *when* an
 
 # bibliometrix analysis
 
-When the `bibliometrix` package is available we also run a parallel bibliometrix pipeline on the same Scopus CSVs. We convert each file with `convert2df()`, combine the results, de-duplicate on title, and patch in the columns that bibliometrix expects but that our exports do not always carry — in particular deriving author countries (`AU_CO`, `AU1_CO`) from the affiliation field. The converted dataset and, when it succeeds, the `biblioAnalysis()` summary are saved under `output/bibliometrix/`.
+When the `bibliometrix` package is available we also run a parallel bibliometrix pipeline on the same Scopus CSVs. We convert each file with `convert2df()`, combine the results, de-duplicate on title, and patch in the columns that bibliometrix expects but that our exports do not always carry — in particular deriving author countries (`AU_CO`, `AU1_CO`) from the affiliation field. The converted dataset and, when it succeeds, the `biblioAnalysis()` summary are saved under `results/bibliometrix/`.
 
 ```{r bibliometrix-analysis}
 if (bibliometrix_available) {
@@ -738,4 +750,4 @@ write_message("Run completed.")
 run_info
 ```
 # Interpretation — `{r run-metadata}`
-We can see that the run-metadata table gives us a clean summary of the whole pipeline. We got 588 raw rows from the Scopus CSVs, which after de-duplication became 511 unique papers in Data A, and `data_b_rows_with_abstracts` also sits at 511 — meaning every surviving paper carries a non-empty abstract. We got 20 manual-review candidates set aside for inspection, the full top-20 vocabulary generated, and `bibliometrix_available = 1` confirming the parallel bibliometrix pipeline ran. The one value to flag is `provided_xlsx_loaded = 0`: the combined workbook was not picked up this run, most likely because it is not inside the `data/` folder under its expected filename. This does not affect any core output since that file was only an optional sanity check, but we would need to drop it into `data/` to re-enable the comparison.
+We can see that the run-metadata table gives us a clean summary of the whole pipeline. We got 588 raw rows from the Scopus CSVs, which after de-duplication became 511 unique papers in Data A, and `data_b_rows_with_abstracts` also sits at 511 — meaning every surviving paper carries a non-empty abstract. We got 20 manual-review candidates set aside for inspection, the full top-20 vocabulary generated, and `bibliometrix_available = 1` confirming the parallel bibliometrix pipeline ran. The one value to flag is `provided_xlsx_loaded = 0`: the combined workbook was not picked up this run, most likely because it is not inside the `data/raw/` folder under its expected filename. This does not affect any core output since that file was only an optional sanity check, but we would need to drop it into `data/raw/` to re-enable the comparison.

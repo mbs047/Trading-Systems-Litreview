@@ -1,12 +1,21 @@
 # BANA 420 Project — Shiny App (v3)
 #
-# Run: open in RStudio → Run App.
-# Data folder must contain:
-#   data/*.zip  — Scopus CSV export(s) zipped together  [required]
-#   data/ALL SEARCH RESULTS - v01g (1).xlsx              [optional]
-
-# Set the work space folder : Mandatory
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+# Run: open in RStudio -> Run App.
+# Project layout (Cookiecutter Data Science):
+#   data/raw/*.zip                      Scopus CSV export(s) zipped together  [required]
+#   data/raw/ALL SEARCH RESULTS - v01g (1).xlsx                               [optional]
+#   data/interim/                       intermediate concatenations
+#   data/processed/                     cleaned analysis-ready datasets
+#   results/{figures,tables,logs,bibliometrix}/   generated artefacts
+#
+# This script lives under src/, so the project directory is its parent.
+src_dir <- tryCatch(
+  dirname(rstudioapi::getActiveDocumentContext()$path),
+  error = function(e) getwd()
+)
+if (!nzchar(src_dir)) src_dir <- getwd()
+setwd(src_dir)
+default_project_dir <- normalizePath(file.path(src_dir, ".."))
 
 # ---- Packages ---------------------------------------------------------------
 required_packages <- c(
@@ -356,7 +365,7 @@ ui <- fluidPage(
       div(class = "status-box", style = "margin-top:4px; margin-bottom:8px;",
           textOutput("chosen_dir_text")),
       helpText(style = "margin-top:0;",
-        "Folder must have a data/ subfolder with a Scopus zip file."),
+        "Folder must have a data/raw/ subfolder with a Scopus zip file."),
 
       tags$hr(),
 
@@ -436,7 +445,7 @@ ui <- fluidPage(
           ),
           h4("How to use"),
           tags$ol(
-            tags$li("Select the project folder (must contain ", tags$code("data/"), " with a Scopus zip)."),
+            tags$li("Select the project folder (must contain ", tags$code("data/raw/"), " with a Scopus zip)."),
             tags$li("Adjust ", tags$b("Top N terms"), " and ", tags$b("Min frequency"), " if needed."),
             tags$li(tags$b("Click Run full pipeline.")),
             tags$li("Browse each tab — all charts and tables update automatically."),
@@ -444,8 +453,8 @@ ui <- fluidPage(
           ),
           h4("Expected inputs"),
           tags$ul(
-            tags$li(tags$b("data/*.zip"), " — zip of Scopus CSV exports (required)."),
-            tags$li(tags$b("data/ALL SEARCH RESULTS - v01g (1).xlsx"), " — optional cross-check.")
+            tags$li(tags$b("data/raw/*.zip"), " — zip of Scopus CSV exports (required)."),
+            tags$li(tags$b("data/raw/ALL SEARCH RESULTS - v01g (1).xlsx"), " — optional cross-check.")
           )
         ),
 
@@ -721,14 +730,18 @@ server <- function(input, output, session) {
   }
 
   # ---- Directory picker -----------------------------------------------------
-  fs_roots <- c(Home = path.expand("~"), `Working dir` = getwd())
+  # Default to the project root (parent of src/) so first-time users don't
+  # need to navigate up before picking the folder.
+  fs_roots <- c(Project = default_project_dir,
+                Home    = path.expand("~"),
+                `Working dir` = getwd())
 
   shinyFiles::shinyDirChoose(input, "pick_dir", roots = fs_roots)
 
   chosen_dir <- reactive({
-    if (is.integer(input$pick_dir)) return(getwd())
+    if (is.integer(input$pick_dir)) return(default_project_dir)
     d <- shinyFiles::parseDirPath(roots = fs_roots, selection = input$pick_dir)
-    if (length(d) == 0 || identical(d, "")) getwd() else as.character(d)
+    if (length(d) == 0 || identical(d, "")) default_project_dir else as.character(d)
   })
 
   output$chosen_dir_text <- renderText({
@@ -796,27 +809,29 @@ server <- function(input, output, session) {
       # All state$xxx assignments happen ONLY after the full pipeline succeeds.
       ok <- tryCatch({
 
-        # ---- Paths ----------------------------------------------------------
-        input_dir  <- file.path(project_dir, "data")
-        output_dir <- file.path(project_dir, "output")
-        fig_dir    <- file.path(output_dir, "figures")
-        table_dir  <- file.path(output_dir, "tables")
-        data_dir   <- file.path(output_dir, "data")
-        log_dir    <- file.path(output_dir, "logs")
-        raw_dir    <- file.path(output_dir, "raw_scopus_files")
-        unzip_dir  <- file.path(input_dir,  "search_results_unzipped")
+        # ---- Paths (Cookiecutter Data Science layout) ----------------------
+        raw_dir       <- file.path(project_dir, "data", "raw")
+        interim_dir   <- file.path(project_dir, "data", "interim")
+        processed_dir <- file.path(project_dir, "data", "processed")
+        unzip_dir     <- file.path(raw_dir, "search_results_unzipped")
 
-        for (p in c(output_dir, fig_dir, table_dir, data_dir, log_dir, raw_dir))
+        results_dir <- file.path(project_dir, "results")
+        fig_dir     <- file.path(results_dir, "figures")
+        table_dir   <- file.path(results_dir, "tables")
+        log_dir     <- file.path(results_dir, "logs")
+
+        for (p in c(interim_dir, processed_dir,
+                    results_dir, fig_dir, table_dir, log_dir))
           dir.create(p, recursive = TRUE, showWarnings = FALSE)
 
         log_msg("Run started: ", format(Sys.time(), "%Y-%m-%d %H:%M:%S"))
         incProgress(0.04, detail = "Locating zip file\u2026")
 
         # ---- Find zip -------------------------------------------------------
-        zip_files <- list.files(input_dir, pattern = "\\.zip$",
+        zip_files <- list.files(raw_dir, pattern = "\\.zip$",
                                 full.names = TRUE, ignore.case = TRUE)
         if (length(zip_files) == 0)
-          stop("No .zip file found in data/. Add the Scopus zip and try again.")
+          stop("No .zip file found in data/raw/. Add the Scopus zip and try again.")
 
         zip_path <- zip_files[1]
         log_msg("Using zip: ", basename(zip_path))
@@ -844,7 +859,7 @@ server <- function(input, output, session) {
           df
         })
         raw_combined <- dplyr::bind_rows(raw_list)
-        readr::write_csv(raw_combined, file.path(raw_dir, "raw_combined.csv"))
+        readr::write_csv(raw_combined, file.path(interim_dir, "raw_combined_from_zip.csv"))
         log_msg("Loaded ", length(csv_files), " CSV files — ",
                 nrow(raw_combined), " rows total")
         incProgress(0.06, detail = "Building Data A\u2026")
@@ -914,12 +929,12 @@ server <- function(input, output, session) {
         # ---- Write xlsx -----------------------------------------------------
         incProgress(0.05, detail = "Saving Data A / B\u2026")
         openxlsx::write.xlsx(data_a_export,
-          file.path(data_dir, "Data_A_cleaned.xlsx"), asTable = TRUE, overwrite = TRUE)
+          file.path(processed_dir, "data_a_cleaned.xlsx"), asTable = TRUE, overwrite = TRUE)
         openxlsx::write.xlsx(data_b_export,
-          file.path(data_dir, "Data_B_abstracts.xlsx"), asTable = TRUE, overwrite = TRUE)
+          file.path(processed_dir, "data_b_abstracts.xlsx"), asTable = TRUE, overwrite = TRUE)
         if (nrow(manual_review) > 0)
           openxlsx::write.xlsx(manual_review,
-            file.path(data_dir, "Manual_review.xlsx"), asTable = TRUE, overwrite = TRUE)
+            file.path(processed_dir, "manual_review_candidates.xlsx"), asTable = TRUE, overwrite = TRUE)
 
         # ---- Tokenise -------------------------------------------------------
         incProgress(0.07, detail = "Tokenising abstracts\u2026")
@@ -955,8 +970,8 @@ server <- function(input, output, session) {
           dplyr::mutate(rank = dplyr::row_number()) |>
           dplyr::select(rank, word, frequency)
 
-        readr::write_csv(top_n_terms, file.path(table_dir, "top_terms.csv"))
-        openxlsx::write.xlsx(top_n_table, file.path(table_dir, "top_terms.xlsx"),
+        readr::write_csv(top_n_terms, file.path(table_dir, "top20_terms.csv"))
+        openxlsx::write.xlsx(top_n_table, file.path(table_dir, "top20_terms.xlsx"),
                              asTable = TRUE, overwrite = TRUE)
         log_msg("Top ", n_top, " terms extracted (", nrow(term_counts), " unique tokens)")
 
@@ -977,7 +992,7 @@ server <- function(input, output, session) {
           ggplot2::theme_minimal(base_size = 13) +
           ggplot2::theme(panel.grid.major.y = ggplot2::element_blank())
 
-        ggplot2::ggsave(file.path(fig_dir, "top_terms_barplot.png"),
+        ggplot2::ggsave(file.path(fig_dir, "top20_terms_barplot.png"),
                         plot = bar_plot, width = 11, height = 8, dpi = 300, bg = "white")
 
         # ---- Correlation heatmap --------------------------------------------
@@ -1006,7 +1021,7 @@ server <- function(input, output, session) {
             )
           )
 
-        readr::write_csv(term_cor_full, file.path(table_dir, "term_correlations.csv"))
+        readr::write_csv(term_cor_full, file.path(table_dir, "top20_term_correlations_long.csv"))
 
         heatmap_plot <- ggplot2::ggplot(
           term_cor_full,
@@ -1032,7 +1047,7 @@ server <- function(input, output, session) {
             panel.grid  = ggplot2::element_blank()
           )
 
-        ggplot2::ggsave(file.path(fig_dir, "heatmap.png"),
+        ggplot2::ggsave(file.path(fig_dir, "top20_term_correlation_heatmap.png"),
                         plot = heatmap_plot, width = 13, height = 11, dpi = 300, bg = "white")
         log_msg("Heatmap done.")
 
@@ -1072,7 +1087,7 @@ server <- function(input, output, session) {
                 by = "paper_id"
               )
 
-            readr::write_csv(doc_map_df, file.path(table_dir, "doc_map.csv"))
+            readr::write_csv(doc_map_df, file.path(table_dir, "document_map_coordinates.csv"))
 
             doc_map_plot <- ggplot2::ggplot(
               doc_map_df,
@@ -1095,7 +1110,7 @@ server <- function(input, output, session) {
               ggplot2::theme_minimal(base_size = 12) +
               ggplot2::theme(legend.position = "bottom")
 
-            ggplot2::ggsave(file.path(fig_dir, "doc_map.png"),
+            ggplot2::ggsave(file.path(fig_dir, "document_map_2d.png"),
                             plot = doc_map_plot, width = 14, height = 11,
                             dpi = 300, bg = "white")
           }
@@ -1128,7 +1143,7 @@ server <- function(input, output, session) {
           Dim1 = term_coords[, 1],
           Dim2 = term_coords[, 2]
         )
-        readr::write_csv(term_map_df, file.path(table_dir, "term_map.csv"))
+        readr::write_csv(term_map_df, file.path(table_dir, "term_map_coordinates.csv"))
 
         term_map_plot <- ggplot2::ggplot(
           term_map_df,
@@ -1145,7 +1160,7 @@ server <- function(input, output, session) {
           ) +
           ggplot2::theme_minimal(base_size = 12)
 
-        ggplot2::ggsave(file.path(fig_dir, "term_map.png"),
+        ggplot2::ggsave(file.path(fig_dir, "term_map_2d.png"),
                         plot = term_map_plot, width = 13, height = 10,
                         dpi = 300, bg = "white")
         log_msg("Term map done.")
@@ -1174,7 +1189,7 @@ server <- function(input, output, session) {
         # ---- Word cloud (saved to disk) -------------------------------------
         incProgress(0.04, detail = "Word cloud\u2026")
         set.seed(42)
-        png(file.path(fig_dir, "wordcloud.png"),
+        png(file.path(fig_dir, "wordcloud_top20_terms.png"),
             width = 2200, height = 1600, res = 220, bg = "white")
         wordcloud::wordcloud(
           words = top_n_terms$word, freq = top_n_terms$frequency,
@@ -1427,13 +1442,13 @@ server <- function(input, output, session) {
     }
   )
 
-  output$dl_data_a    <- mk_xlsx(function() state$data_a_export, "Data_A.xlsx")
-  output$dl_data_b    <- mk_xlsx(function() state$data_b,        "Data_B.xlsx")
-  output$dl_manual    <- mk_xlsx(function() state$manual_review, "Manual_review.xlsx")
-  output$dl_top20_csv <- mk_csv(function() state$top20,          "top_terms.csv")
-  output$dl_corr_csv  <- mk_csv(function() state$term_cor_full,  "term_correlations.csv")
-  output$dl_doc_map   <- mk_csv(function() state$doc_map_df,     "doc_map.csv")
-  output$dl_term_map  <- mk_csv(function() state$term_map_df,    "term_map.csv")
+  output$dl_data_a    <- mk_xlsx(function() state$data_a_export, "data_a_cleaned.xlsx")
+  output$dl_data_b    <- mk_xlsx(function() state$data_b,        "data_b_abstracts.xlsx")
+  output$dl_manual    <- mk_xlsx(function() state$manual_review, "manual_review_candidates.xlsx")
+  output$dl_top20_csv <- mk_csv(function() state$top20,          "top20_terms.csv")
+  output$dl_corr_csv  <- mk_csv(function() state$term_cor_full,  "top20_term_correlations_long.csv")
+  output$dl_doc_map   <- mk_csv(function() state$doc_map_df,     "document_map_coordinates.csv")
+  output$dl_term_map  <- mk_csv(function() state$term_map_df,    "term_map_coordinates.csv")
   output$dl_run_info  <- mk_csv(function() state$run_info,       "run_info.csv")
 }
 

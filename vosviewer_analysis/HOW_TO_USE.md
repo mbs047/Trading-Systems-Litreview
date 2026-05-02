@@ -62,18 +62,14 @@ When you're happy with the result, save back into the same folder so the screens
 
 ## 5. Where the input files come from
 
-The `input_*.txt` and `input_item_summary.tsv` files in folders 02–05 are the VOSviewer-ready CSVs produced by the R pipeline, copied here for traceability. The originals live under:
+The `input_*.txt` and `input_item_summary.tsv` files in folders 02–05 are the VOSviewer-ready inputs that VOSviewer itself wrote when each map was first built and saved. The underlying co-occurrence and co-authorship matrices are produced by the R pipeline — specifically `src/bibliometrix_app.R`, via the `bibliometrix::biblioNetwork()` family of functions — and persisted as `.rds` NetMatrix objects under:
 
 ```
-output/vosviewer/
-├── 01_co_occurrence_author_keywords.csv
-├── 02_co_occurrence_all_keywords.csv
-├── 03_co_occurrence_title_abstract.csv
-├── 04_co_authorship_authors.csv
-└── 05_co_citation_references.csv
+results/bibliometrix/network/
+└── co_occurrence_keywords.rds          (plus other NetMatrix objects per analysis)
 ```
 
-See `output/vosviewer/VOSviewer_how_to_load.txt` for the loading parameters used for each CSV.
+If you need to regenerate the VOSviewer-ready CSVs from those NetMatrix objects, see the *Network analysis* section of `src/bibliometrix_app.R`.
 
 ## 6. Credits
 

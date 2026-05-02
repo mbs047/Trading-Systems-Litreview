@@ -8,23 +8,23 @@
 # The script does four things:
 #   1. Loads our Scopus exports through bibliometrix::convert2df().
 #   2. Runs every standard biblioshiny analysis programmatically and saves
-#      every table/figure under output/biblio/.
-#   3. Saves the cleaned data frame to output/biblio/M_clean.rds.
-#   4. Loads M_clean.rds and launches biblioshiny() (the GUI).
+#      every table/figure under results/bibliometrix/.
+#   3. Saves the cleaned data frame to results/bibliometrix/m_clean.rds.
+#   4. Loads m_clean.rds and launches biblioshiny() (the GUI).
 #
-# Inputs we expect:
-#   data/search results - renamed.zip   (required, our renamed Scopus exports)
+# Inputs we expect (Cookiecutter Data Science layout):
+#   data/raw/search_results_renamed.zip   (required, our renamed Scopus exports)
 #
-# Outputs we produce (under output/biblio/):
+# Outputs we produce (under results/bibliometrix/):
 #   tables/            biblioAnalysis summary, sources, authors, countries,
 #                      documents, keyword tables, lotka, bradford
 #   figures/           every plot the package produces (PNG, 300 dpi)
 #   network/           NetMatrix .rds objects for re-use
-#   M_clean.rds        the cleaned bibliometric data frame
+#   m_clean.rds        the cleaned bibliometric data frame
 #   biblio_summary.txt the full text summary
 #
-# Run it via:
-#   source("BANA420_bibliometrix.R")
+# Run it via (from within RStudio with src/bibliometrix_app.R open):
+#   source("bibliometrix_app.R")
 
 # ---- Packages --------------------------------------------------------------
 
@@ -40,24 +40,32 @@ install_if_missing <- function(pkgs) {
 install_if_missing(required_packages)
 invisible(lapply(required_packages, library, character.only = TRUE))
 
-# ---- Paths -----------------------------------------------------------------
+# ---- Paths (Cookiecutter Data Science layout) -----------------------------
 
-project_dir <- getwd()
-input_dir   <- file.path(project_dir, "data")
-unzip_dir   <- file.path(input_dir,  "search_results_unzipped")
-output_dir  <- file.path(project_dir, "output", "biblio")
-fig_dir     <- file.path(output_dir, "figures")
-tab_dir     <- file.path(output_dir, "tables")
-net_dir     <- file.path(output_dir, "network")
+# This script lives under src/, so the project directory is its parent.
+src_dir <- tryCatch(
+  dirname(rstudioapi::getActiveDocumentContext()$path),
+  error = function(e) getwd()
+)
+if (!nzchar(src_dir)) src_dir <- getwd()
+setwd(src_dir)
+project_dir <- normalizePath(file.path(src_dir, ".."))
 
-for (p in c(input_dir, unzip_dir, output_dir, fig_dir, tab_dir, net_dir)) {
+raw_dir    <- file.path(project_dir, "data", "raw")
+unzip_dir  <- file.path(raw_dir,     "search_results_unzipped")
+output_dir <- file.path(project_dir, "results", "bibliometrix")
+fig_dir    <- file.path(output_dir, "figures")
+tab_dir    <- file.path(output_dir, "tables")
+net_dir    <- file.path(output_dir, "network")
+
+for (p in c(raw_dir, unzip_dir, output_dir, fig_dir, tab_dir, net_dir)) {
   dir.create(p, recursive = TRUE, showWarnings = FALSE)
 }
 
-zip_candidates <- list.files(input_dir, pattern = "search results.*\\.zip$",
+zip_candidates <- list.files(raw_dir, pattern = "search_results.*\\.zip$",
                              full.names = TRUE, ignore.case = TRUE)
 if (length(zip_candidates) == 0) {
-  stop("Zip file not found in data/. Place 'search results - renamed.zip' there first.")
+  stop("Zip file not found in data/raw/. Place 'search_results_renamed.zip' there first.")
 }
 if (length(list.files(unzip_dir, recursive = TRUE)) == 0) {
   unzip(zip_candidates[1], exdir = unzip_dir)
@@ -107,7 +115,7 @@ if (!"DB" %in% names(M))     M$DB     <- "SCOPUS"
 if (!"AU_CO" %in% names(M))  M$AU_CO  <- "Unknown"
 if (!"AU1_CO" %in% names(M)) M$AU1_CO <- "Unknown"
 
-saveRDS(M, file.path(output_dir, "M_clean.rds"))
+saveRDS(M, file.path(output_dir, "m_clean.rds"))
 message("    Loaded ", nrow(M), " unique documents from ",
         length(M_list), " CSVs.")
 
@@ -406,14 +414,14 @@ message("\nAll outputs written under: ", output_dir)
 # 10. Launch the official biblioshiny GUI on this same M
 # ============================================================================
 # bibliometrix ships its own GUI called biblioshiny(). We launch it here so
-# we can browse the exact same cleaned dataset (M_clean.rds) we just built.
+# we can browse the exact same cleaned dataset (m_clean.rds) we just built.
 #
 # Inside biblioshiny we pick:
-#   Load data -> RData (.rds) file -> output/biblio/M_clean.rds -> Start.
+#   Load data -> RData (.rds) file -> results/bibliometrix/m_clean.rds -> Start.
 
 library(bibliometrix)
-M <- readRDS(file.path(output_dir, "M_clean.rds"))
+M <- readRDS(file.path(output_dir, "m_clean.rds"))
 message("\nLaunching biblioshiny GUI ...")
 message("Inside the GUI, choose: Load data -> RData (.rds) -> ",
-        file.path(output_dir, "M_clean.rds"), " -> Start")
+        file.path(output_dir, "m_clean.rds"), " -> Start")
 biblioshiny()

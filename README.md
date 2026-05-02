@@ -2,171 +2,124 @@
 
 A reproducible literature-review pipeline for trading-system research, built for the BANA 420 final project. We collect Scopus search exports, clean and de-duplicate them into a single corpus, mine the abstracts for the dominant vocabulary, project both documents and terms onto 2D maps, run a parallel `bibliometrix` analysis, and export co-occurrence networks for VOSviewer so the conceptual structure of the field becomes visible at a glance.
 
-The whole analysis is available in three interchangeable forms: an R Markdown notebook for the final knitted report, a Shiny app for interactive exploration, and a separate `bibliometrix` application for bibliometric drill-downs. They all read the same inputs and produce the same outputs.
+The repository follows the [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/) layout: source code in `src/`, immutable raw data in `data/raw/`, intermediate products in `data/interim/`, the cleaned analysis-ready datasets in `data/processed/`, and every generated artefact (figures, tables, logs, bibliometrix output) in `results/`. The whole analysis is available in three interchangeable forms — an R Markdown notebook (`src/project_analysis.Rmd`), an interactive Shiny app (`src/shiny_app.R`), and a standalone bibliometrix application (`src/bibliometrix_app.R`).
 
 ## What this project does
 
-We take a folder of Scopus per-search CSV exports (zipped) and run them through an end-to-end text-mining and bibliometric pipeline:
+The pipeline takes a folder of Scopus per-search CSV exports (zipped) and runs them end-to-end:
 
-1. **Read & combine** — unzip the per-search archive, read every CSV, tag each row with its search number and source file.
-2. **Build Data A** — standardise field names, reconcile Scopus aliases, drop title-less rows, de-duplicate on a normalised title key, and assign a stable `PaperID` (P001, P002, ...).
+1. **Read & combine** — unzip the archive, read every CSV, tag each row with its search number and source file.
+2. **Build Data A** — standardise field names, reconcile Scopus aliases, drop title-less rows, de-duplicate on a normalised title key, assign a stable `PaperID` (P001, P002, …).
 3. **Build Data B** — keep only `PaperID` and the cleaned abstract; this is the table that feeds the text mining.
-4. **Tokenise & rank** — split abstracts into words, drop stop-words, publisher noise, and pure numbers, then compute the **top-20 most frequent terms**.
+4. **Tokenise & rank** — split abstracts into words, drop stop-words, publisher noise, and pure numbers, then compute the top-20 most frequent terms.
 5. **Required Result A** — bar chart of the top-20 terms.
 6. **Required Result B** — word cloud of the same top-20 vocabulary.
 7. **Required Result C** — pairwise phi-correlation heatmap of the top-20 terms.
 8. **Required Result D** — document map: TF-IDF document-term matrix → Euclidean distance → classical MDS → 2D projection of every paper.
 9. **Required Result E** — term map: top-20 correlation matrix → `1 - correlation` distance → classical MDS → 2D projection of the top-20 terms.
 10. **Descriptive summaries** — documents per year and top-20 publishing sources.
-11. **bibliometrix analysis** — a parallel `bibliometrix::convert2df()` + `biblioAnalysis()` run with annual production, author productivity, source ranking, Bradford / Lotka laws, keyword growth, thematic map, trend topics, and conceptual structure outputs.
-12. **VOSviewer exports** — co-occurrence and co-authorship tables (author keywords, all keywords, title/abstract terms, authors, references) ready to drop into VOSviewer, plus the saved network files and screenshots from five completed analyses.
+11. **bibliometrix analysis** — annual production, author productivity, source ranking, Bradford / Lotka laws, keyword growth, thematic map, trend topics, and conceptual structure.
+12. **VOSviewer exports** — co-occurrence and co-authorship tables ready to drop into VOSviewer (the saved maps and screenshots from five completed analyses live under `vosviewer_analysis/`).
 13. **Run metadata & log** — every run writes a `run_info.csv` snapshot and a free-text `run_log.txt`.
+
+A more detailed methodological walkthrough is in [`docs/methodology.md`](docs/methodology.md).
 
 ## Repository layout
 
 ```
 trading-systems-litreview/
-├── Project Analysis.Rmd               # the R Markdown analysis notebook
-├── Project-Analysis.tex               # LaTeX source produced when knitting to PDF
-├── Project-Analysis.log               # LaTeX build log
-├── RShiny Dashboard.R                 # the Shiny app (same pipeline, interactive)
-├── bibliomatrix Application.R         # standalone bibliometrix-focused R app
+├── README.md
+├── LICENSE
+├── .gitignore
+├── .gitattributes
+│
+├── src/                                  # all R source code
+│   ├── project_analysis.Rmd              # main R Markdown notebook
+│   ├── shiny_app.R                       # interactive Shiny app
+│   └── bibliometrix_app.R                # standalone bibliometrix app
+│
 ├── data/
-│   ├── search results - renamed.zip                  # required raw input
-│   └── search_results_unzipped/                      # auto-extracted on first run
-│       └── search results - renamed/
-│           ├── 01 financial trading platform usability.csv
-│           ├── 02 trading software usability evaluation.csv
-│           ├── 03 electronic trading interface design.csv
-│           ├── 04 trading platform user experience (UX).csv
-│           ├── 05 human-computer interaction in financial trading.csv
-│           ├── 06 usability heuristics for trading systems.csv
-│           ├── 07 requirements engineering for trading systems.csv
-│           ├── 08 user-centered design of trading platforms.csv
-│           ├── 09 interaction design for electronic trading.csv
-│           ├── 10 information visualization for financial trading.csv
-│           ├── 11 financial market data visualization interface.csv
-│           ├── 12 decision support systems for traders interface.csv
-│           ├── 13 cognitive workload in trading interfaces - NO RESULTS.txt
-│           ├── 13 usability survey financial trading.csv
-│           ├── 14 situation awareness in financial trading systems.csv
-│           ├── 15 algorithmic trading interfaces.csv
-│           ├── 16 explainable AI for trading decision interfaces.csv
-│           ├── 17 mobile trading app usability.csv
-│           ├── 18 feature requirements for trading platforms.csv
-│           ├── 19 workflow design electronic trading.csv
-│           └── 20 usability financial trading platform.csv
-├── output/                            # generated by the pipeline (gitignored)
-│   ├── data/                          # cleaned datasets
-│   │   ├── Data_A_all_search_results_cleaned.xlsx
-│   │   ├── Data_A_cleaned.xlsx
-│   │   ├── Data_B_paperid_abstracts_only.xlsx
-│   │   ├── Data_B_abstracts.xlsx
-│   │   ├── Manual_review_candidates.xlsx
-│   │   └── Manual_review.xlsx
-│   ├── tables/                        # CSV / XLSX deliverables
-│   │   ├── top20_terms.csv / .xlsx
-│   │   ├── top_terms.csv / .xlsx
-│   │   ├── top20_term_correlations_long.csv
-│   │   ├── term_correlations.csv
-│   │   ├── document_map_coordinates.csv
-│   │   ├── doc_map.csv
-│   │   ├── term_map_coordinates.csv
-│   │   ├── term_map.csv
-│   │   └── descriptive_summaries.xlsx
-│   ├── figures/                       # PNG plots
-│   │   ├── top_terms_barplot.png
-│   │   ├── wordcloud.png
+│   ├── raw/                              # immutable inputs
+│   │   ├── search_results_renamed.zip            # required: Scopus CSV exports
+│   │   └── search_results_unzipped/              # auto-extracted on first run (gitignored)
+│   ├── interim/                          # generated intermediate tables (gitignored)
+│   │   └── raw_combined_from_zip.csv
+│   └── processed/                        # cleaned, analysis-ready datasets (gitignored)
+│       ├── data_a_cleaned.xlsx
+│       ├── data_b_abstracts.xlsx
+│       └── manual_review_candidates.xlsx
+│
+├── results/                              # generated artefacts (gitignored)
+│   ├── figures/
+│   │   ├── top20_terms_barplot.png
 │   │   ├── wordcloud_top20_terms.png
 │   │   ├── top20_term_correlation_heatmap.png
-│   │   ├── heatmap.png
-│   │   ├── doc_map.png
 │   │   ├── document_map_2d.png
-│   │   ├── term_map.png
 │   │   └── term_map_2d.png
-│   ├── raw_scopus_files/              # unmodified concatenations of the per-search CSVs
-│   │   ├── raw_combined.csv
-│   │   └── raw_combined_from_zip.csv
-│   ├── biblio/                        # bibliometrix outputs
-│   │   ├── M_clean.rds
+│   ├── tables/
+│   │   ├── top20_terms.csv  /  .xlsx
+│   │   ├── top20_term_correlations_long.csv
+│   │   ├── document_map_coordinates.csv
+│   │   ├── term_map_coordinates.csv
+│   │   └── descriptive_summaries.xlsx
+│   ├── bibliometrix/                     # full bibliometrix output
+│   │   ├── m_clean.rds
 │   │   ├── biblio_summary.txt
-│   │   ├── figures/                   # annual production, author/source rankings, Bradford,
-│   │   │                              # keyword growth, thematic map, trend topics, etc.
-│   │   ├── tables/                    # affiliations, authors, h-index, sources,
-│   │   │                              # most-cited (global/local), thematic clusters, etc.
+│   │   ├── bibliometrix_converted_data.csv
+│   │   ├── figures/                      # annual production, author/source rankings,
+│   │   │                                 # Bradford, keyword growth, thematic map, …
+│   │   ├── tables/                       # affiliations, authors, h-index, sources,
+│   │   │                                 # most-cited (global/local), thematic clusters, …
 │   │   └── network/
 │   │       └── co_occurrence_keywords.rds
-│   ├── bibliometrix/
-│   │   └── bibliometrix_converted_data.csv
-│   ├── vosviewer/                     # VOSviewer-ready co-occurrence / co-authorship CSVs
-│   │   ├── 01_co_occurrence_author_keywords.csv
-│   │   ├── 02_co_occurrence_all_keywords.csv
-│   │   ├── 03_co_occurrence_title_abstract.csv
-│   │   ├── 04_co_authorship_authors.csv
-│   │   ├── 05_co_citation_references.csv
-│   │   └── VOSviewer_how_to_load.txt
 │   └── logs/
 │       ├── run_log.txt
 │       └── run_info.csv
-├── VOSviewer analysis/                # saved VOSviewer maps + screenshots (one folder per analysis)
+│
+├── vosviewer_analysis/                   # Omero's saved VOSviewer maps + screenshots
+│   ├── HOW_TO_USE.md
 │   ├── 01_abstract_term_cooccurrence/
-│   │   ├── corpus.txt
-│   │   ├── scores.txt
-│   │   ├── thesaurus_terms.txt
-│   │   ├── vosviewer_map.json
-│   │   ├── vosviewer_map.txt
-│   │   ├── vosviewer_network.txt
-│   │   └── vosviewer_screenshot.png
 │   ├── 02_author_keyword_cooccurrence/
-│   │   ├── input_item_summary.tsv
-│   │   ├── input_map.txt
-│   │   ├── input_network.txt
-│   │   ├── vosviewer_map.json
-│   │   ├── vosviewer_map.txt
-│   │   ├── vosviewer_network.txt
-│   │   └── vosviewer_screenshot.png
-│   ├── 03_index_keyword_cooccurrence/        # same file set as above
-│   ├── 04_country_collaboration/             # same file set as above
-│   └── 05_source_keyword_similarity/         # same file set as above
-├── Reports/                           # final knitted reports
-│   ├── Docx/
-│   │   ├── Project-Analysis.docx
-│   │   └── Report - Draft.docx
-│   └── PDF/
-│       ├── Project-Analysis.pdf
-│       └── Report - Draft.pdf
-├── .gitattributes
-├── .gitignore
-├── LICENSE
-└── README.md
+│   ├── 03_index_keyword_cooccurrence/
+│   ├── 04_country_collaboration/
+│   └── 05_source_keyword_similarity/
+│
+├── reports/                              # final knitted deliverables
+│   ├── docx/
+│   │   ├── project_analysis.docx
+│   │   └── report_draft.docx
+│   └── pdf/
+│       ├── project_analysis.pdf
+│       └── report_draft.pdf
+│
+├── docs/                                 # human-written documentation
+│   ├── methodology.md
+│   └── contributing.md
+│
+└── references/                           # bibliography / external materials
 ```
-
-The `output/` folder and `data/search_results_unzipped/` are regenerated on every run and should be gitignored.
 
 ## Inputs
 
 | File | Required | Purpose |
 |------|----------|---------|
-| `data/search results - renamed.zip` | Yes | Renamed per-search Scopus CSV exports. Unzipped on first run into `data/search_results_unzipped/`. |
+| `data/raw/search_results_renamed.zip` | Yes | Renamed per-search Scopus CSV exports. Unzipped on first run into `data/raw/search_results_unzipped/`. |
+| `data/raw/ALL SEARCH RESULTS - v01g (1).xlsx` | No | Pre-combined workbook used only as an optional sanity-check against our rebuilt Data A. |
 
 ## Outputs
 
-Every run writes its artefacts under `output/`:
+Every run writes its artefacts under `data/{interim,processed}/` and `results/`:
 
 | Location | What it contains |
 |----------|------------------|
-| `output/data/` | `Data_A_all_search_results_cleaned.xlsx`, `Data_A_cleaned.xlsx`, `Data_B_paperid_abstracts_only.xlsx`, `Data_B_abstracts.xlsx`, `Manual_review_candidates.xlsx`, `Manual_review.xlsx` |
-| `output/tables/` | `top20_terms.csv` / `.xlsx`, `top_terms.csv` / `.xlsx`, `top20_term_correlations_long.csv`, `term_correlations.csv`, `document_map_coordinates.csv`, `doc_map.csv`, `term_map_coordinates.csv`, `term_map.csv`, `descriptive_summaries.xlsx` |
-| `output/figures/` | `top_terms_barplot.png`, `wordcloud.png`, `wordcloud_top20_terms.png`, `top20_term_correlation_heatmap.png`, `heatmap.png`, `doc_map.png`, `document_map_2d.png`, `term_map.png`, `term_map_2d.png` |
-| `output/raw_scopus_files/` | `raw_combined.csv`, `raw_combined_from_zip.csv` — the unmodified concatenations of every per-search CSV |
-| `output/biblio/` | `M_clean.rds`, `biblio_summary.txt`, plus `figures/`, `tables/`, and `network/` subfolders with the full bibliometrix output set |
-| `output/bibliometrix/` | `bibliometrix_converted_data.csv` |
-| `output/vosviewer/` | Five VOSviewer-ready CSVs (`01_co_occurrence_author_keywords.csv` … `05_co_citation_references.csv`) plus `VOSviewer_how_to_load.txt` |
-| `output/logs/` | `run_log.txt`, `run_info.csv` |
+| `data/interim/` | `raw_combined_from_zip.csv` — unmodified concatenation of every per-search CSV |
+| `data/processed/` | `data_a_cleaned.xlsx`, `data_b_abstracts.xlsx`, `manual_review_candidates.xlsx` |
+| `results/tables/` | `top20_terms.{csv,xlsx}`, `top20_term_correlations_long.csv`, `document_map_coordinates.csv`, `term_map_coordinates.csv`, `descriptive_summaries.xlsx` |
+| `results/figures/` | `top20_terms_barplot.png`, `wordcloud_top20_terms.png`, `top20_term_correlation_heatmap.png`, `document_map_2d.png`, `term_map_2d.png` |
+| `results/bibliometrix/` | `m_clean.rds`, `biblio_summary.txt`, `bibliometrix_converted_data.csv`, plus `figures/`, `tables/`, and `network/` subfolders |
+| `results/logs/` | `run_log.txt`, `run_info.csv` |
 
-The saved VOSviewer maps that go with the CSVs in `output/vosviewer/` live in the top-level `VOSviewer analysis/` folder, organised one subfolder per analysis (abstract terms, author keywords, index keywords, country collaboration, source-keyword similarity), each containing the VOSviewer map / network / JSON files and a screenshot.
-
-Final knitted reports (PDF and Word) are kept in `Reports/PDF/` and `Reports/Docx/`.
+Final knitted reports (PDF and Word) are kept under `reports/pdf/` and `reports/docx/`. The VOSviewer-ready CSVs that feed `vosviewer_analysis/` are produced inside the bibliometrix run and saved under `results/bibliometrix/`.
 
 ## Quick start — R Markdown notebook
 
@@ -177,21 +130,21 @@ cd trading-systems-litreview
 
 Then in RStudio:
 
-1. Open `Project Analysis.Rmd`.
-2. Confirm `data/search results - renamed.zip` is in place.
-3. Click **Knit** (or `Ctrl/Cmd + Shift + K`) and choose PDF, HTML, or Word. The `Project-Analysis.tex` and `Project-Analysis.log` files are produced as a side-effect of knitting to PDF.
+1. Open `src/project_analysis.Rmd`.
+2. Confirm `data/raw/search_results_renamed.zip` is in place.
+3. Click **Knit** (or `Ctrl/Cmd + Shift + K`) and choose PDF, HTML, or Word.
 
-Missing CRAN packages are installed automatically on first knit via an install-if-missing helper.
+Missing CRAN packages are installed automatically on first knit.
 
 ## Quick start — Shiny app
 
 ```r
-shiny::runApp("RShiny Dashboard.R")
+shiny::runApp("src/shiny_app.R")
 ```
 
 In the app:
 
-1. Confirm the project directory in the sidebar.
+1. Confirm the project directory in the sidebar (defaults to the repo root).
 2. Click **Run full pipeline**.
 3. Browse each tab — Data A, Data B, manual review, top-20 terms (table + bar chart + word cloud), correlation heatmap, document map, term map, descriptive summaries, run metadata.
 4. Download any deliverable from the sidebar buttons.
@@ -199,18 +152,18 @@ In the app:
 ## Quick start — bibliometrix application
 
 ```r
-shiny::runApp("bibliomatrix Application.R")
+shiny::runApp("src/bibliometrix_app.R")
 ```
 
-This is a standalone app focused on the bibliometric side of the pipeline — annual production, author productivity, source ranking, Bradford / Lotka laws, keyword growth, thematic map, trend topics, and conceptual structure. It writes its outputs under `output/biblio/`.
+A standalone app focused on the bibliometric side of the pipeline — annual production, author productivity, source ranking, Bradford / Lotka laws, keyword growth, thematic map, trend topics, and conceptual structure. It writes its outputs under `results/bibliometrix/`.
 
 ## VOSviewer workflow
 
 1. Install VOSviewer from <https://www.vosviewer.com/download>.
-2. Run the main pipeline so the CSVs in `output/vosviewer/` are up to date.
+2. Run the main pipeline so the bibliometrix CSVs are up to date.
 3. Open VOSviewer → **Create a map based on network data** → load the relevant CSV.
-4. See `output/vosviewer/VOSviewer_how_to_load.txt` for per-file load settings, and **`VOSviewer analysis/HOW_TO_USE.md`** for the full walkthrough on re-opening or rebuilding the saved maps.
-5. Save the resulting map / network files into the matching `VOSviewer analysis/<analysis>/` folder alongside a `vosviewer_screenshot.png`.
+4. See [`vosviewer_analysis/HOW_TO_USE.md`](vosviewer_analysis/HOW_TO_USE.md) for the full walkthrough on re-opening or rebuilding the saved maps.
+5. Save the resulting map / network files into the matching `vosviewer_analysis/<analysis>/` folder alongside a `vosviewer_screenshot.png`.
 
 ## Reference run snapshot
 
@@ -222,7 +175,6 @@ This is a standalone app focused on the bibliometric side of the pipeline — an
 | `manual_review_rows` | 20 |
 | `top20_terms_generated` | 20 |
 | `bibliometrix_available` | 1 |
-| `provided_xlsx_loaded` | 0 |
 
 Top-5 terms by frequency: **data** (915), **trading** (839), **system** (523), **market** (492), **financial** (425).
 Strongest term-pair correlations: **market – stock** (0.348), **analysis – data** (0.300), **platform – user** (0.285), **analysis – financial** (0.252).
@@ -230,8 +182,8 @@ Strongest term-pair correlations: **market – stock** (0.348), **analysis – d
 ## Requirements
 
 - R >= 4.2 and RStudio.
-- CRAN packages: `dplyr`, `readr`, `readxl`, `openxlsx`, `stringr`, `tidyr`, `purrr`, `tibble`, `janitor`, `tidytext`, `widyr`, `ggplot2`, `ggrepel`, `Matrix`, `wordcloud`, `RColorBrewer`, `shiny`, `DT`, `bibliometrix`.
-- External: [VOSviewer](https://www.vosviewer.com/download) for opening the CSVs in `output/vosviewer/` and producing the maps stored under `VOSviewer analysis/`. See `VOSviewer analysis/HOW_TO_USE.md` for step-by-step instructions.
+- CRAN packages: `dplyr`, `readr`, `readxl`, `openxlsx`, `stringr`, `tidyr`, `purrr`, `tibble`, `janitor`, `tidytext`, `widyr`, `ggplot2`, `ggrepel`, `Matrix`, `wordcloud`, `RColorBrewer`, `shiny`, `shinyjs`, `shinyFiles`, `DT`, `officer`, `flextable`, `bibliometrix`, `igraph`.
+- External: [VOSviewer](https://www.vosviewer.com/download) for opening the CSVs and producing the maps stored under `vosviewer_analysis/`. See [`vosviewer_analysis/HOW_TO_USE.md`](vosviewer_analysis/HOW_TO_USE.md).
 
 All required CRAN packages are installed automatically on first run.
 
@@ -239,12 +191,13 @@ All required CRAN packages are installed automatically on first run.
 
 The notebook is designed to be re-runnable. On a clean build the only files that need to be preserved are:
 
-- `Project Analysis.Rmd`
-- `RShiny Dashboard.R`
-- `bibliomatrix Application.R`
-- `data/search results - renamed.zip`
+- `src/project_analysis.Rmd`
+- `src/shiny_app.R`
+- `src/bibliometrix_app.R`
+- `data/raw/search_results_renamed.zip`
+- `data/raw/ALL SEARCH RESULTS - v01g (1).xlsx` *(optional)*
 
-Every other folder (`output/`, `data/search_results_unzipped/`, the LaTeX side-files, and the contents of `Reports/`) is regenerated automatically on the next run and is safe to delete.
+Every other folder (`data/interim/`, `data/processed/`, `results/`, `data/raw/search_results_unzipped/`) is regenerated automatically on the next run and is safe to delete.
 
 ## Project context
 
@@ -254,15 +207,18 @@ This project was built for **BANA 420 — Final Project**. It implements the fiv
 
 | Name | Student ID |
 |------|------------|
-| Mohammed Baobaid | 202031137 |
+| Mohammed Baobab | 202031137 |
 | Majid Tayfour | 202219094 |
 | Hamed Alsaedi | 202008437 |
 | Omero Moheyeldin | 700042090 |
 
 **Contributions**
-- **VOSviewer analysis** (the `VOSviewer analysis/` folder and all five maps inside it) — produced by **Omero Moheyeldin**.
-- **Everything else in the pipeline** (R Markdown notebook, Shiny app, bibliometrix application, data cleaning, text mining, document/term maps, and the rest of the `output/` artefacts) — built by **Mohammed Baobab**.
-- **Final report** (the deliverables under `Reports/`) — a shared group task contributed to by all four members.
+
+- **VOSviewer analysis** (`vosviewer_analysis/` and all five maps inside it) — produced by **Omero Moheyeldin**.
+- **Pipeline** (R Markdown notebook, Shiny app, bibliometrix application, data cleaning, text mining, document/term maps, the rest of `results/`) — built by **Mohammed Baobab**.
+- **Final report** (deliverables under `reports/`) — shared group task contributed to by all four members.
+
+See [`docs/contributing.md`](docs/contributing.md) for branch / commit conventions.
 
 ## License
 

@@ -1,23 +1,50 @@
-/data/search_results_unzipped
+# ==========================================================================
+# trading-systems-litreview — .gitignore
+# ==========================================================================
 
-output/data/Data_A_cleaned.xlsx
-output/data/Data_B_abstracts.xlsx
-output/data/Manual_review.xlsx
-/output/figures
-/output/logs
-/output/raw_scopus_files
-/output/tables
-output/vosviewer/01_co_occurrence_author_keywords.csv
-output/vosviewer/02_co_occurrence_all_keywords.csv
-output/vosviewer/03_co_occurrence_title_abstract.csv
-output/vosviewer/04_co_authorship_authors.csv
-output/vosviewer/05_co_citation_references.csv
-output/data/Data_A_all_search_results_cleaned.xlsx
-output/data/Data_B_paperid_abstracts_only.xlsx
-/output/bibliometrix
-output/data/Manual_review_candidates.xlsx
-Project-Analysis.log
-Project-Analysis.tex
-Reports/.DS_Store
+# --- Generated pipeline artefacts (regenerated on every run) ---------------
+/results/
+/data/interim/
+/data/processed/
+/data/raw/search_results_unzipped/
+
+# --- LaTeX / knitr build side-files ----------------------------------------
+*.tex
+*.log
+*.aux
+*.out
+*.toc
+*.synctex.gz
+# but keep our docs/ markdown sources
+!docs/**/*.md
+
+# --- R / RStudio -----------------------------------------------------------
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+*-Ex.R
+
+# --- Knitr / R Markdown caches ---------------------------------------------
+*_cache/
+*_files/
+/cache/
+
+# --- OS / editor junk ------------------------------------------------------
 .DS_Store
-/output/biblio
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# --- Python venv (in case anyone adds analysis scripts) --------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
