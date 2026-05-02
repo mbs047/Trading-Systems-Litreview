@@ -22,7 +22,7 @@ The pipeline takes a folder of Scopus per-search CSV exports (zipped) and runs t
 12. **VOSviewer exports** — co-occurrence and co-authorship tables ready to drop into VOSviewer (the saved maps and screenshots from five completed analyses live under `vosviewer_analysis/`).
 13. **Run metadata & log** — every run writes a `run_info.csv` snapshot and a free-text `run_log.txt`.
 
-A more detailed methodological walkthrough is in [`docs/methodology.md`](docs/methodology.md).
+A more detailed methodological walkthrough is in [`docs/methodology.md`](docs/methodology.md), the search strategy in [`docs/search_protocol.md`](docs/search_protocol.md), and the cleaned-data column reference in [`docs/data_dictionary.md`](docs/data_dictionary.md). The PRISMA 2020 flow diagram for the corpus construction is at [`results/figures/prisma_flow.png`](results/figures/prisma_flow.png).
 
 ## Repository layout
 
@@ -33,10 +33,12 @@ trading-systems-litreview/
 ├── .gitignore
 ├── .gitattributes
 │
-├── src/                                  # all R source code
+├── src/                                  # all source code
 │   ├── project_analysis.Rmd              # main R Markdown notebook
 │   ├── shiny_app.R                       # interactive Shiny app
-│   └── bibliometrix_app.R                # standalone bibliometrix app
+│   ├── bibliometrix_app.R                # standalone bibliometrix app
+│   ├── helpers.R                         # shared cleaning helpers (used by tests)
+│   └── build_prisma_flow.py              # regenerates the PRISMA diagram
 │
 ├── data/
 │   ├── raw/                              # immutable inputs
@@ -93,10 +95,22 @@ trading-systems-litreview/
 │       └── report_draft.pdf
 │
 ├── docs/                                 # human-written documentation
-│   ├── methodology.md
-│   └── contributing.md
+│   ├── methodology.md                    # pipeline-stage walkthrough + PRISMA
+│   ├── search_protocol.md                # Scopus queries, dates, filters, criteria
+│   ├── data_dictionary.md                # every column in data/processed/ explained
+│   └── contributing.md                   # team, layout rules, branch / commit style
 │
-└── references/                           # bibliography / external materials
+├── references/                           # bibliography / external materials
+│   └── references.bib
+│
+├── tests/                                # unit tests for src/helpers.R
+│   ├── run_tests.R
+│   └── testthat/
+│       └── test-helpers.R
+│
+├── renv.lock                             # pinned package versions for reproducibility
+├── .Rprofile                             # auto-activates renv on R startup
+└── CITATION.cff                          # machine-readable citation metadata
 ```
 
 ## Inputs
@@ -266,22 +280,60 @@ Strongest term-pair correlations: **market – stock** (0.348), **analysis – d
 ## Requirements
 
 - R >= 4.2 and RStudio.
-- CRAN packages: `dplyr`, `readr`, `readxl`, `openxlsx`, `stringr`, `tidyr`, `purrr`, `tibble`, `janitor`, `tidytext`, `widyr`, `ggplot2`, `ggrepel`, `Matrix`, `wordcloud`, `RColorBrewer`, `shiny`, `shinyjs`, `shinyFiles`, `DT`, `officer`, `flextable`, `bibliometrix`, `igraph`.
+- CRAN packages: `dplyr`, `readr`, `readxl`, `openxlsx`, `stringr`, `tidyr`, `purrr`, `tibble`, `janitor`, `tidytext`, `widyr`, `ggplot2`, `ggrepel`, `Matrix`, `wordcloud`, `RColorBrewer`, `shiny`, `shinyjs`, `shinyFiles`, `DT`, `officer`, `flextable`, `bibliometrix`, `igraph`, `renv`, `testthat`.
+- Python 3 + `matplotlib` (only needed if you want to regenerate the PRISMA diagram).
 - External: [VOSviewer](https://www.vosviewer.com/download) for opening the CSVs and producing the maps stored under `vosviewer_analysis/`. See [`vosviewer_analysis/HOW_TO_USE.md`](vosviewer_analysis/HOW_TO_USE.md).
 
-All required CRAN packages are installed automatically on first run.
+All required CRAN packages are installed automatically on first run, but the recommended path is `renv::restore()` from the project root (see *Reproducibility* below).
+
+Bibliography for the report lives at [`references/references.bib`](references/references.bib).
 
 ## Reproducibility
 
 The notebook is designed to be re-runnable. On a clean build the only files that need to be preserved are:
 
-- `src/project_analysis.Rmd`
-- `src/shiny_app.R`
-- `src/bibliometrix_app.R`
+- `src/project_analysis.Rmd`, `src/shiny_app.R`, `src/bibliometrix_app.R`, `src/helpers.R`, `src/build_prisma_flow.py`
 - `data/raw/search_results_renamed.zip`
 - `data/raw/ALL SEARCH RESULTS - v01g (1).xlsx` *(optional)*
+- `renv.lock`, `.Rprofile`, `renv/activate.R`
 
 Every other folder (`data/interim/`, `data/processed/`, `results/`, `data/raw/search_results_unzipped/`) is regenerated automatically on the next run and is safe to delete.
+
+### Pinned package versions with `renv`
+
+The project ships an [`renv`](https://rstudio.github.io/renv/) lockfile so a fresh checkout gets the same package versions we ran with. On first open in RStudio, `renv` will bootstrap itself; then run:
+
+```r
+renv::restore()
+```
+
+This installs the versions listed in `renv.lock` into a project-local library under `renv/library/` (gitignored). After your first successful pipeline run, `renv::snapshot()` will refine the lockfile with hashes captured from your machine.
+
+If you don't want to use `renv`, every script also auto-installs missing CRAN packages on first run — `renv` is the more robust path but not strictly required.
+
+### Regenerating the PRISMA flow diagram
+
+`results/figures/prisma_flow.png` is regenerated from `results/logs/run_info.csv` by:
+
+```bash
+python3 src/build_prisma_flow.py
+```
+
+Re-run after every pipeline run if the corpus counts have shifted.
+
+### Running the test suite
+
+The pure helpers in `src/helpers.R` (used for de-duplication and schema reconciliation) are covered by unit tests under `tests/testthat/`. Run them with:
+
+```bash
+Rscript tests/run_tests.R
+```
+
+Or from inside R:
+
+```r
+source("tests/run_tests.R")
+```
 
 ## Project context
 
@@ -303,6 +355,10 @@ This project was built for **BANA 420 — Final Project**. It implements the fiv
 - **Final report** (deliverables under `reports/`) — shared group task contributed to by all four members.
 
 See [`docs/contributing.md`](docs/contributing.md) for branch / commit conventions.
+
+## How to cite
+
+If you reuse this pipeline or its outputs, please cite it. The repository ships a [`CITATION.cff`](CITATION.cff) file in the root, which GitHub renders as a "Cite this repository" button and which most reference managers (Zotero, EndNote, Mendeley) understand directly.
 
 ## License
 
