@@ -10,27 +10,46 @@
 library(testthat)
 
 # Locate src/helpers.R robustly. testthat::test_dir() sources test files
-# through its own mechanism, so sys.frame(1)$ofile is unreliable. Probe
-# a list of candidate locations relative to common cwds (project root,
-# tests/, tests/testthat/) and use the first one that resolves to an
-# existing file.
+# through sys.source(), so sys.frame(1)$ofile is unreliable. Probe a
+# list of candidate locations and use the first one that exists.
 locate_helpers <- function() {
-  candidates <- c(
-    "src/helpers.R",                  # cwd = project root
-    "../src/helpers.R",               # cwd = tests/
-    "../../src/helpers.R",            # cwd = tests/testthat/
-    file.path(getwd(), "..", "..", "src", "helpers.R")
-  )
-  # If testthat is loaded, test_path() points inside tests/testthat/.
+  candidates <- character()
+
+  # 1) testthat::test_path() — anchored at tests/testthat/.
   if (requireNamespace("testthat", quietly = TRUE)) {
     candidates <- c(
+      candidates,
       tryCatch(testthat::test_path("..", "..", "src", "helpers.R"),
-               error = function(e) NA_character_),
-      candidates
+               error = function(e) NA_character_)
     )
   }
+
+  # 2) Frame-walk: sys.frame(i)$ofile is set when source() is on the stack.
+  for (i in seq_len(sys.nframe())) {
+    of <- tryCatch(sys.frame(i)$ofile, error = function(e) NULL)
+    if (!is.null(of) && nzchar(of)) {
+      this_dir <- dirname(normalizePath(of, mustWork = FALSE))
+      candidates <- c(
+        candidates,
+        file.path(this_dir, "..", "..", "src", "helpers.R")
+      )
+      break
+    }
+  }
+
+  # 3) cwd-relative anchors: project root / tests / tests/testthat.
+  candidates <- c(
+    candidates,
+    "src/helpers.R",
+    "../src/helpers.R",
+    "../../src/helpers.R",
+    file.path(getwd(), "..", "..", "src", "helpers.R")
+  )
+
   for (p in candidates) {
-    if (!is.na(p) && file.exists(p)) return(normalizePath(p))
+    if (!is.null(p) && !is.na(p) && nzchar(p) && file.exists(p)) {
+      return(normalizePath(p))
+    }
   }
   stop("Could not locate src/helpers.R. Tried:\n  ",
        paste(candidates, collapse = "\n  "))
