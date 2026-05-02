@@ -371,8 +371,11 @@ ui <- fluidPage(
 
       # Step 2 — settings
       p(class = "sidebar-label", "2. Analysis settings"),
-      sliderInput("n_top_terms",    "Top N terms",       min = 10, max = 50, value = 20, step = 5),
-      sliderInput("min_token_freq", "Min term frequency", min = 1,  max = 15, value = 3,  step = 1),
+      sliderInput("n_top_terms",    "Top N terms",        min = 10, max = 50,   value = 20,  step = 5),
+      sliderInput("min_token_freq", "Min term frequency", min = 1,  max = 15,   value = 3,   step = 1),
+      sliderInput("max_token_freq", "Max term frequency", min = 50, max = 1000, value = 180, step = 10),
+      helpText(style = "margin-top:-6px; font-size:11px;",
+               "Drops over-dominant terms whose frequency exceeds this cap."),
 
       tags$hr(),
 
@@ -780,6 +783,7 @@ server <- function(input, output, session) {
     cfg_zip_file    = "",
     cfg_n_top       = 20L,
     cfg_min_freq    = 3L,
+    cfg_max_freq    = 180L,
     cfg_run_time    = "",
     cfg_keywords    = ""
   )
@@ -941,6 +945,7 @@ server <- function(input, output, session) {
 
         n_top    <- input$n_top_terms
         min_freq <- input$min_token_freq
+        max_freq <- input$max_token_freq
 
         noise_terms <- tibble::tibble(word = c(
           "elsevier", "ltd", "rights", "reserved", "author", "authors",
@@ -963,6 +968,21 @@ server <- function(input, output, session) {
 
         term_counts <- abstract_tokens |>
           dplyr::count(word, sort = TRUE, name = "frequency")
+
+        # Drop over-dominant terms whose frequency exceeds the side-panel cap.
+        # These swamp the correlation / map analyses and are usually generic
+        # words such as "data", "trading", "system" at >180 occurrences.
+        n_dropped_high <- sum(term_counts$frequency > max_freq)
+        term_counts <- term_counts |>
+          dplyr::filter(frequency <= max_freq)
+
+        if (n_dropped_high > 0)
+          log_msg("Dropped ", n_dropped_high,
+                  " over-dominant term(s) above frequency cap = ", max_freq)
+
+        if (nrow(term_counts) == 0)
+          stop("Max term frequency is too low — every term was dropped. ",
+               "Raise the slider in the sidebar.")
 
         top_n_terms <- term_counts |> dplyr::slice_head(n = n_top)
         top_words   <- top_n_terms$word
@@ -1203,9 +1223,11 @@ server <- function(input, output, session) {
         run_info <- tibble::tibble(
           item  = c("raw_rows", "data_a_rows", "data_b_rows",
                     "manual_review_rows", "top_n_terms", "unique_tokens",
+                    "min_term_freq", "max_term_freq", "high_freq_terms_dropped",
                     "bibliometrix_available"),
           value = c(nrow(raw_combined), nrow(data_a_export), nrow(data_b_export),
                     nrow(manual_review), n_top, nrow(term_counts),
+                    min_freq, max_freq, n_dropped_high,
                     as.integer(bibliometrix_available))
         )
         readr::write_csv(run_info, file.path(log_dir, "run_info.csv"))
@@ -1238,6 +1260,7 @@ server <- function(input, output, session) {
         state$cfg_zip_file    <- basename(zip_path)
         state$cfg_n_top       <- n_top
         state$cfg_min_freq    <- min_freq
+        state$cfg_max_freq    <- max_freq
         state$cfg_run_time    <- format(Sys.time(), "%Y-%m-%d %H:%M:%S")
         state$cfg_keywords    <- paste(keywords, collapse = ", ")
         state$ready      <- TRUE
@@ -1334,14 +1357,17 @@ server <- function(input, output, session) {
   output$doc_map_plot  <- renderPlot({ req(state$doc_map_plot);  state$doc_map_plot  })
   output$doc_map_table <- DT::renderDataTable({
     req(state$doc_map_df)
-    DT::datatable(state$doc_map_df, options = list(pageLength = 10, scrollX = TRUE))
+    DT::datatable(state$doc_map_df,
+                  options = list(pageLength = 10, scrollX = TRUE)) |>
+      DT::formatRound(columns = c("x", "y"), digits = 6)
   })
 
   # ---- Term map ---------------------------------------------------------------
   output$term_map_plot  <- renderPlot({ req(state$term_map_plot); state$term_map_plot })
   output$term_map_table <- DT::renderDataTable({
     req(state$term_map_df)
-    DT::datatable(state$term_map_df, options = list(pageLength = 25))
+    DT::datatable(state$term_map_df, options = list(pageLength = 25)) |>
+      DT::formatRound(columns = c("Dim1", "Dim2"), digits = 6)
   })
 
   # ---- Descriptive summaries --------------------------------------------------
@@ -1435,6 +1461,7 @@ server <- function(input, output, session) {
         zip_file    = state$cfg_zip_file,
         n_top       = state$cfg_n_top,
         min_freq    = state$cfg_min_freq,
+        max_freq    = state$cfg_max_freq,
         run_time    = state$cfg_run_time,
         keywords    = state$cfg_keywords
       )
