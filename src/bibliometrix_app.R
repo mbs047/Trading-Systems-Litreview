@@ -39,8 +39,13 @@
 #   m_clean.rds        the cleaned bibliometric data frame
 #   biblio_summary.txt the full text summary
 #
-# Run it via (from within RStudio with src/bibliometrix_app.R open):
-#   source("bibliometrix_app.R")
+# Run it (recommended — RStudio):
+#   1. Open src/bibliometrix_app.R in RStudio.
+#   2. Click 'Source' at the top-right of the editor pane
+#      (or press Ctrl/Cmd + Shift + S).
+#
+# Alternative (R console):
+#   source("src/bibliometrix_app.R")
 
 # ---- Packages --------------------------------------------------------------
 

@@ -125,27 +125,36 @@ Final knitted reports (PDF and Word) are kept under `reports/pdf/` and `reports/
 
 The repository ships three R entry points plus the external VOSviewer tool. They all read the same Scopus zip under `data/raw/` and write to `data/{interim,processed}/` and `results/`. Pick the one that matches what you want to do.
 
-### 0. Get the repo
+### 0. Prerequisites & get the repo
+
+The three R entry points are all designed to run inside **RStudio Desktop** — that's the most user-friendly way and the path we recommend for everyone on the team. Install once and forget:
+
+- **R** (>= 4.2) — <https://cran.r-project.org/>
+- **RStudio Desktop** (free) — <https://posit.co/download/rstudio-desktop/>
+
+Then clone the repo:
 
 ```bash
 git clone https://github.com/<your-username>/trading-systems-litreview.git
 cd trading-systems-litreview
 ```
 
-Confirm `data/raw/search_results_renamed.zip` is in place. Missing CRAN packages are installed automatically on first run of any of the three scripts.
+Open the project in RStudio (**File → Open Project…** and pick the repo folder, or just double-click any `.R` / `.Rmd` file inside it). Confirm `data/raw/search_results_renamed.zip` is in place. Missing CRAN packages are installed automatically on first run of any of the three scripts.
 
 ### 1. `src/project_analysis.Rmd` — main R Markdown notebook
 
 The canonical, knit-to-report version of the pipeline. Use this when you want a polished PDF / Word / HTML deliverable and the prose narration that explains every step.
 
-**Run it**
+**Run it (recommended — RStudio)**
+
+1. Open `src/project_analysis.Rmd` in RStudio (just double-click the file).
+2. Click the **Knit** button at the top of the editor — or press **Ctrl/Cmd + Shift + K**.
+3. Pick the output format from the **Knit** dropdown — **PDF**, **Word**, or **HTML**.
+4. The knitted document opens automatically when it's done; the R Markdown tab in the bottom-left pane shows the build log if anything goes wrong.
+
+**Alternative (R console / headless)**
 
 ```r
-# In RStudio:
-#   1. Open src/project_analysis.Rmd
-#   2. Click Knit (or Ctrl/Cmd + Shift + K) and pick PDF, Word, or HTML.
-
-# From the R console (headless):
 rmarkdown::render("src/project_analysis.Rmd", output_format = "pdf_document")
 ```
 
@@ -157,7 +166,12 @@ Cleaned datasets under `data/processed/`, all five required figures + tables und
 
 The **primary interactive entry point**. Use this when you want to explore the corpus, tweak parameters, and download artefacts on demand.
 
-**Run it**
+**Run it (recommended — RStudio)**
+
+1. Open `src/shiny_app.R` in RStudio.
+2. Click the green **▶ Run App** button at the top of the editor pane (it appears automatically when RStudio detects a Shiny file). The app launches in RStudio's built-in viewer; click the **Open in Browser** button if you want a full browser window instead.
+
+**Alternative (R console)**
 
 ```r
 shiny::runApp("src/shiny_app.R")
@@ -190,10 +204,15 @@ Same artefact set as the Rmd, written to the same paths, plus an on-demand Word 
 - Add bibliometric outputs the main pipeline doesn't provide (Bradford / Lotka laws, h-index per author and source, thematic map, trend topics, country collaboration, historiograph, etc.).
 - Launch `biblioshiny()` — bibliometrix's official GUI — on the same cleaned dataset for interactive exploration outside our app.
 
-**Run it**
+**Run it (recommended — RStudio)**
+
+1. Open `src/bibliometrix_app.R` in RStudio.
+2. Click **Source** at the top-right of the editor pane (or press **Ctrl/Cmd + Shift + S**) to execute the whole script.
+3. Watch the R console for progress messages; once it finishes, `biblioshiny()` opens in a new browser tab automatically.
+
+**Alternative (R console)**
 
 ```r
-# From the R console, with the project root as the working directory:
 source("src/bibliometrix_app.R")
 ```
 
@@ -270,17 +289,17 @@ This project was built for **BANA 420 — Final Project**. It implements the fiv
 
 ## Team & contributions
 
-| Name | Student ID |
-|------|------------|
-| Mohammed Baobab | 202031137 |
-| Majid Tayfour | 202219094 |
-| Hamed Alsaedi | 202008437 |
-| Omero Moheyeldin | 700042090 |
+| Name | Student ID | Email |
+|------|------------|-------|
+| Mohammed Baobaid | 202031137 | 202031137@uaeu.ac.ae |
+| Majid Tayfour | 202219094 | 202219094@uaeu.ac.ae |
+| Hamed Alsaedi | 202008437 | 202008437@uaeu.ac.ae |
+| Omero Moheyeldin | 700042090 | 700042090@uaeu.ac.ae |
 
 **Contributions**
 
 - **VOSviewer analysis** (`vosviewer_analysis/` and all five maps inside it) — produced by **Omero Moheyeldin**.
-- **Pipeline** (R Markdown notebook, Shiny app, bibliometrix application, data cleaning, text mining, document/term maps, the rest of `results/`) — built by **Mohammed Baobab**.
+- **Pipeline** (R Markdown notebook, Shiny app, bibliometrix application, data cleaning, text mining, document/term maps, the rest of `results/`) — built by **Mohammed Baobaid**.
 - **Final report** (deliverables under `reports/`) — shared group task contributed to by all four members.
 
 See [`docs/contributing.md`](docs/contributing.md) for branch / commit conventions.

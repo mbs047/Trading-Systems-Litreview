@@ -4,12 +4,12 @@ This is an academic group project for **BANA 420 — Final Project**. The notes 
 
 ## Team
 
-| Name | Student ID | Primary contribution |
-|------|------------|----------------------|
-| Mohammed Baobab | 202031137 | Pipeline (Rmd, Shiny app, bibliometrix app), data cleaning, text mining, document/term maps |
-| Majid Tayfour | 202219094 | Final report |
-| Hamed Alsaedi | 202008437 | Final report |
-| Omero Moheyeldin | 700042090 | VOSviewer analysis (`vosviewer_analysis/`) |
+| Name | Student ID | Email | Primary contribution |
+|------|------------|-------|----------------------|
+| Mohammed Baobaid | 202031137 | 202031137@uaeu.ac.ae | Pipeline (Rmd, Shiny app, bibliometrix app), data cleaning, text mining, document/term maps |
+| Majid Tayfour | 202219094 | 202219094@uaeu.ac.ae | Final report |
+| Hamed Alsaedi | 202008437 | 202008437@uaeu.ac.ae | Final report |
+| Omero Moheyeldin | 700042090 | 700042090@uaeu.ac.ae | VOSviewer analysis (`vosviewer_analysis/`) |
 
 The final report under `reports/` is a shared deliverable contributed to by all four members.
 
