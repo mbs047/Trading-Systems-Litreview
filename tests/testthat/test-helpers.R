@@ -7,20 +7,36 @@
 # or, more robustly via the test runner script:
 #   Rscript tests/run_tests.R
 
-# Resolve project root robustly. testthat::test_dir() runs each file with
-# its own working directory inside tests/testthat/; falling back to that
-# location keeps the test runnable from anywhere.
-this_file <- tryCatch(sys.frame(1)$ofile, error = function(e) NULL)
-test_dir  <- if (!is.null(this_file) && nzchar(this_file)) {
-  dirname(normalizePath(this_file, mustWork = FALSE))
-} else {
-  getwd()
-}
-proj_root <- normalizePath(file.path(test_dir, "..", ".."), mustWork = FALSE)
-helpers   <- file.path(proj_root, "src", "helpers.R")
-source(helpers, local = TRUE)
-
 library(testthat)
+
+# Locate src/helpers.R robustly. testthat::test_dir() sources test files
+# through its own mechanism, so sys.frame(1)$ofile is unreliable. Probe
+# a list of candidate locations relative to common cwds (project root,
+# tests/, tests/testthat/) and use the first one that resolves to an
+# existing file.
+locate_helpers <- function() {
+  candidates <- c(
+    "src/helpers.R",                  # cwd = project root
+    "../src/helpers.R",               # cwd = tests/
+    "../../src/helpers.R",            # cwd = tests/testthat/
+    file.path(getwd(), "..", "..", "src", "helpers.R")
+  )
+  # If testthat is loaded, test_path() points inside tests/testthat/.
+  if (requireNamespace("testthat", quietly = TRUE)) {
+    candidates <- c(
+      tryCatch(testthat::test_path("..", "..", "src", "helpers.R"),
+               error = function(e) NA_character_),
+      candidates
+    )
+  }
+  for (p in candidates) {
+    if (!is.na(p) && file.exists(p)) return(normalizePath(p))
+  }
+  stop("Could not locate src/helpers.R. Tried:\n  ",
+       paste(candidates, collapse = "\n  "))
+}
+
+source(locate_helpers(), local = TRUE)
 
 
 # ---------------------------------------------------------------------------

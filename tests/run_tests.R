@@ -9,18 +9,26 @@
 #   source("tests/run_tests.R")
 
 if (!requireNamespace("testthat", quietly = TRUE)) {
-  install.packages("testthat", repos = "https://cloud.r-project.org")
+  utils::install.packages("testthat", repos = "https://cloud.r-project.org")
 }
 
-this_file <- tryCatch(sys.frame(1)$ofile, error = function(e) NULL)
-runner_dir <- if (!is.null(this_file) && nzchar(this_file)) {
-  dirname(normalizePath(this_file, mustWork = FALSE))
-} else {
-  file.path(getwd(), "tests")
+# Locate the testthat directory by probing common cwd anchors. This works
+# whether the script is invoked from the project root, from tests/, or
+# sourced interactively.
+locate_testthat_dir <- function() {
+  candidates <- c(
+    "tests/testthat",
+    "testthat",
+    file.path(getwd(), "tests", "testthat")
+  )
+  for (p in candidates) {
+    if (dir.exists(p)) return(normalizePath(p))
+  }
+  stop("Could not locate tests/testthat/. Run from the project root or from tests/.")
 }
 
 result <- testthat::test_dir(
-  file.path(runner_dir, "testthat"),
+  locate_testthat_dir(),
   reporter = testthat::SummaryReporter$new()
 )
 
