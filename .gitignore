@@ -27,6 +27,18 @@
 *.Rproj
 *-Ex.R
 
+# --- renv -----------------------------------------------------------------
+# Track only the lockfile + activate.R; ignore the per-machine library
+# and the settings file that renv writes locally.
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock/
+renv/python/
+renv/staging/
+renv/settings.json
+renv/settings.dcf
+
 # --- Knitr / R Markdown caches ---------------------------------------------
 *_cache/
 *_files/
