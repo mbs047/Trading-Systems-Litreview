@@ -3,10 +3,17 @@
 # ==========================================================================
 
 # --- Generated pipeline artefacts (regenerated on every run) ---------------
-/results/
+# Use /results/* (not /results/) so we can re-include specific files below.
+/results/*
 /data/interim/
 /data/processed/
 /data/raw/search_results_unzipped/
+
+# --- ...except the PRISMA flow, which is a committed deliverable ----------
+!/results/figures/
+/results/figures/*
+!/results/figures/prisma_flow.png
+!/results/figures/prisma_flow.svg
 
 # --- LaTeX / knitr build side-files ----------------------------------------
 *.tex
