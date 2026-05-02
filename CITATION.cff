@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+title: >-
+  trading-systems-litreview: A reproducible literature-review pipeline for
+  trading-system research
+message: >-
+  If you use this software or its derived artefacts, please cite it
+  using the metadata below.
+type: software
+authors:
+  - given-names: Mohammed
+    family-names: Baobaid
+    email: 202031137@uaeu.ac.ae
+    affiliation: United Arab Emirates University
+  - given-names: Majid
+    family-names: Tayfour
+    email: 202219094@uaeu.ac.ae
+    affiliation: United Arab Emirates University
+  - given-names: Hamed
+    family-names: Alsaedi
+    email: 202008437@uaeu.ac.ae
+    affiliation: United Arab Emirates University
+  - given-names: Omero
+    family-names: Moheyeldin
+    email: 700042090@uaeu.ac.ae
+    affiliation: United Arab Emirates University
+abstract: >-
+  A reproducible R-based pipeline that ingests Scopus search exports,
+  cleans and de-duplicates them into a single corpus on trading-system
+  and trading-platform usability research, mines the abstracts for the
+  dominant vocabulary, projects documents and terms onto 2D maps, runs
+  a parallel bibliometrix analysis, and exports co-occurrence networks
+  for VOSviewer. Built for the BANA 420 Final Project, College of
+  Business and Economics, United Arab Emirates University.
+keywords:
+  - literature review
+  - bibliometrics
+  - text mining
+  - trading systems
+  - trading platforms
+  - usability
+  - human-computer interaction
+  - Scopus
+  - bibliometrix
+  - VOSviewer
+  - R
+  - Shiny
+license: MIT
+version: "1.0.0"
+date-released: "2025-05-02"
+url: "https://github.com/<your-username>/trading-systems-litreview"
