@@ -1,0 +1,1701 @@
+﻿{
+	"network": {
+		"items": [
+			{
+				"id": 1,
+				"label": "blockchain",
+				"description": "<table><tr><td>Author keyword:</td><td>blockchain</td></tr><tr><td>Records:</td><td>37</td></tr><tr><td>Example PaperIDs:</td><td>P007, P008, P019, P020, P022, P026, P079, P087</td></tr></table>",
+				"x": -0.5545,
+				"y": 0.3451,
+				"cluster": 1,
+				"weights": {
+					"Links": 14.0000,
+					"Total link strength": 42.0000,
+					"Occurrences": 37.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.1890,
+					"Avg citations": 16.6490
+				}
+			},
+			{
+				"id": 2,
+				"label": "machine learning",
+				"description": "<table><tr><td>Author keyword:</td><td>machine learning</td></tr><tr><td>Records:</td><td>32</td></tr><tr><td>Example PaperIDs:</td><td>P012, P025, P030, P043, P048, P081, P106, P124</td></tr></table>",
+				"x": -0.5757,
+				"y": -0.2114,
+				"cluster": 4,
+				"weights": {
+					"Links": 13.0000,
+					"Total link strength": 34.0000,
+					"Occurrences": 32.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.8440,
+					"Avg citations": 17.1560
+				}
+			},
+			{
+				"id": 3,
+				"label": "deep learning",
+				"description": "<table><tr><td>Author keyword:</td><td>deep learning</td></tr><tr><td>Records:</td><td>14</td></tr><tr><td>Example PaperIDs:</td><td>P041, P086, P118, P133, P147, P153, P160, P162</td></tr></table>",
+				"x": -0.6658,
+				"y": -0.3186,
+				"cluster": 3,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 15.0000,
+					"Occurrences": 14.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.9290,
+					"Avg citations": 9.4290
+				}
+			},
+			{
+				"id": 4,
+				"label": "e-commerce",
+				"description": "<table><tr><td>Author keyword:</td><td>e-commerce</td></tr><tr><td>Records:</td><td>12</td></tr><tr><td>Example PaperIDs:</td><td>P054, P068, P189, P270, P290, P305, P369, P392</td></tr></table>",
+				"x": -0.4974,
+				"y": 0.5367,
+				"cluster": 5,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 12.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.5000,
+					"Avg citations": 14.3330
+				}
+			},
+			{
+				"id": 5,
+				"label": "data visualization",
+				"description": "<table><tr><td>Author keyword:</td><td>data visualization</td></tr><tr><td>Records:</td><td>11</td></tr><tr><td>Example PaperIDs:</td><td>P052, P128, P152, P211, P216, P229, P263, P363</td></tr></table>",
+				"x": -0.6024,
+				"y": -0.2430,
+				"cluster": 10,
+				"weights": {
+					"Links": 3.0000,
+					"Total link strength": 7.0000,
+					"Occurrences": 11.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.0910,
+					"Avg citations": 5.4550
+				}
+			},
+			{
+				"id": 6,
+				"label": "metaverse",
+				"description": "<table><tr><td>Author keyword:</td><td>metaverse</td></tr><tr><td>Records:</td><td>9</td></tr><tr><td>Example PaperIDs:</td><td>P019, P087, P092, P097, P127, P231, P232, P233</td></tr></table>",
+				"x": -0.5598,
+				"y": 0.2246,
+				"cluster": 6,
+				"weights": {
+					"Links": 4.0000,
+					"Total link strength": 17.0000,
+					"Occurrences": 9.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.4440,
+					"Avg citations": 16.8890
+				}
+			},
+			{
+				"id": 7,
+				"label": "stock market",
+				"description": "<table><tr><td>Author keyword:</td><td>stock market</td></tr><tr><td>Records:</td><td>9</td></tr><tr><td>Example PaperIDs:</td><td>P121, P148, P294, P297, P367, P374, P426, P427</td></tr></table>",
+				"x": 0.6352,
+				"y": 0.6861,
+				"cluster": 7,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 9.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.1110,
+					"Avg citations": 4.6670
+				}
+			},
+			{
+				"id": 8,
+				"label": "fintech",
+				"description": "<table><tr><td>Author keyword:</td><td>fintech</td></tr><tr><td>Records:</td><td>8</td></tr><tr><td>Example PaperIDs:</td><td>P030, P219, P228, P232, P248, P297, P359, P449</td></tr></table>",
+				"x": -0.4003,
+				"y": -0.4387,
+				"cluster": 2,
+				"weights": {
+					"Links": 4.0000,
+					"Total link strength": 8.0000,
+					"Occurrences": 8.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.1250,
+					"Avg citations": 8.6250
+				}
+			},
+			{
+				"id": 9,
+				"label": "lstm",
+				"description": "<table><tr><td>Author keyword:</td><td>lstm</td></tr><tr><td>Records:</td><td>8</td></tr><tr><td>Example PaperIDs:</td><td>P044, P045, P070, P288, P293, P297, P427, P429</td></tr></table>",
+				"x": 0.6355,
+				"y": 0.6858,
+				"cluster": 7,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 4.0000,
+					"Occurrences": 8.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.7500,
+					"Avg citations": 4.1250
+				}
+			},
+			{
+				"id": 10,
+				"label": "security",
+				"description": "<table><tr><td>Author keyword:</td><td>security</td></tr><tr><td>Records:</td><td>8</td></tr><tr><td>Example PaperIDs:</td><td>P007, P024, P036, P109, P214, P282, P314, P486</td></tr></table>",
+				"x": -0.5013,
+				"y": 0.5234,
+				"cluster": 5,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 5.0000,
+					"Occurrences": 8.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.7500,
+					"Avg citations": 18.0000
+				}
+			},
+			{
+				"id": 11,
+				"label": "sentiment analysis",
+				"description": "<table><tr><td>Author keyword:</td><td>sentiment analysis</td></tr><tr><td>Records:</td><td>8</td></tr><tr><td>Example PaperIDs:</td><td>P074, P118, P215, P264, P430, P433, P441, P498</td></tr></table>",
+				"x": -0.6506,
+				"y": -0.3001,
+				"cluster": 9,
+				"weights": {
+					"Links": 3.0000,
+					"Total link strength": 6.0000,
+					"Occurrences": 8.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.6250,
+					"Avg citations": 2.0000
+				}
+			},
+			{
+				"id": 12,
+				"label": "artificial intelligence",
+				"description": "<table><tr><td>Author keyword:</td><td>artificial intelligence</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P025, P081, P086, P293, P347, P409, P442</td></tr></table>",
+				"x": -0.5688,
+				"y": -0.2100,
+				"cluster": 4,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.1430,
+					"Avg citations": 15.0000
+				}
+			},
+			{
+				"id": 13,
+				"label": "big data",
+				"description": "<table><tr><td>Author keyword:</td><td>big data</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P230, P373, P385, P441, P451, P465, P505</td></tr></table>",
+				"x": 0.3688,
+				"y": -0.8810,
+				"cluster": 17,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.2860,
+					"Avg citations": 3.7140
+				}
+			},
+			{
+				"id": 14,
+				"label": "data mining",
+				"description": "<table><tr><td>Author keyword:</td><td>data mining</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P035, P173, P216, P230, P250, P318, P396</td></tr></table>",
+				"x": 0.8072,
+				"y": -0.4685,
+				"cluster": 8,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.0000,
+					"Avg citations": 0.7140
+				}
+			},
+			{
+				"id": 15,
+				"label": "human-computer interaction",
+				"description": "<table><tr><td>Author keyword:</td><td>human-computer interaction</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P015, P096, P262, P298, P453, P480, P496</td></tr></table>",
+				"x": 0.9592,
+				"y": 0.1894,
+				"cluster": 18,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.4290,
+					"Avg citations": 1.2860
+				}
+			},
+			{
+				"id": 16,
+				"label": "internet of things",
+				"description": "<table><tr><td>Author keyword:</td><td>internet of things</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P022, P028, P175, P192, P214, P393, P479</td></tr></table>",
+				"x": -0.5609,
+				"y": 0.3585,
+				"cluster": 1,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 3.0000,
+					"Occurrences": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.2860,
+					"Avg citations": 7.2860
+				}
+			},
+			{
+				"id": 17,
+				"label": "nft",
+				"description": "<table><tr><td>Author keyword:</td><td>nft</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P008, P087, P097, P108, P231, P232, P233</td></tr></table>",
+				"x": -0.5606,
+				"y": 0.2027,
+				"cluster": 6,
+				"weights": {
+					"Links": 3.0000,
+					"Total link strength": 13.0000,
+					"Occurrences": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.7140,
+					"Avg citations": 19.0000
+				}
+			},
+			{
+				"id": 18,
+				"label": "stock market prediction",
+				"description": "<table><tr><td>Author keyword:</td><td>stock market prediction</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P264, P342, P365, P384, P433, P440, P491</td></tr></table>",
+				"x": -0.6326,
+				"y": -0.2787,
+				"cluster": 9,
+				"weights": {
+					"Links": 3.0000,
+					"Total link strength": 7.0000,
+					"Occurrences": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.4290,
+					"Avg citations": 5.1430
+				}
+			},
+			{
+				"id": 19,
+				"label": "trading",
+				"description": "<table><tr><td>Author keyword:</td><td>trading</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P161, P213, P296, P419, P441, P485, P510</td></tr></table>",
+				"x": 0.6446,
+				"y": -0.7031,
+				"cluster": 11,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.4290,
+					"Avg citations": 3.1430
+				}
+			},
+			{
+				"id": 20,
+				"label": "visualization",
+				"description": "<table><tr><td>Author keyword:</td><td>visualization</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P070, P073, P155, P162, P307, P430, P441</td></tr></table>",
+				"x": -0.6523,
+				"y": -0.3021,
+				"cluster": 9,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.7140,
+					"Avg citations": 16.0000
+				}
+			},
+			{
+				"id": 21,
+				"label": "investment",
+				"description": "<table><tr><td>Author keyword:</td><td>investment</td></tr><tr><td>Records:</td><td>6</td></tr><tr><td>Example PaperIDs:</td><td>P050, P163, P274, P297, P441, P485</td></tr></table>",
+				"x": 0.6446,
+				"y": -0.7032,
+				"cluster": 11,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 6.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.3330,
+					"Avg citations": 4.1670
+				}
+			},
+			{
+				"id": 22,
+				"label": "smart contracts",
+				"description": "<table><tr><td>Author keyword:</td><td>smart contracts</td></tr><tr><td>Records:</td><td>6</td></tr><tr><td>Example PaperIDs:</td><td>P008, P101, P141, P238, P356, P391</td></tr></table>",
+				"x": -0.5462,
+				"y": 0.3448,
+				"cluster": 1,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 4.0000,
+					"Occurrences": 6.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.1670,
+					"Avg citations": 7.0000
+				}
+			},
+			{
+				"id": 23,
+				"label": "usability",
+				"description": "<table><tr><td>Author keyword:</td><td>usability</td></tr><tr><td>Records:</td><td>6</td></tr><tr><td>Example PaperIDs:</td><td>P024, P270, P314, P486, P496, P497</td></tr></table>",
+				"x": -0.4983,
+				"y": 0.5335,
+				"cluster": 5,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 5.0000,
+					"Occurrences": 6.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.3330,
+					"Avg citations": 8.8330
+				}
+			},
+			{
+				"id": 24,
+				"label": "user experience",
+				"description": "<table><tr><td>Author keyword:</td><td>user experience</td></tr><tr><td>Records:</td><td>6</td></tr><tr><td>Example PaperIDs:</td><td>P020, P097, P132, P140, P215, P397</td></tr></table>",
+				"x": -0.5628,
+				"y": 0.3456,
+				"cluster": 1,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 6.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.3330,
+					"Avg citations": 4.1670
+				}
+			},
+			{
+				"id": 25,
+				"label": "visual analytics",
+				"description": "<table><tr><td>Author keyword:</td><td>visual analytics</td></tr><tr><td>Records:</td><td>6</td></tr><tr><td>Example PaperIDs:</td><td>P025, P126, P155, P300, P474, P511</td></tr></table>",
+				"x": 0.5414,
+				"y": -0.4105,
+				"cluster": 19,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 6.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.6670,
+					"Avg citations": 4.3330
+				}
+			},
+			{
+				"id": 26,
+				"label": "agent-based modeling",
+				"description": "<table><tr><td>Author keyword:</td><td>agent-based modeling</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P067, P152, P322, P405, P407</td></tr></table>",
+				"x": 0.4427,
+				"y": -0.1270,
+				"cluster": 12,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2018.2000,
+					"Avg citations": 4.0000
+				}
+			},
+			{
+				"id": 27,
+				"label": "cryptocurrency",
+				"description": "<table><tr><td>Author keyword:</td><td>cryptocurrency</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P052, P144, P161, P163, P401</td></tr></table>",
+				"x": -0.5436,
+				"y": 0.3523,
+				"cluster": 1,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.6000,
+					"Avg citations": 8.4000
+				}
+			},
+			{
+				"id": 28,
+				"label": "data analysis",
+				"description": "<table><tr><td>Author keyword:</td><td>data analysis</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P216, P230, P382, P480, P482</td></tr></table>",
+				"x": 0.8075,
+				"y": -0.4685,
+				"cluster": 8,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 4.0000,
+					"Occurrences": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.0000,
+					"Avg citations": 1.4000
+				}
+			},
+			{
+				"id": 29,
+				"label": "finance",
+				"description": "<table><tr><td>Author keyword:</td><td>finance</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P219, P297, P318, P336, P487</td></tr></table>",
+				"x": -0.3971,
+				"y": -0.4417,
+				"cluster": 2,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.0000,
+					"Avg citations": 13.2000
+				}
+			},
+			{
+				"id": 30,
+				"label": "quantitative trading",
+				"description": "<table><tr><td>Author keyword:</td><td>quantitative trading</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P306, P317, P347, P379, P437</td></tr></table>",
+				"x": 0.1255,
+				"y": 0.7604,
+				"cluster": 20,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.2000,
+					"Avg citations": 9.4000
+				}
+			},
+			{
+				"id": 31,
+				"label": "risk management",
+				"description": "<table><tr><td>Author keyword:</td><td>risk management</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P099, P224, P263, P401, P425</td></tr></table>",
+				"x": -0.1890,
+				"y": -0.9631,
+				"cluster": 21,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.0000,
+					"Avg citations": 24.4000
+				}
+			},
+			{
+				"id": 32,
+				"label": "smart contract",
+				"description": "<table><tr><td>Author keyword:</td><td>smart contract</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P104, P105, P108, P109, P277</td></tr></table>",
+				"x": -0.6063,
+				"y": 0.4305,
+				"cluster": 15,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 4.0000,
+					"Occurrences": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.2000,
+					"Avg citations": 10.6000
+				}
+			},
+			{
+				"id": 33,
+				"label": "smart grid",
+				"description": "<table><tr><td>Author keyword:</td><td>smart grid</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P081, P127, P362, P419, P479</td></tr></table>",
+				"x": -0.5376,
+				"y": 0.3805,
+				"cluster": 13,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 4.0000,
+					"Occurrences": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.8000,
+					"Avg citations": 18.2000
+				}
+			},
+			{
+				"id": 34,
+				"label": "social media",
+				"description": "<table><tr><td>Author keyword:</td><td>social media</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P190, P271, P295, P347, P501</td></tr></table>",
+				"x": -0.1209,
+				"y": 0.9846,
+				"cluster": 22,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2019.4000,
+					"Avg citations": 82.2000
+				}
+			},
+			{
+				"id": 35,
+				"label": "stock prediction",
+				"description": "<table><tr><td>Author keyword:</td><td>stock prediction</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P044, P118, P162, P273, P310</td></tr></table>",
+				"x": -0.6710,
+				"y": -0.3270,
+				"cluster": 3,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 3.0000,
+					"Occurrences": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.0000,
+					"Avg citations": 20.8000
+				}
+			},
+			{
+				"id": 36,
+				"label": "stock price prediction",
+				"description": "<table><tr><td>Author keyword:</td><td>stock price prediction</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P048, P070, P363, P364, P506</td></tr></table>",
+				"x": -0.5277,
+				"y": -0.2042,
+				"cluster": 14,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 5.0000,
+					"Occurrences": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.6000,
+					"Avg citations": 0.4000
+				}
+			},
+			{
+				"id": 37,
+				"label": "time series forecasting",
+				"description": "<table><tr><td>Author keyword:</td><td>time series forecasting</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P153, P363, P365, P374, P433</td></tr></table>",
+				"x": -0.6211,
+				"y": -0.2652,
+				"cluster": 10,
+				"weights": {
+					"Links": 4.0000,
+					"Total link strength": 10.0000,
+					"Occurrences": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.6000,
+					"Avg citations": 3.2000
+				}
+			},
+			{
+				"id": 38,
+				"label": "algorithmic trading",
+				"description": "<table><tr><td>Author keyword:</td><td>algorithmic trading</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P052, P086, P167, P284</td></tr></table>",
+				"x": -0.6731,
+				"y": -0.3273,
+				"cluster": 3,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2025.0000,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 39,
+				"label": "data trading",
+				"description": "<table><tr><td>Author keyword:</td><td>data trading</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P022, P094, P115, P238</td></tr></table>",
+				"x": 0.0068,
+				"y": -0.8588,
+				"cluster": 23,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.7500,
+					"Avg citations": 0.7500
+				}
+			},
+			{
+				"id": 40,
+				"label": "decision-making",
+				"description": "<table><tr><td>Author keyword:</td><td>decision-making</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P329, P405, P482, P502</td></tr></table>",
+				"x": 0.3380,
+				"y": 0.3909,
+				"cluster": 24,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.0000,
+					"Avg citations": 5.0000
+				}
+			},
+			{
+				"id": 41,
+				"label": "demand response",
+				"description": "<table><tr><td>Author keyword:</td><td>demand response</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P403, P447, P448, P489</td></tr></table>",
+				"x": 0.2462,
+				"y": -0.9455,
+				"cluster": 25,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.7500,
+					"Avg citations": 31.0000
+				}
+			},
+			{
+				"id": 42,
+				"label": "energy trading",
+				"description": "<table><tr><td>Author keyword:</td><td>energy trading</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P020, P127, P192, P362</td></tr></table>",
+				"x": -0.5380,
+				"y": 0.3798,
+				"cluster": 13,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 5.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.0000,
+					"Avg citations": 3.5000
+				}
+			},
+			{
+				"id": 43,
+				"label": "financial market",
+				"description": "<table><tr><td>Author keyword:</td><td>financial market</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P262, P299, P308, P405</td></tr></table>",
+				"x": 0.9076,
+				"y": 0.3612,
+				"cluster": 26,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.5000,
+					"Avg citations": 9.0000
+				}
+			},
+			{
+				"id": 44,
+				"label": "financial technology",
+				"description": "<table><tr><td>Author keyword:</td><td>financial technology</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P064, P228, P389, P453</td></tr></table>",
+				"x": 0.2623,
+				"y": 0.5813,
+				"cluster": 27,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.5000,
+					"Avg citations": 7.0000
+				}
+			},
+			{
+				"id": 45,
+				"label": "genetic algorithm",
+				"description": "<table><tr><td>Author keyword:</td><td>genetic algorithm</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P012, P226, P327, P499</td></tr></table>",
+				"x": 0.7315,
+				"y": -0.2008,
+				"cluster": 28,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.5000,
+					"Avg citations": 7.2500
+				}
+			},
+			{
+				"id": 46,
+				"label": "large language model",
+				"description": "<table><tr><td>Author keyword:</td><td>large language model</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P116, P207, P259, P389</td></tr></table>",
+				"x": 0.0631,
+				"y": 0.9872,
+				"cluster": 29,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2025.0000,
+					"Avg citations": 1.0000
+				}
+			},
+			{
+				"id": 47,
+				"label": "long short-term memory (lstm)",
+				"description": "<table><tr><td>Author keyword:</td><td>long short-term memory (lstm)</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P243, P363, P428, P506</td></tr></table>",
+				"x": -0.5254,
+				"y": -0.2039,
+				"cluster": 14,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.5000,
+					"Avg citations": 5.5000
+				}
+			},
+			{
+				"id": 48,
+				"label": "optimization",
+				"description": "<table><tr><td>Author keyword:</td><td>optimization</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P077, P137, P203, P482</td></tr></table>",
+				"x": 0.4566,
+				"y": 0.8672,
+				"cluster": 30,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.5000,
+					"Avg citations": 4.0000
+				}
+			},
+			{
+				"id": 49,
+				"label": "portfolio optimization",
+				"description": "<table><tr><td>Author keyword:</td><td>portfolio optimization</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P012, P284, P321, P461</td></tr></table>",
+				"x": -0.5763,
+				"y": -0.2038,
+				"cluster": 4,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.2500,
+					"Avg citations": 7.5000
+				}
+			},
+			{
+				"id": 50,
+				"label": "predictive analytics",
+				"description": "<table><tr><td>Author keyword:</td><td>predictive analytics</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P050, P058, P062, P106</td></tr></table>",
+				"x": 0.4929,
+				"y": -0.8351,
+				"cluster": 31,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2025.0000,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 51,
+				"label": "privacy",
+				"description": "<table><tr><td>Author keyword:</td><td>privacy</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P008, P314, P367, P490</td></tr></table>",
+				"x": 0.5952,
+				"y": 0.1487,
+				"cluster": 32,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.5000,
+					"Avg citations": 4.5000
+				}
+			},
+			{
+				"id": 52,
+				"label": "real-time data",
+				"description": "<table><tr><td>Author keyword:</td><td>real-time data</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P073, P128, P368, P433</td></tr></table>",
+				"x": -0.5983,
+				"y": -0.2382,
+				"cluster": 10,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 4.0000,
+					"Occurrences": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2025.0000,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 53,
+				"label": "anomaly detection",
+				"description": "<table><tr><td>Author keyword:</td><td>anomaly detection</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P076, P288, P493</td></tr></table>",
+				"x": 0.7791,
+				"y": -0.0133,
+				"cluster": 33,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.3330,
+					"Avg citations": 1.0000
+				}
+			},
+			{
+				"id": 54,
+				"label": "augmented reality",
+				"description": "<table><tr><td>Author keyword:</td><td>augmented reality</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P020, P151, P280</td></tr></table>",
+				"x": -0.3153,
+				"y": -0.9629,
+				"cluster": 34,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.3330,
+					"Avg citations": 2.3330
+				}
+			},
+			{
+				"id": 55,
+				"label": "big data analytics",
+				"description": "<table><tr><td>Author keyword:</td><td>big data analytics</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P073, P097, P500</td></tr></table>",
+				"x": 0.9570,
+				"y": -0.1178,
+				"cluster": 35,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.0000,
+					"Avg citations": 3.6670
+				}
+			},
+			{
+				"id": 56,
+				"label": "bitcoin",
+				"description": "<table><tr><td>Author keyword:</td><td>bitcoin</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P128, P161, P288</td></tr></table>",
+				"x": -0.0249,
+				"y": 0.8940,
+				"cluster": 36,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.0000,
+					"Avg citations": 4.0000
+				}
+			},
+			{
+				"id": 57,
+				"label": "business intelligence",
+				"description": "<table><tr><td>Author keyword:</td><td>business intelligence</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P058, P216, P382</td></tr></table>",
+				"x": 0.8079,
+				"y": -0.4685,
+				"cluster": 8,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.6670,
+					"Avg citations": 1.6670
+				}
+			},
+			{
+				"id": 58,
+				"label": "consortium blockchain",
+				"description": "<table><tr><td>Author keyword:</td><td>consortium blockchain</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P105, P109, P391</td></tr></table>",
+				"x": -0.6076,
+				"y": 0.4328,
+				"cluster": 15,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.3330,
+					"Avg citations": 13.3330
+				}
+			},
+			{
+				"id": 59,
+				"label": "deep reinforcement learning",
+				"description": "<table><tr><td>Author keyword:</td><td>deep reinforcement learning</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P161, P200, P239</td></tr></table>",
+				"x": 0.1789,
+				"y": -0.7850,
+				"cluster": 37,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.0000,
+					"Avg citations": 39.6670
+				}
+			},
+			{
+				"id": 60,
+				"label": "electronic markets",
+				"description": "<table><tr><td>Author keyword:</td><td>electronic markets</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P096, P322, P407</td></tr></table>",
+				"x": 0.4427,
+				"y": -0.1269,
+				"cluster": 12,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2019.0000,
+					"Avg citations": 2.3330
+				}
+			},
+			{
+				"id": 61,
+				"label": "feature engineering",
+				"description": "<table><tr><td>Author keyword:</td><td>feature engineering</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P035, P207, P312</td></tr></table>",
+				"x": 0.0983,
+				"y": -0.9793,
+				"cluster": 38,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.0000,
+					"Avg citations": 6.0000
+				}
+			},
+			{
+				"id": 62,
+				"label": "forecasting",
+				"description": "<table><tr><td>Author keyword:</td><td>forecasting</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P044, P045, P062</td></tr></table>",
+				"x": 0.6357,
+				"y": 0.6855,
+				"cluster": 7,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.6670,
+					"Avg citations": 0.6670
+				}
+			},
+			{
+				"id": 63,
+				"label": "gamification",
+				"description": "<table><tr><td>Author keyword:</td><td>gamification</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P199, P446, P458</td></tr></table>",
+				"x": -0.5523,
+				"y": 0.3564,
+				"cluster": 1,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.0000,
+					"Avg citations": 3.0000
+				}
+			},
+			{
+				"id": 64,
+				"label": "hci",
+				"description": "<table><tr><td>Author keyword:</td><td>hci</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P229, P301, P302</td></tr></table>",
+				"x": 0.2484,
+				"y": -0.6184,
+				"cluster": 39,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.3330,
+					"Avg citations": 1.0000
+				}
+			},
+			{
+				"id": 65,
+				"label": "interoperability",
+				"description": "<table><tr><td>Author keyword:</td><td>interoperability</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P019, P092, P333</td></tr></table>",
+				"x": -0.5586,
+				"y": 0.2570,
+				"cluster": 6,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 6.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.3330,
+					"Avg citations": 9.3330
+				}
+			},
+			{
+				"id": 66,
+				"label": "investor sentiment",
+				"description": "<table><tr><td>Author keyword:</td><td>investor sentiment</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P158, P295, P323</td></tr></table>",
+				"x": -0.0663,
+				"y": -0.9847,
+				"cluster": 40,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.6670,
+					"Avg citations": 108.0000
+				}
+			},
+			{
+				"id": 67,
+				"label": "large language models",
+				"description": "<table><tr><td>Author keyword:</td><td>large language models</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P180, P244, P254</td></tr></table>",
+				"x": 0.2545,
+				"y": 0.9236,
+				"cluster": 16,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2025.0000,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 68,
+				"label": "natural language processing",
+				"description": "<table><tr><td>Author keyword:</td><td>natural language processing</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P180, P244, P347</td></tr></table>",
+				"x": 0.2544,
+				"y": 0.9237,
+				"cluster": 16,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.0000,
+					"Avg citations": 1.3330
+				}
+			},
+			{
+				"id": 69,
+				"label": "portfolio",
+				"description": "<table><tr><td>Author keyword:</td><td>portfolio</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P296, P297, P359</td></tr></table>",
+				"x": -0.3972,
+				"y": -0.4429,
+				"cluster": 2,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.3330,
+					"Avg citations": 0.6670
+				}
+			},
+			{
+				"id": 70,
+				"label": "prediction",
+				"description": "<table><tr><td>Author keyword:</td><td>prediction</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P307, P364, P427</td></tr></table>",
+				"x": 0.9312,
+				"y": -0.2562,
+				"cluster": 41,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.6670,
+					"Avg citations": 0.6670
+				}
+			},
+			{
+				"id": 71,
+				"label": "recommendation system",
+				"description": "<table><tr><td>Author keyword:</td><td>recommendation system</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P041, P160, P312</td></tr></table>",
+				"x": -0.6731,
+				"y": -0.3252,
+				"cluster": 3,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2019.0000,
+					"Avg citations": 6.6670
+				}
+			},
+			{
+				"id": 72,
+				"label": "requirements engineering",
+				"description": "<table><tr><td>Author keyword:</td><td>requirements engineering</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P083, P329, P421</td></tr></table>",
+				"x": 0.8263,
+				"y": 0.5222,
+				"cluster": 42,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2019.6670,
+					"Avg citations": 3.3330
+				}
+			},
+			{
+				"id": 73,
+				"label": "situation awareness",
+				"description": "<table><tr><td>Author keyword:</td><td>situation awareness</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P036, P265, P334</td></tr></table>",
+				"x": 0.3769,
+				"y": 0.1630,
+				"cluster": 43,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2017.0000,
+					"Avg citations": 10.6670
+				}
+			},
+			{
+				"id": 74,
+				"label": "social trading",
+				"description": "<table><tr><td>Author keyword:</td><td>social trading</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P221, P228, P359</td></tr></table>",
+				"x": -0.3982,
+				"y": -0.4425,
+				"cluster": 2,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.3330,
+					"Avg citations": 14.0000
+				}
+			},
+			{
+				"id": 75,
+				"label": "stackelberg game",
+				"description": "<table><tr><td>Author keyword:</td><td>stackelberg game</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P115, P150, P378</td></tr></table>",
+				"x": -0.2466,
+				"y": 0.9755,
+				"cluster": 44,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.3330,
+					"Avg citations": 14.0000
+				}
+			},
+			{
+				"id": 76,
+				"label": "stock trading",
+				"description": "<table><tr><td>Author keyword:</td><td>stock trading</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P021, P045, P147</td></tr></table>",
+				"x": 0.8058,
+				"y": 0.2013,
+				"cluster": 45,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.0000,
+					"Avg citations": 1.0000
+				}
+			},
+			{
+				"id": 77,
+				"label": "stocks",
+				"description": "<table><tr><td>Author keyword:</td><td>stocks</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P106, P297, P307</td></tr></table>",
+				"x": 0.3361,
+				"y": -0.4011,
+				"cluster": 46,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2025.6670,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 78,
+				"label": "sustainability",
+				"description": "<table><tr><td>Author keyword:</td><td>sustainability</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P113, P283, P344</td></tr></table>",
+				"x": 0.9665,
+				"y": 0.0310,
+				"cluster": 47,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.3330,
+					"Avg citations": 2.0000
+				}
+			},
+			{
+				"id": 79,
+				"label": "text mining",
+				"description": "<table><tr><td>Author keyword:</td><td>text mining</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P097, P120, P287</td></tr></table>",
+				"x": 0.5350,
+				"y": 0.4125,
+				"cluster": 48,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.0000,
+					"Avg citations": 5.3330
+				}
+			},
+			{
+				"id": 80,
+				"label": "time series analysis",
+				"description": "<table><tr><td>Author keyword:</td><td>time series analysis</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P133, P342, P385</td></tr></table>",
+				"x": -0.5709,
+				"y": -0.2044,
+				"cluster": 4,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 3.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.3330,
+					"Avg citations": 2.0000
+				}
+			},
+			{
+				"id": 81,
+				"label": "traceability",
+				"description": "<table><tr><td>Author keyword:</td><td>traceability</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P199, P333, P406</td></tr></table>",
+				"x": -0.5669,
+				"y": 0.3529,
+				"cluster": 1,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 2.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.0000,
+					"Avg citations": 9.0000
+				}
+			},
+			{
+				"id": 82,
+				"label": "trust",
+				"description": "<table><tr><td>Author keyword:</td><td>trust</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P274, P281, P490</td></tr></table>",
+				"x": 0.3753,
+				"y": 0.7235,
+				"cluster": 49,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.0000,
+					"Avg citations": 13.0000
+				}
+			},
+			{
+				"id": 83,
+				"label": "user interface",
+				"description": "<table><tr><td>Author keyword:</td><td>user interface</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P054, P215, P248</td></tr></table>",
+				"x": 0.7376,
+				"y": 0.3962,
+				"cluster": 50,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.6670,
+					"Avg citations": 0.6670
+				}
+			},
+			{
+				"id": 84,
+				"label": "xai",
+				"description": "<table><tr><td>Author keyword:</td><td>xai</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P013, P297, P440</td></tr></table>",
+				"x": 0.4335,
+				"y": -0.6438,
+				"cluster": 51,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Occurrences": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.3330,
+					"Avg citations": 9.0000
+				}
+			}
+		],
+		"links": [
+			{
+				"source_id": 1,
+				"target_id": 2,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 6,
+				"strength": 7.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 10,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 16,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 17,
+				"strength": 6.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 22,
+				"strength": 4.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 24,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 27,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 32,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 33,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 42,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 63,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 65,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 81,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 3,
+				"strength": 4.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 5,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 6,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 8,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 12,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 17,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 18,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 36,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 37,
+				"strength": 4.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 49,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 52,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 80,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 11,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 35,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 37,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 38,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 71,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 4,
+				"target_id": 23,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 5,
+				"target_id": 37,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 5,
+				"target_id": 52,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 6,
+				"target_id": 17,
+				"strength": 5.0000
+			},
+			{
+				"source_id": 6,
+				"target_id": 65,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 7,
+				"target_id": 9,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 8,
+				"target_id": 29,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 8,
+				"target_id": 69,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 8,
+				"target_id": 74,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 9,
+				"target_id": 62,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 10,
+				"target_id": 23,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 11,
+				"target_id": 18,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 11,
+				"target_id": 20,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 14,
+				"target_id": 28,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 18,
+				"target_id": 37,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 19,
+				"target_id": 21,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 26,
+				"target_id": 60,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 28,
+				"target_id": 57,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 32,
+				"target_id": 58,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 33,
+				"target_id": 42,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 36,
+				"target_id": 47,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 67,
+				"target_id": 68,
+				"strength": 2.0000
+			}
+		]
+	}
+}

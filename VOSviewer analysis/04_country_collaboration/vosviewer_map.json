@@ -1,0 +1,1008 @@
+﻿{
+	"network": {
+		"items": [
+			{
+				"id": 1,
+				"label": "China",
+				"description": "<table><tr><td>Country:</td><td>China</td></tr><tr><td>Records:</td><td>131</td></tr><tr><td>Example PaperIDs:</td><td>P010, P013, P015, P016, P018, P023, P026, P027</td></tr></table>",
+				"x": -0.2371,
+				"y": 0.0764,
+				"cluster": 5,
+				"weights": {
+					"Links": 17.0000,
+					"Total link strength": 43.0000,
+					"Documents": 131.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.9690,
+					"Avg citations": 11.1300
+				}
+			},
+			{
+				"id": 2,
+				"label": "India",
+				"description": "<table><tr><td>Country:</td><td>India</td></tr><tr><td>Records:</td><td>74</td></tr><tr><td>Example PaperIDs:</td><td>P007, P017, P024, P043, P045, P048, P050, P051</td></tr></table>",
+				"x": -0.2963,
+				"y": -0.0910,
+				"cluster": 3,
+				"weights": {
+					"Links": 7.0000,
+					"Total link strength": 14.0000,
+					"Documents": 74.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.5410,
+					"Avg citations": 4.2430
+				}
+			},
+			{
+				"id": 3,
+				"label": "United States",
+				"description": "<table><tr><td>Country:</td><td>United States</td></tr><tr><td>Records:</td><td>65</td></tr><tr><td>Example PaperIDs:</td><td>P039, P043, P045, P056, P089, P090, P091, P092</td></tr></table>",
+				"x": -0.2925,
+				"y": 0.0476,
+				"cluster": 7,
+				"weights": {
+					"Links": 17.0000,
+					"Total link strength": 32.0000,
+					"Documents": 65.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.4460,
+					"Avg citations": 14.6000
+				}
+			},
+			{
+				"id": 4,
+				"label": "United Kingdom",
+				"description": "<table><tr><td>Country:</td><td>United Kingdom</td></tr><tr><td>Records:</td><td>29</td></tr><tr><td>Example PaperIDs:</td><td>P035, P036, P131, P173, P180, P192, P208, P251</td></tr></table>",
+				"x": -0.3655,
+				"y": -0.1186,
+				"cluster": 1,
+				"weights": {
+					"Links": 12.0000,
+					"Total link strength": 18.0000,
+					"Documents": 29.0000
+				},
+				"scores": {
+					"Avg publication year": 2019.1720,
+					"Avg citations": 14.2410
+				}
+			},
+			{
+				"id": 5,
+				"label": "South Korea",
+				"description": "<table><tr><td>Country:</td><td>South Korea</td></tr><tr><td>Records:</td><td>25</td></tr><tr><td>Example PaperIDs:</td><td>P012, P019, P033, P063, P079, P087, P099, P107</td></tr></table>",
+				"x": -0.3681,
+				"y": 0.3493,
+				"cluster": 4,
+				"weights": {
+					"Links": 7.0000,
+					"Total link strength": 9.0000,
+					"Documents": 25.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.2400,
+					"Avg citations": 11.9200
+				}
+			},
+			{
+				"id": 6,
+				"label": "Australia",
+				"description": "<table><tr><td>Country:</td><td>Australia</td></tr><tr><td>Records:</td><td>20</td></tr><tr><td>Example PaperIDs:</td><td>P009, P025, P116, P152, P167, P208, P209, P214</td></tr></table>",
+				"x": -0.2754,
+				"y": -0.0138,
+				"cluster": 3,
+				"weights": {
+					"Links": 8.0000,
+					"Total link strength": 16.0000,
+					"Documents": 20.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.4000,
+					"Avg citations": 35.3500
+				}
+			},
+			{
+				"id": 7,
+				"label": "Italy",
+				"description": "<table><tr><td>Country:</td><td>Italy</td></tr><tr><td>Records:</td><td>15</td></tr><tr><td>Example PaperIDs:</td><td>P004, P040, P061, P108, P121, P155, P178, P207</td></tr></table>",
+				"x": -0.4721,
+				"y": -0.1213,
+				"cluster": 1,
+				"weights": {
+					"Links": 5.0000,
+					"Total link strength": 7.0000,
+					"Documents": 15.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.1330,
+					"Avg citations": 8.7330
+				}
+			},
+			{
+				"id": 8,
+				"label": "Taiwan",
+				"description": "<table><tr><td>Country:</td><td>Taiwan</td></tr><tr><td>Records:</td><td>14</td></tr><tr><td>Example PaperIDs:</td><td>P068, P105, P136, P182, P190, P198, P220, P221</td></tr></table>",
+				"x": -0.3649,
+				"y": 0.4054,
+				"cluster": 4,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 2.0000,
+					"Documents": 14.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.7860,
+					"Avg citations": 9.2140
+				}
+			},
+			{
+				"id": 9,
+				"label": "Germany",
+				"description": "<table><tr><td>Country:</td><td>Germany</td></tr><tr><td>Records:</td><td>13</td></tr><tr><td>Example PaperIDs:</td><td>P082, P083, P088, P092, P096, P204, P228, P304</td></tr></table>",
+				"x": -0.3983,
+				"y": -0.1647,
+				"cluster": 2,
+				"weights": {
+					"Links": 4.0000,
+					"Total link strength": 4.0000,
+					"Documents": 13.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.7690,
+					"Avg citations": 5.7690
+				}
+			},
+			{
+				"id": 10,
+				"label": "Hong Kong",
+				"description": "<table><tr><td>Country:</td><td>Hong Kong</td></tr><tr><td>Records:</td><td>13</td></tr><tr><td>Example PaperIDs:</td><td>P069, P115, P116, P130, P173, P234, P255, P272</td></tr></table>",
+				"x": -0.1670,
+				"y": -0.0127,
+				"cluster": 5,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 14.0000,
+					"Documents": 13.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.5380,
+					"Avg citations": 4.3080
+				}
+			},
+			{
+				"id": 11,
+				"label": "France",
+				"description": "<table><tr><td>Country:</td><td>France</td></tr><tr><td>Records:</td><td>11</td></tr><tr><td>Example PaperIDs:</td><td>P011, P013, P057, P059, P066, P155, P205, P266</td></tr></table>",
+				"x": -0.4701,
+				"y": -0.0109,
+				"cluster": 1,
+				"weights": {
+					"Links": 7.0000,
+					"Total link strength": 9.0000,
+					"Documents": 11.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.6360,
+					"Avg citations": 33.0000
+				}
+			},
+			{
+				"id": 12,
+				"label": "Brazil",
+				"description": "<table><tr><td>Country:</td><td>Brazil</td></tr><tr><td>Records:</td><td>9</td></tr><tr><td>Example PaperIDs:</td><td>P049, P188, P224, P360, P366, P424, P473, P499</td></tr></table>",
+				"x": -0.4309,
+				"y": -0.1884,
+				"cluster": 2,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 6.0000,
+					"Documents": 9.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.4440,
+					"Avg citations": 6.7780
+				}
+			},
+			{
+				"id": 13,
+				"label": "Japan",
+				"description": "<table><tr><td>Country:</td><td>Japan</td></tr><tr><td>Records:</td><td>9</td></tr><tr><td>Example PaperIDs:</td><td>P016, P043, P258, P260, P261, P298, P336, P359</td></tr></table>",
+				"x": -0.1452,
+				"y": -0.0658,
+				"cluster": 6,
+				"weights": {
+					"Links": 5.0000,
+					"Total link strength": 7.0000,
+					"Documents": 9.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.8890,
+					"Avg citations": 4.1110
+				}
+			},
+			{
+				"id": 14,
+				"label": "Spain",
+				"description": "<table><tr><td>Country:</td><td>Spain</td></tr><tr><td>Records:</td><td>9</td></tr><tr><td>Example PaperIDs:</td><td>P061, P064, P112, P134, P353, P356, P424, P444</td></tr></table>",
+				"x": -0.4434,
+				"y": -0.2210,
+				"cluster": 2,
+				"weights": {
+					"Links": 4.0000,
+					"Total link strength": 6.0000,
+					"Documents": 9.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.7780,
+					"Avg citations": 5.8890
+				}
+			},
+			{
+				"id": 15,
+				"label": "Iran",
+				"description": "<table><tr><td>Country:</td><td>Iran</td></tr><tr><td>Records:</td><td>8</td></tr><tr><td>Example PaperIDs:</td><td>P127, P146, P159, P293, P328, P403, P464, P478</td></tr></table>",
+				"x": -0.4810,
+				"y": -0.2978,
+				"cluster": 2,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 1.0000,
+					"Documents": 8.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.2500,
+					"Avg citations": 12.8750
+				}
+			},
+			{
+				"id": 16,
+				"label": "Russian Federation",
+				"description": "<table><tr><td>Country:</td><td>Russian Federation</td></tr><tr><td>Records:</td><td>8</td></tr><tr><td>Example PaperIDs:</td><td>P158, P279, P299, P338, P346, P380, P462, P466</td></tr></table>",
+				"x": -0.3462,
+				"y": 0.3556,
+				"cluster": 4,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 2.0000,
+					"Documents": 8.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.7500,
+					"Avg citations": 6.5000
+				}
+			},
+			{
+				"id": 17,
+				"label": "Singapore",
+				"description": "<table><tr><td>Country:</td><td>Singapore</td></tr><tr><td>Records:</td><td>8</td></tr><tr><td>Example PaperIDs:</td><td>P137, P162, P196, P298, P379, P481, P509, P511</td></tr></table>",
+				"x": 0.0071,
+				"y": -0.0293,
+				"cluster": 6,
+				"weights": {
+					"Links": 5.0000,
+					"Total link strength": 7.0000,
+					"Documents": 8.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.3750,
+					"Avg citations": 17.7500
+				}
+			},
+			{
+				"id": 18,
+				"label": "Switzerland",
+				"description": "<table><tr><td>Country:</td><td>Switzerland</td></tr><tr><td>Records:</td><td>8</td></tr><tr><td>Example PaperIDs:</td><td>P231, P233, P263, P287, P322, P360, P410, P476</td></tr></table>",
+				"x": -0.3960,
+				"y": -0.1249,
+				"cluster": 1,
+				"weights": {
+					"Links": 7.0000,
+					"Total link strength": 11.0000,
+					"Documents": 8.0000
+				},
+				"scores": {
+					"Avg publication year": 2019.5000,
+					"Avg citations": 22.6250
+				}
+			},
+			{
+				"id": 19,
+				"label": "Canada",
+				"description": "<table><tr><td>Country:</td><td>Canada</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P143, P171, P188, P256, P320, P390, P490</td></tr></table>",
+				"x": -0.4144,
+				"y": -0.0793,
+				"cluster": 2,
+				"weights": {
+					"Links": 5.0000,
+					"Total link strength": 5.0000,
+					"Documents": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.4290,
+					"Avg citations": 16.8570
+				}
+			},
+			{
+				"id": 20,
+				"label": "Indonesia",
+				"description": "<table><tr><td>Country:</td><td>Indonesia</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P074, P099, P161, P215, P220, P269, P389</td></tr></table>",
+				"x": -0.3677,
+				"y": 0.4103,
+				"cluster": 4,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 2.0000,
+					"Documents": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.4290,
+					"Avg citations": 6.8570
+				}
+			},
+			{
+				"id": 21,
+				"label": "Poland",
+				"description": "<table><tr><td>Country:</td><td>Poland</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P081, P103, P294, P301, P302, P355, P463</td></tr></table>",
+				"x": 4.2217,
+				"y": -0.0393,
+				"cluster": 8,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Documents": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.7140,
+					"Avg citations": 10.8570
+				}
+			},
+			{
+				"id": 22,
+				"label": "Portugal",
+				"description": "<table><tr><td>Country:</td><td>Portugal</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P085, P086, P254, P382, P424, P446, P464</td></tr></table>",
+				"x": -0.4677,
+				"y": -0.2721,
+				"cluster": 2,
+				"weights": {
+					"Links": 5.0000,
+					"Total link strength": 6.0000,
+					"Documents": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.2860,
+					"Avg citations": 3.4290
+				}
+			},
+			{
+				"id": 23,
+				"label": "United Arab Emirates",
+				"description": "<table><tr><td>Country:</td><td>United Arab Emirates</td></tr><tr><td>Records:</td><td>7</td></tr><tr><td>Example PaperIDs:</td><td>P007, P093, P100, P225, P333, P414, P457</td></tr></table>",
+				"x": -0.2842,
+				"y": -0.1244,
+				"cluster": 3,
+				"weights": {
+					"Links": 3.0000,
+					"Total link strength": 5.0000,
+					"Documents": 7.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.8570,
+					"Avg citations": 30.4290
+				}
+			},
+			{
+				"id": 24,
+				"label": "Greece",
+				"description": "<table><tr><td>Country:</td><td>Greece</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P014, P108, P141, P343, P480</td></tr></table>",
+				"x": -0.4531,
+				"y": -0.1171,
+				"cluster": 1,
+				"weights": {
+					"Links": 3.0000,
+					"Total link strength": 3.0000,
+					"Documents": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.2000,
+					"Avg citations": 8.0000
+				}
+			},
+			{
+				"id": 25,
+				"label": "Malaysia",
+				"description": "<table><tr><td>Country:</td><td>Malaysia</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P058, P185, P311, P345, P488</td></tr></table>",
+				"x": -0.1731,
+				"y": 0.1362,
+				"cluster": 7,
+				"weights": {
+					"Links": 3.0000,
+					"Total link strength": 3.0000,
+					"Documents": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.4000,
+					"Avg citations": 10.2000
+				}
+			},
+			{
+				"id": 26,
+				"label": "Netherlands",
+				"description": "<table><tr><td>Country:</td><td>Netherlands</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P113, P203, P406, P412, P440</td></tr></table>",
+				"x": -0.5050,
+				"y": -0.0790,
+				"cluster": 1,
+				"weights": {
+					"Links": 3.0000,
+					"Total link strength": 3.0000,
+					"Documents": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2019.6000,
+					"Avg citations": 20.8000
+				}
+			},
+			{
+				"id": 27,
+				"label": "Saudi Arabia",
+				"description": "<table><tr><td>Country:</td><td>Saudi Arabia</td></tr><tr><td>Records:</td><td>5</td></tr><tr><td>Example PaperIDs:</td><td>P024, P284, P322, P330, P414</td></tr></table>",
+				"x": -0.3071,
+				"y": -0.1343,
+				"cluster": 3,
+				"weights": {
+					"Links": 5.0000,
+					"Total link strength": 5.0000,
+					"Documents": 5.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.8000,
+					"Avg citations": 2.0000
+				}
+			},
+			{
+				"id": 28,
+				"label": "Philippines",
+				"description": "<table><tr><td>Country:</td><td>Philippines</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P021, P172, P189, P510</td></tr></table>",
+				"x": -0.1080,
+				"y": 0.1933,
+				"cluster": 5,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 1.0000,
+					"Documents": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.5000,
+					"Avg citations": 1.2500
+				}
+			},
+			{
+				"id": 29,
+				"label": "Thailand",
+				"description": "<table><tr><td>Country:</td><td>Thailand</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P037, P187, P237, P247</td></tr></table>",
+				"x": 3.0622,
+				"y": 2.9665,
+				"cluster": 9,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Documents": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.7500,
+					"Avg citations": 3.0000
+				}
+			},
+			{
+				"id": 30,
+				"label": "Ukraine",
+				"description": "<table><tr><td>Country:</td><td>Ukraine</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P240, P369, P376, P422</td></tr></table>",
+				"x": 3.0308,
+				"y": -2.9960,
+				"cluster": 10,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Documents": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.2500,
+					"Avg citations": 4.7500
+				}
+			},
+			{
+				"id": 31,
+				"label": "Viet Nam",
+				"description": "<table><tr><td>Country:</td><td>Viet Nam</td></tr><tr><td>Records:</td><td>4</td></tr><tr><td>Example PaperIDs:</td><td>P008, P044, P439, P468</td></tr></table>",
+				"x": -0.3772,
+				"y": 0.3848,
+				"cluster": 4,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 1.0000,
+					"Documents": 4.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.7500,
+					"Avg citations": 20.7500
+				}
+			},
+			{
+				"id": 32,
+				"label": "Bangladesh",
+				"description": "<table><tr><td>Country:</td><td>Bangladesh</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P151, P388, P428</td></tr></table>",
+				"x": -0.2627,
+				"y": -0.0650,
+				"cluster": 3,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 2.0000,
+					"Documents": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.6670,
+					"Avg citations": 8.0000
+				}
+			},
+			{
+				"id": 33,
+				"label": "Belgium",
+				"description": "<table><tr><td>Country:</td><td>Belgium</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P011, P113, P266</td></tr></table>",
+				"x": -0.5104,
+				"y": -0.0502,
+				"cluster": 1,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 3.0000,
+					"Documents": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.0000,
+					"Avg citations": 7.0000
+				}
+			},
+			{
+				"id": 34,
+				"label": "Finland",
+				"description": "<table><tr><td>Country:</td><td>Finland</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P028, P137, P229</td></tr></table>",
+				"x": 0.0388,
+				"y": -0.0323,
+				"cluster": 6,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 1.0000,
+					"Documents": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.0000,
+					"Avg citations": 5.3330
+				}
+			},
+			{
+				"id": 35,
+				"label": "Pakistan",
+				"description": "<table><tr><td>Country:</td><td>Pakistan</td></tr><tr><td>Records:</td><td>3</td></tr><tr><td>Example PaperIDs:</td><td>P214, P311, P426</td></tr></table>",
+				"x": -0.1801,
+				"y": 0.1239,
+				"cluster": 7,
+				"weights": {
+					"Links": 4.0000,
+					"Total link strength": 4.0000,
+					"Documents": 3.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.3330,
+					"Avg citations": 6.3330
+				}
+			}
+		],
+		"links": [
+			{
+				"source_id": 1,
+				"target_id": 3,
+				"strength": 8.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 4,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 5,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 6,
+				"strength": 5.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 9,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 10,
+				"strength": 7.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 11,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 13,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 16,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 17,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 18,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 19,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 24,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 25,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 27,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 28,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 1,
+				"target_id": 35,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 3,
+				"strength": 5.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 5,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 13,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 14,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 23,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 27,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 2,
+				"target_id": 32,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 4,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 5,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 6,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 8,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 9,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 10,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 11,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 13,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 17,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 18,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 19,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 22,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 23,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 25,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 3,
+				"target_id": 35,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 4,
+				"target_id": 6,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 4,
+				"target_id": 9,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 4,
+				"target_id": 10,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 4,
+				"target_id": 12,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 4,
+				"target_id": 13,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 4,
+				"target_id": 18,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 4,
+				"target_id": 22,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 4,
+				"target_id": 24,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 4,
+				"target_id": 26,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 4,
+				"target_id": 27,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 5,
+				"target_id": 11,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 5,
+				"target_id": 16,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 5,
+				"target_id": 20,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 5,
+				"target_id": 31,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 6,
+				"target_id": 10,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 6,
+				"target_id": 11,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 6,
+				"target_id": 19,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 6,
+				"target_id": 32,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 6,
+				"target_id": 35,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 7,
+				"target_id": 11,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 7,
+				"target_id": 14,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 7,
+				"target_id": 18,
+				"strength": 3.0000
+			},
+			{
+				"source_id": 7,
+				"target_id": 24,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 7,
+				"target_id": 26,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 8,
+				"target_id": 20,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 9,
+				"target_id": 12,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 10,
+				"target_id": 17,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 10,
+				"target_id": 18,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 11,
+				"target_id": 19,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 11,
+				"target_id": 33,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 12,
+				"target_id": 14,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 12,
+				"target_id": 18,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 12,
+				"target_id": 19,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 12,
+				"target_id": 22,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 13,
+				"target_id": 17,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 14,
+				"target_id": 22,
+				"strength": 2.0000
+			},
+			{
+				"source_id": 15,
+				"target_id": 22,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 17,
+				"target_id": 34,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 18,
+				"target_id": 27,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 23,
+				"target_id": 27,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 25,
+				"target_id": 35,
+				"strength": 1.0000
+			},
+			{
+				"source_id": 26,
+				"target_id": 33,
+				"strength": 1.0000
+			}
+		]
+	}
+}

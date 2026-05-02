@@ -1,0 +1,1905 @@
+﻿{
+	"network": {
+		"items": [
+			{
+				"id": 1,
+				"label": "IEEE Access",
+				"description": "<table><tr><td>Source:</td><td>IEEE Access</td></tr><tr><td>Documents:</td><td>11</td></tr><tr><td>Top shared keywords:</td><td>commerce, blockchain, fintech, investments, smart contract, economic and social effects, electronic trading, machine learning</td></tr></table>",
+				"x": -0.3678,
+				"y": 0.0868,
+				"cluster": 3,
+				"weights": {
+					"Links": 24.0000,
+					"Total link strength": 426.0122,
+					"Documents": 11.0000,
+					"Unique keywords": 177.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.5450,
+					"Avg citations": 16.5450
+				}
+			},
+			{
+				"id": 2,
+				"label": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
+				"description": "<table><tr><td>Source:</td><td>Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)</td></tr><tr><td>Documents:</td><td>10</td></tr><tr><td>Top shared keywords:</td><td>commerce, electronic trading, human-computer interaction, financial market, behavioral research, recommender systems, stock market, investments</td></tr></table>",
+				"x": -0.3341,
+				"y": -0.0579,
+				"cluster": 1,
+				"weights": {
+					"Links": 33.0000,
+					"Total link strength": 744.0597,
+					"Documents": 10.0000,
+					"Unique keywords": 142.0000
+				},
+				"scores": {
+					"Avg publication year": 2019.5000,
+					"Avg citations": 5.8000
+				}
+			},
+			{
+				"id": 3,
+				"label": "Lecture Notes in Networks and Systems",
+				"description": "<table><tr><td>Source:</td><td>Lecture Notes in Networks and Systems</td></tr><tr><td>Documents:</td><td>10</td></tr><tr><td>Top shared keywords:</td><td>electronic trading, commerce, data mining, financial market, trading platform, user experience, e-commerce, real-time</td></tr></table>",
+				"x": -0.3074,
+				"y": -0.0943,
+				"cluster": 7,
+				"weights": {
+					"Links": 34.0000,
+					"Total link strength": 656.9471,
+					"Documents": 10.0000,
+					"Unique keywords": 145.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.7000,
+					"Avg citations": 0.1000
+				}
+			},
+			{
+				"id": 4,
+				"label": "ACM International Conference Proceeding Series",
+				"description": "<table><tr><td>Source:</td><td>ACM International Conference Proceeding Series</td></tr><tr><td>Documents:</td><td>9</td></tr><tr><td>Top shared keywords:</td><td>e-commerce, visualization, electronic trading, software design, internet of things, commerce, neural-networks, design and implementations</td></tr></table>",
+				"x": -0.4125,
+				"y": -0.1751,
+				"cluster": 4,
+				"weights": {
+					"Links": 10.0000,
+					"Total link strength": 156.1042,
+					"Documents": 9.0000,
+					"Unique keywords": 134.0000
+				},
+				"scores": {
+					"Avg publication year": 2019.8890,
+					"Avg citations": 0.7780
+				}
+			},
+			{
+				"id": 5,
+				"label": "Communications in Computer and Information Science",
+				"description": "<table><tr><td>Source:</td><td>Communications in Computer and Information Science</td></tr><tr><td>Documents:</td><td>5</td></tr><tr><td>Top shared keywords:</td><td>electronic trading, financial market, forecasting, marketplaces, financial investments, language processing, artificial intelligence, financial decisions</td></tr></table>",
+				"x": -0.2840,
+				"y": -0.1079,
+				"cluster": 2,
+				"weights": {
+					"Links": 17.0000,
+					"Total link strength": 361.9122,
+					"Documents": 5.0000,
+					"Unique keywords": 78.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.2000,
+					"Avg citations": 0.6000
+				}
+			},
+			{
+				"id": 6,
+				"label": "Energies",
+				"description": "<table><tr><td>Source:</td><td>Energies</td></tr><tr><td>Documents:</td><td>5</td></tr><tr><td>Top shared keywords:</td><td>energy policy, investments, renewable energy, decision making, smart grid, smart power grids, wind power, risk assessment</td></tr></table>",
+				"x": -0.2659,
+				"y": 0.1542,
+				"cluster": 3,
+				"weights": {
+					"Links": 8.0000,
+					"Total link strength": 102.4762,
+					"Documents": 5.0000,
+					"Unique keywords": 103.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.4000,
+					"Avg citations": 36.4000
+				}
+			},
+			{
+				"id": 7,
+				"label": "Lecture Notes in Computer Science",
+				"description": "<table><tr><td>Source:</td><td>Lecture Notes in Computer Science</td></tr><tr><td>Documents:</td><td>4</td></tr><tr><td>Top shared keywords:</td><td>electronic trading, human-computer interaction, financial market, creative design, cosmology, study design, usability testing, open platforms</td></tr></table>",
+				"x": -0.2371,
+				"y": -0.1231,
+				"cluster": 6,
+				"weights": {
+					"Links": 10.0000,
+					"Total link strength": 207.8701,
+					"Documents": 4.0000,
+					"Unique keywords": 69.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.7500,
+					"Avg citations": 0.2500
+				}
+			},
+			{
+				"id": 8,
+				"label": "Advances in Intelligent Systems and Computing",
+				"description": "<table><tr><td>Source:</td><td>Advances in Intelligent Systems and Computing</td></tr><tr><td>Documents:</td><td>3</td></tr><tr><td>Top shared keywords:</td><td>artificial intelligence, financial technology, electronic trading, virtual organization, interest rates, case based reasoning, intelligent agents, soft computing</td></tr></table>",
+				"x": -0.1874,
+				"y": -0.1076,
+				"cluster": 6,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 72.4545,
+					"Documents": 3.0000,
+					"Unique keywords": 40.0000
+				},
+				"scores": {
+					"Avg publication year": 2018.6670,
+					"Avg citations": 4.3330
+				}
+			},
+			{
+				"id": 9,
+				"label": "Conference on Human Factors in Computing Systems - Proceedings",
+				"description": "<table><tr><td>Source:</td><td>Conference on Human Factors in Computing Systems - Proceedings</td></tr><tr><td>Documents:</td><td>3</td></tr><tr><td>Top shared keywords:</td><td>computation theory, human-computer interaction, human engineering, decisions makings, social networking (online), decision making, visual prediction, stock market prediction</td></tr></table>",
+				"x": -0.3949,
+				"y": -0.1722,
+				"cluster": 4,
+				"weights": {
+					"Links": 11.0000,
+					"Total link strength": 185.6430,
+					"Documents": 3.0000,
+					"Unique keywords": 48.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.3330,
+					"Avg citations": 8.0000
+				}
+			},
+			{
+				"id": 10,
+				"label": "Dianwang Jishu/Power System Technology",
+				"description": "<table><tr><td>Source:</td><td>Dianwang Jishu/Power System Technology</td></tr><tr><td>Documents:</td><td>3</td></tr><tr><td>Top shared keywords:</td><td>electrical engineering, commerce, electric power systems, monolithic architecture, operation mechanism, service identification, power trading, micro-service</td></tr></table>",
+				"x": -0.3029,
+				"y": 0.2442,
+				"cluster": 3,
+				"weights": {
+					"Links": 4.0000,
+					"Total link strength": 51.6685,
+					"Documents": 3.0000,
+					"Unique keywords": 42.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.0000,
+					"Avg citations": 8.0000
+				}
+			},
+			{
+				"id": 11,
+				"label": "International Conference on Intelligent User Interfaces, Proceedings IUI",
+				"description": "<table><tr><td>Source:</td><td>International Conference on Intelligent User Interfaces, Proceedings IUI</td></tr><tr><td>Documents:</td><td>3</td></tr><tr><td>Top shared keywords:</td><td>commerce, financial market, caching, physics-based prefetching, user interface, prefetching, interactive visualization, middleware components</td></tr></table>",
+				"x": -0.3694,
+				"y": -0.0705,
+				"cluster": 1,
+				"weights": {
+					"Links": 9.0000,
+					"Total link strength": 176.3688,
+					"Documents": 3.0000,
+					"Unique keywords": 43.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.3330,
+					"Avg citations": 11.6670
+				}
+			},
+			{
+				"id": 12,
+				"label": "Lecture Notes in Electrical Engineering",
+				"description": "<table><tr><td>Source:</td><td>Lecture Notes in Electrical Engineering</td></tr><tr><td>Documents:</td><td>3</td></tr><tr><td>Top shared keywords:</td><td>electronic trading, machine learning, real estate, financial market, learning systems, electronic data interchange, gold, stocks</td></tr></table>",
+				"x": -0.2648,
+				"y": -0.0624,
+				"cluster": 2,
+				"weights": {
+					"Links": 12.0000,
+					"Total link strength": 236.2016,
+					"Documents": 3.0000,
+					"Unique keywords": 61.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.6670,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 13,
+				"label": "Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+				"description": "<table><tr><td>Source:</td><td>Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</td></tr><tr><td>Documents:</td><td>3</td></tr><tr><td>Top shared keywords:</td><td>electronic trading, high-frequency trading, investments, advertiser retention, community is, performance metrices, online advertizing, long-term development</td></tr></table>",
+				"x": -0.2030,
+				"y": -0.0528,
+				"cluster": 2,
+				"weights": {
+					"Links": 9.0000,
+					"Total link strength": 195.9669,
+					"Documents": 3.0000,
+					"Unique keywords": 47.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.3330,
+					"Avg citations": 6.6670
+				}
+			},
+			{
+				"id": 14,
+				"label": "2025 International Conference on Pervasive Computational Technologies, ICPCT 2025",
+				"description": "<table><tr><td>Source:</td><td>2025 International Conference on Pervasive Computational Technologies, ICPCT 2025</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>decentralized finance, user-centered trading platform, user-centered trading platforms, decisions makings, trading platform, retail investor decision-making, technical challenges in trading, novice day trader</td></tr></table>",
+				"x": -0.2842,
+				"y": -0.0626,
+				"cluster": 2,
+				"weights": {
+					"Links": 8.0000,
+					"Total link strength": 111.9418,
+					"Documents": 2.0000,
+					"Unique keywords": 43.0000
+				},
+				"scores": {
+					"Avg publication year": 2025.0000,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 15,
+				"label": "AIP Conference Proceedings",
+				"description": "<table><tr><td>Source:</td><td>AIP Conference Proceedings</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>smart contract, peer-to-peer security, renewal energy trading, blockchain framework, digital, trust, consistency, investor</td></tr></table>",
+				"x": 3.2398,
+				"y": -3.8546,
+				"cluster": 8,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Documents": 2.0000,
+					"Unique keywords": 9.0000
+				},
+				"scores": {
+					"Avg publication year": 2025.0000,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 16,
+				"label": "Behaviour and Information Technology",
+				"description": "<table><tr><td>Source:</td><td>Behaviour and Information Technology</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>human, electronic trading, online shopping, affective factors, structural equation modeling, e-commerce, fear of missing out, mediation analysis</td></tr></table>",
+				"x": -0.4865,
+				"y": -0.0915,
+				"cluster": 1,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 85.8637,
+					"Documents": 2.0000,
+					"Unique keywords": 46.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.5000,
+					"Avg citations": 9.5000
+				}
+			},
+			{
+				"id": 17,
+				"label": "CEUR Workshop Proceedings",
+				"description": "<table><tr><td>Source:</td><td>CEUR Workshop Proceedings</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>management information systems, business process, software development methods, business process management, query languages, e trades, e-commerce, management system</td></tr></table>",
+				"x": -0.4126,
+				"y": -0.1435,
+				"cluster": 1,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 63.3663,
+					"Documents": 2.0000,
+					"Unique keywords": 48.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.0000,
+					"Avg citations": 7.5000
+				}
+			},
+			{
+				"id": 18,
+				"label": "Cognitive Science and Technology",
+				"description": "<table><tr><td>Source:</td><td>Cognitive Science and Technology</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>user-friendly platform, historical data visualization, financial decision-making, user dashboard, stock market analysis, forecasting, predictive analytics, collaborative community development</td></tr></table>",
+				"x": 4.8631,
+				"y": -1.0738,
+				"cluster": 9,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Documents": 2.0000,
+					"Unique keywords": 12.0000
+				},
+				"scores": {
+					"Avg publication year": 2026.0000,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 19,
+				"label": "Computer Systems Science and Engineering",
+				"description": "<table><tr><td>Source:</td><td>Computer Systems Science and Engineering</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>digital system, healthcare industry, 'current, smart healthcare, software usabilities, application programs, losses, usability engineering</td></tr></table>",
+				"x": -0.4346,
+				"y": -0.0916,
+				"cluster": 1,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 77.0852,
+					"Documents": 2.0000,
+					"Unique keywords": 40.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.0000,
+					"Avg citations": 4.0000
+				}
+			},
+			{
+				"id": 20,
+				"label": "Dianli Xitong Zidonghua/Automation of Electric Power Systems",
+				"description": "<table><tr><td>Source:</td><td>Dianli Xitong Zidonghua/Automation of Electric Power Systems</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>risk assessment, cascade hydropower station, hydroelectric power, hydroelectric power plants, stochastic systems, risk perception, bidding curve, conditional value at risk</td></tr></table>",
+				"x": -0.2946,
+				"y": 0.2388,
+				"cluster": 3,
+				"weights": {
+					"Links": 5.0000,
+					"Total link strength": 52.2073,
+					"Documents": 2.0000,
+					"Unique keywords": 39.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.5000,
+					"Avg citations": 5.5000
+				}
+			},
+			{
+				"id": 21,
+				"label": "Electronics (Switzerland)",
+				"description": "<table><tr><td>Source:</td><td>Electronics (Switzerland)</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>physical-chemical parameters, refrigeration environment, quality, artificial intelligence decision support system, peach, smart cities, retail, load testing</td></tr></table>",
+				"x": -0.2123,
+				"y": 0.0031,
+				"cluster": 2,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 134.1003,
+					"Documents": 2.0000,
+					"Unique keywords": 32.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.0000,
+					"Avg citations": 5.0000
+				}
+			},
+			{
+				"id": 22,
+				"label": "Energy Reports",
+				"description": "<table><tr><td>Source:</td><td>Energy Reports</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>internet of things, open-source, internet of things (iot), data acquisition, message queuing telemetry transport (mqtt), peer to peer networks, web interface, internet of thing</td></tr></table>",
+				"x": -0.2912,
+				"y": 0.2342,
+				"cluster": 3,
+				"weights": {
+					"Links": 4.0000,
+					"Total link strength": 34.0219,
+					"Documents": 2.0000,
+					"Unique keywords": 45.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.0000,
+					"Avg citations": 37.0000
+				}
+			},
+			{
+				"id": 23,
+				"label": "Human Factors",
+				"description": "<table><tr><td>Source:</td><td>Human Factors</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>financial market, human errors, errors, commerce, human, human error, adult, humans</td></tr></table>",
+				"x": -0.4712,
+				"y": -0.0377,
+				"cluster": 1,
+				"weights": {
+					"Links": 7.0000,
+					"Total link strength": 124.1788,
+					"Documents": 2.0000,
+					"Unique keywords": 59.0000
+				},
+				"scores": {
+					"Avg publication year": 2017.0000,
+					"Avg citations": 15.0000
+				}
+			},
+			{
+				"id": 24,
+				"label": "ICAIF 2025 - 6th ACM International Conference on AI in Finance",
+				"description": "<table><tr><td>Source:</td><td>ICAIF 2025 - 6th ACM International Conference on AI in Finance</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>electronic trading, human-computer interaction, investments, stock movement, neural-networks, hyper graph, hypergraph neural network, time and motion study</td></tr></table>",
+				"x": -0.2690,
+				"y": -0.1624,
+				"cluster": 6,
+				"weights": {
+					"Links": 9.0000,
+					"Total link strength": 200.4648,
+					"Documents": 2.0000,
+					"Unique keywords": 34.0000
+				},
+				"scores": {
+					"Avg publication year": 2025.0000,
+					"Avg citations": 0.5000
+				}
+			},
+			{
+				"id": 25,
+				"label": "IEEE Transactions on Computational Social Systems",
+				"description": "<table><tr><td>Source:</td><td>IEEE Transactions on Computational Social Systems</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>relay chain, digital assets, interoperability, central servers, network architecture, digital asset chain, relay, distributed ledger</td></tr></table>",
+				"x": -0.4476,
+				"y": -0.1512,
+				"cluster": 4,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 72.3215,
+					"Documents": 2.0000,
+					"Unique keywords": 31.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.5000,
+					"Avg citations": 17.5000
+				}
+			},
+			{
+				"id": 26,
+				"label": "IEEE Transactions on Fuzzy Systems",
+				"description": "<table><tr><td>Source:</td><td>IEEE Transactions on Fuzzy Systems</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>electronic trading, fuzzy inference, fuzzy neural networks, commerce, financial market, forecasting, fuzzy rules, fama-french multifactor model</td></tr></table>",
+				"x": -0.2667,
+				"y": 0.0494,
+				"cluster": 3,
+				"weights": {
+					"Links": 14.0000,
+					"Total link strength": 321.6121,
+					"Documents": 2.0000,
+					"Unique keywords": 43.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.0000,
+					"Avg citations": 19.0000
+				}
+			},
+			{
+				"id": 27,
+				"label": "IEEE Transactions on Mobile Computing",
+				"description": "<table><tr><td>Source:</td><td>IEEE Transactions on Mobile Computing</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>commerce, nash bargaining, adaptive cooperation, optimization, data sharing, source data, efficiency, stackelberg games</td></tr></table>",
+				"x": -0.2240,
+				"y": 0.0245,
+				"cluster": 2,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 107.3776,
+					"Documents": 2.0000,
+					"Unique keywords": 29.0000
+				},
+				"scores": {
+					"Avg publication year": 2025.0000,
+					"Avg citations": 6.0000
+				}
+			},
+			{
+				"id": 28,
+				"label": "IEEE Transactions on Smart Grid",
+				"description": "<table><tr><td>Source:</td><td>IEEE Transactions on Smart Grid</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>power markets, distributed coordination control, game theory, differential game theory (dgt), voltage control, differential game theory, micro grid, decentralized control</td></tr></table>",
+				"x": -0.3050,
+				"y": 0.2306,
+				"cluster": 3,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 62.2776,
+					"Documents": 2.0000,
+					"Unique keywords": 42.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.0000,
+					"Avg citations": 52.0000
+				}
+			},
+			{
+				"id": 29,
+				"label": "IEICE Transactions on Information and Systems",
+				"description": "<table><tr><td>Source:</td><td>IEICE Transactions on Information and Systems</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>finance, commerce, financial market, scheduling, electronic trading, communication between agents, software agents, internal communications</td></tr></table>",
+				"x": -0.3664,
+				"y": 0.1012,
+				"cluster": 5,
+				"weights": {
+					"Links": 8.0000,
+					"Total link strength": 180.4796,
+					"Documents": 2.0000,
+					"Unique keywords": 38.0000
+				},
+				"scores": {
+					"Avg publication year": 2015.0000,
+					"Avg citations": 6.0000
+				}
+			},
+			{
+				"id": 30,
+				"label": "International Conference on Information Systems, ICIS 2022: \"Digitization for the Next Generation\"",
+				"description": "<table><tr><td>Source:</td><td>International Conference on Information Systems, ICIS 2022: \"Digitization for the Next Generation\"</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>information systems, information use, customer support, live chat interaction, online customers, trust in e-commerce, perceived ease of use, perceived ease-of-use</td></tr></table>",
+				"x": -0.4439,
+				"y": -0.1301,
+				"cluster": 1,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 72.0554,
+					"Documents": 2.0000,
+					"Unique keywords": 32.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.0000,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 31,
+				"label": "International Conference on Information and Knowledge Management, Proceedings",
+				"description": "<table><tr><td>Source:</td><td>International Conference on Information and Knowledge Management, Proceedings</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>ranking approach, long term exposure, recommender system, re-ranking, two-sided platforms, two-sided platform, long term fairness, provider fairness</td></tr></table>",
+				"x": -0.2291,
+				"y": -0.0515,
+				"cluster": 2,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 66.7266,
+					"Documents": 2.0000,
+					"Unique keywords": 26.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.0000,
+					"Avg citations": 3.5000
+				}
+			},
+			{
+				"id": 32,
+				"label": "International Journal of Advanced Computer Science and Applications",
+				"description": "<table><tr><td>Source:</td><td>International Journal of Advanced Computer Science and Applications</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>commerce, risk assessment, electronic trading, portfolio optimization, markov decision processes, reinforcement learning (rl), markov decision process, reinforcement learning</td></tr></table>",
+				"x": -0.2589,
+				"y": 0.0356,
+				"cluster": 2,
+				"weights": {
+					"Links": 12.0000,
+					"Total link strength": 228.4454,
+					"Documents": 2.0000,
+					"Unique keywords": 42.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.5000,
+					"Avg citations": 4.5000
+				}
+			},
+			{
+				"id": 33,
+				"label": "Journal of Cleaner Production",
+				"description": "<table><tr><td>Source:</td><td>Journal of Cleaner Production</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>fleet operations, evolutionary game analyse, recycling, system dynamics, evolutionary games, subsidy policy, battery carbon footprint, battery carbon</td></tr></table>",
+				"x": -0.2285,
+				"y": -0.2584,
+				"cluster": 7,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 6.4394,
+					"Documents": 2.0000,
+					"Unique keywords": 39.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.5000,
+					"Avg citations": 30.0000
+				}
+			},
+			{
+				"id": 34,
+				"label": "Journal of Forecasting",
+				"description": "<table><tr><td>Source:</td><td>Journal of Forecasting</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>electronic trading, commerce, financial market, machine learning, graphic methods, bar chart, stock prediction, stock price</td></tr></table>",
+				"x": -0.2662,
+				"y": -0.0001,
+				"cluster": 2,
+				"weights": {
+					"Links": 20.0000,
+					"Total link strength": 448.4238,
+					"Documents": 2.0000,
+					"Unique keywords": 38.0000
+				},
+				"scores": {
+					"Avg publication year": 2026.0000,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 35,
+				"label": "Journal of Industrial Engineering and Engineering Management",
+				"description": "<table><tr><td>Source:</td><td>Journal of Industrial Engineering and Engineering Management</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>signaling theory, knowledge paid product, zhihu live, social marketing, 推荐意愿, 推荐奖励计划, referral reward program, price mechanism</td></tr></table>",
+				"x": 2.2465,
+				"y": 4.5249,
+				"cluster": 10,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Documents": 2.0000,
+					"Unique keywords": 11.0000
+				},
+				"scores": {
+					"Avg publication year": 2022.0000,
+					"Avg citations": 7.5000
+				}
+			},
+			{
+				"id": 36,
+				"label": "Journal of Physics: Conference Series",
+				"description": "<table><tr><td>Source:</td><td>Journal of Physics: Conference Series</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>electronic business, environmental considerations, technical capabilities, cloud computing technologies, cloud computing, organization development, big data, intelligent systems</td></tr></table>",
+				"x": -0.2136,
+				"y": -0.1509,
+				"cluster": 6,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 64.3996,
+					"Documents": 2.0000,
+					"Unique keywords": 31.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.5000,
+					"Avg citations": 11.5000
+				}
+			},
+			{
+				"id": 37,
+				"label": "Journal of Retailing and Consumer Services",
+				"description": "<table><tr><td>Source:</td><td>Journal of Retailing and Consumer Services</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>text mining, nft, virtual reality, data mining, mapping, value affordance theory, metaverse, user experience</td></tr></table>",
+				"x": -0.5039,
+				"y": -0.0406,
+				"cluster": 4,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 73.7354,
+					"Documents": 2.0000,
+					"Unique keywords": 27.0000
+				},
+				"scores": {
+					"Avg publication year": 2025.0000,
+					"Avg citations": 29.0000
+				}
+			},
+			{
+				"id": 38,
+				"label": "Lecture Notes in Business Information Processing",
+				"description": "<table><tr><td>Source:</td><td>Lecture Notes in Business Information Processing</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>commerce, design and implementations, quantitative trading, knowledge graph, quantitative method, codes (symbols), programming experience, automatic programming</td></tr></table>",
+				"x": -0.4377,
+				"y": -0.0579,
+				"cluster": 1,
+				"weights": {
+					"Links": 11.0000,
+					"Total link strength": 210.3506,
+					"Documents": 2.0000,
+					"Unique keywords": 35.0000
+				},
+				"scores": {
+					"Avg publication year": 2016.5000,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 39,
+				"label": "New Generation Computing",
+				"description": "<table><tr><td>Source:</td><td>New Generation Computing</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>heterogeneous traders, electronic trading, agent-based model, commerce, artificial stock market, autonomous agents, computational methods, financial market</td></tr></table>",
+				"x": -0.3318,
+				"y": 0.1156,
+				"cluster": 5,
+				"weights": {
+					"Links": 8.0000,
+					"Total link strength": 198.8908,
+					"Documents": 2.0000,
+					"Unique keywords": 34.0000
+				},
+				"scores": {
+					"Avg publication year": 2019.0000,
+					"Avg citations": 3.0000
+				}
+			},
+			{
+				"id": 40,
+				"label": "PLoS ONE",
+				"description": "<table><tr><td>Source:</td><td>PLoS ONE</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>open access publishing, commerce, commercial phenomena, humans, human, wireless communication, computer security, computer network</td></tr></table>",
+				"x": -0.5004,
+				"y": -0.0570,
+				"cluster": 1,
+				"weights": {
+					"Links": 7.0000,
+					"Total link strength": 139.8802,
+					"Documents": 2.0000,
+					"Unique keywords": 32.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.5000,
+					"Avg citations": 1.0000
+				}
+			},
+			{
+				"id": 41,
+				"label": "PeerJ Computer Science",
+				"description": "<table><tr><td>Source:</td><td>PeerJ Computer Science</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>business logic layers, electronic trading, athlete performance, machine learning, leaf springs, forward error correction, steganography, data integrity</td></tr></table>",
+				"x": -0.2511,
+				"y": 0.1213,
+				"cluster": 3,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 67.0253,
+					"Documents": 2.0000,
+					"Unique keywords": 41.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.0000,
+					"Avg citations": 2.0000
+				}
+			},
+			{
+				"id": 42,
+				"label": "Procedia Computer Science",
+				"description": "<table><tr><td>Source:</td><td>Procedia Computer Science</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>data volume, financial assets, reinforcement learning, deep learning, performance, investment decisions, reinforcement learning algorithms, asset management systems</td></tr></table>",
+				"x": -0.3044,
+				"y": 0.0654,
+				"cluster": 5,
+				"weights": {
+					"Links": 7.0000,
+					"Total link strength": 155.3829,
+					"Documents": 2.0000,
+					"Unique keywords": 33.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.5000,
+					"Avg citations": 6.5000
+				}
+			},
+			{
+				"id": 43,
+				"label": "Proceedings - 2023 IEEE International Conference on Metaverse Computing, Networking and Applications, MetaCom 2023",
+				"description": "<table><tr><td>Source:</td><td>Proceedings - 2023 IEEE International Conference on Metaverse Computing, Networking and Applications, MetaCom 2023</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>metaverse, metaverses, blockchain, smart phones, interoperability, gateways (computer networks), border gateway protocol, gaming systems</td></tr></table>",
+				"x": -0.5133,
+				"y": -0.0145,
+				"cluster": 4,
+				"weights": {
+					"Links": 2.0000,
+					"Total link strength": 32.7042,
+					"Documents": 2.0000,
+					"Unique keywords": 27.0000
+				},
+				"scores": {
+					"Avg publication year": 2023.0000,
+					"Avg citations": 4.0000
+				}
+			},
+			{
+				"id": 44,
+				"label": "Proceedings - 2024 International Conference on Electronics and Devices, Computational Science, ICEDCS 2024",
+				"description": "<table><tr><td>Source:</td><td>Proceedings - 2024 International Conference on Electronics and Devices, Computational Science, ICEDCS 2024</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>automobile internationalization platform, internationalisation, spark distributed system, improved cnn algorithm, automotives, deep learning, network security, distributed systems</td></tr></table>",
+				"x": 4.7553,
+				"y": 1.4925,
+				"cluster": 11,
+				"weights": {
+					"Links": 0.0000,
+					"Total link strength": 0.0000,
+					"Documents": 2.0000,
+					"Unique keywords": 27.0000
+				},
+				"scores": {
+					"Avg publication year": 2024.0000,
+					"Avg citations": 0.0000
+				}
+			},
+			{
+				"id": 45,
+				"label": "Proceedings of SPIE - The International Society for Optical Engineering",
+				"description": "<table><tr><td>Source:</td><td>Proceedings of SPIE - The International Society for Optical Engineering</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>electronic trading, meaning and task, teaching methods, sales, visual analytics, e-commerce, e-commerces, an existing problem</td></tr></table>",
+				"x": -0.3857,
+				"y": -0.2211,
+				"cluster": 4,
+				"weights": {
+					"Links": 5.0000,
+					"Total link strength": 52.4209,
+					"Documents": 2.0000,
+					"Unique keywords": 35.0000
+				},
+				"scores": {
+					"Avg publication year": 2021.0000,
+					"Avg citations": 0.5000
+				}
+			},
+			{
+				"id": 46,
+				"label": "Proceedings of the International Astronautical Congress, IAC",
+				"description": "<table><tr><td>Source:</td><td>Proceedings of the International Astronautical Congress, IAC</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>feasibility studies, risk assessment, conceptual design, international cooperation, cost benefit analysis, iterative methods, spacecraft architecture, commercial off-the-shelf</td></tr></table>",
+				"x": -0.4163,
+				"y": 0.1814,
+				"cluster": 3,
+				"weights": {
+					"Links": 1.0000,
+					"Total link strength": 6.0734,
+					"Documents": 2.0000,
+					"Unique keywords": 41.0000
+				},
+				"scores": {
+					"Avg publication year": 2016.0000,
+					"Avg citations": 1.5000
+				}
+			},
+			{
+				"id": 47,
+				"label": "Proceedings of the International Conference on Electronic Business (ICEB)",
+				"description": "<table><tr><td>Source:</td><td>Proceedings of the International Conference on Electronic Business (ICEB)</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>social networking (online), user experience, e-commerce, peer to peer energy trading, data mining, dirichlet process, hlda, energy trading</td></tr></table>",
+				"x": -0.4519,
+				"y": -0.1189,
+				"cluster": 4,
+				"weights": {
+					"Links": 6.0000,
+					"Total link strength": 90.0973,
+					"Documents": 2.0000,
+					"Unique keywords": 30.0000
+				},
+				"scores": {
+					"Avg publication year": 2019.0000,
+					"Avg citations": 5.5000
+				}
+			},
+			{
+				"id": 48,
+				"label": "Proceedings of the International Conference on Information Visualisation",
+				"description": "<table><tr><td>Source:</td><td>Proceedings of the International Conference on Information Visualisation</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>machine learning, visual analytics, visualization, complex event processing, streaming, prediction computation, financial experts, artificial intelligence</td></tr></table>",
+				"x": -0.3783,
+				"y": -0.0833,
+				"cluster": 1,
+				"weights": {
+					"Links": 7.0000,
+					"Total link strength": 106.7059,
+					"Documents": 2.0000,
+					"Unique keywords": 33.0000
+				},
+				"scores": {
+					"Avg publication year": 2020.0000,
+					"Avg citations": 2.5000
+				}
+			},
+			{
+				"id": 49,
+				"label": "Scientific Reports",
+				"description": "<table><tr><td>Source:</td><td>Scientific Reports</td></tr><tr><td>Documents:</td><td>2</td></tr><tr><td>Top shared keywords:</td><td>time series analysis, prediction, forecasting, human, data analysis, convolutional long short-term memory network, cryptocurrency, diagnosis</td></tr></table>",
+				"x": -0.2925,
+				"y": -0.0267,
+				"cluster": 5,
+				"weights": {
+					"Links": 5.0000,
+					"Total link strength": 43.7536,
+					"Documents": 2.0000,
+					"Unique keywords": 24.0000
+				},
+				"scores": {
+					"Avg publication year": 2025.0000,
+					"Avg citations": 6.5000
+				}
+			}
+		],
+		"links": [
+			{
+				"source_id": 1,
+				"target_id": 2,
+				"strength": 39.0702
+			},
+			{
+				"source_id": 1,
+				"target_id": 3,
+				"strength": 28.7242
+			},
+			{
+				"source_id": 1,
+				"target_id": 6,
+				"strength": 14.1414
+			},
+			{
+				"source_id": 1,
+				"target_id": 8,
+				"strength": 8.4721
+			},
+			{
+				"source_id": 1,
+				"target_id": 10,
+				"strength": 15.5587
+			},
+			{
+				"source_id": 1,
+				"target_id": 14,
+				"strength": 17.2016
+			},
+			{
+				"source_id": 1,
+				"target_id": 19,
+				"strength": 12.2977
+			},
+			{
+				"source_id": 1,
+				"target_id": 20,
+				"strength": 10.6752
+			},
+			{
+				"source_id": 1,
+				"target_id": 21,
+				"strength": 18.6598
+			},
+			{
+				"source_id": 1,
+				"target_id": 22,
+				"strength": 7.4536
+			},
+			{
+				"source_id": 1,
+				"target_id": 25,
+				"strength": 13.9693
+			},
+			{
+				"source_id": 1,
+				"target_id": 26,
+				"strength": 23.4734
+			},
+			{
+				"source_id": 1,
+				"target_id": 27,
+				"strength": 31.4270
+			},
+			{
+				"source_id": 1,
+				"target_id": 28,
+				"strength": 11.5944
+			},
+			{
+				"source_id": 1,
+				"target_id": 29,
+				"strength": 20.2590
+			},
+			{
+				"source_id": 1,
+				"target_id": 32,
+				"strength": 21.5325
+			},
+			{
+				"source_id": 1,
+				"target_id": 34,
+				"strength": 26.7419
+			},
+			{
+				"source_id": 1,
+				"target_id": 37,
+				"strength": 10.6917
+			},
+			{
+				"source_id": 1,
+				"target_id": 38,
+				"strength": 22.5308
+			},
+			{
+				"source_id": 1,
+				"target_id": 40,
+				"strength": 18.6383
+			},
+			{
+				"source_id": 1,
+				"target_id": 41,
+				"strength": 13.0145
+			},
+			{
+				"source_id": 1,
+				"target_id": 43,
+				"strength": 16.6667
+			},
+			{
+				"source_id": 1,
+				"target_id": 46,
+				"strength": 6.0734
+			},
+			{
+				"source_id": 1,
+				"target_id": 48,
+				"strength": 17.1448
+			},
+			{
+				"source_id": 2,
+				"target_id": 3,
+				"strength": 39.4395
+			},
+			{
+				"source_id": 2,
+				"target_id": 4,
+				"strength": 23.4638
+			},
+			{
+				"source_id": 2,
+				"target_id": 5,
+				"strength": 34.0469
+			},
+			{
+				"source_id": 2,
+				"target_id": 6,
+				"strength": 12.6851
+			},
+			{
+				"source_id": 2,
+				"target_id": 7,
+				"strength": 27.5690
+			},
+			{
+				"source_id": 2,
+				"target_id": 8,
+				"strength": 14.4698
+			},
+			{
+				"source_id": 2,
+				"target_id": 9,
+				"strength": 25.4201
+			},
+			{
+				"source_id": 2,
+				"target_id": 11,
+				"strength": 27.9073
+			},
+			{
+				"source_id": 2,
+				"target_id": 12,
+				"strength": 24.3290
+			},
+			{
+				"source_id": 2,
+				"target_id": 13,
+				"strength": 32.0717
+			},
+			{
+				"source_id": 2,
+				"target_id": 14,
+				"strength": 15.6359
+			},
+			{
+				"source_id": 2,
+				"target_id": 16,
+				"strength": 14.3523
+			},
+			{
+				"source_id": 2,
+				"target_id": 17,
+				"strength": 9.6674
+			},
+			{
+				"source_id": 2,
+				"target_id": 19,
+				"strength": 14.1201
+			},
+			{
+				"source_id": 2,
+				"target_id": 21,
+				"strength": 26.6401
+			},
+			{
+				"source_id": 2,
+				"target_id": 23,
+				"strength": 16.2503
+			},
+			{
+				"source_id": 2,
+				"target_id": 24,
+				"strength": 31.7702
+			},
+			{
+				"source_id": 2,
+				"target_id": 25,
+				"strength": 13.0320
+			},
+			{
+				"source_id": 2,
+				"target_id": 26,
+				"strength": 31.4438
+			},
+			{
+				"source_id": 2,
+				"target_id": 27,
+				"strength": 20.7201
+			},
+			{
+				"source_id": 2,
+				"target_id": 29,
+				"strength": 25.2383
+			},
+			{
+				"source_id": 2,
+				"target_id": 30,
+				"strength": 11.7706
+			},
+			{
+				"source_id": 2,
+				"target_id": 32,
+				"strength": 28.2892
+			},
+			{
+				"source_id": 2,
+				"target_id": 34,
+				"strength": 35.0080
+			},
+			{
+				"source_id": 2,
+				"target_id": 36,
+				"strength": 10.0246
+			},
+			{
+				"source_id": 2,
+				"target_id": 38,
+				"strength": 30.7847
+			},
+			{
+				"source_id": 2,
+				"target_id": 39,
+				"strength": 29.3152
+			},
+			{
+				"source_id": 2,
+				"target_id": 40,
+				"strength": 22.7959
+			},
+			{
+				"source_id": 2,
+				"target_id": 41,
+				"strength": 11.3318
+			},
+			{
+				"source_id": 2,
+				"target_id": 42,
+				"strength": 22.3470
+			},
+			{
+				"source_id": 2,
+				"target_id": 45,
+				"strength": 7.5475
+			},
+			{
+				"source_id": 2,
+				"target_id": 48,
+				"strength": 15.5023
+			},
+			{
+				"source_id": 3,
+				"target_id": 4,
+				"strength": 22.8090
+			},
+			{
+				"source_id": 3,
+				"target_id": 5,
+				"strength": 36.7670
+			},
+			{
+				"source_id": 3,
+				"target_id": 6,
+				"strength": 14.6233
+			},
+			{
+				"source_id": 3,
+				"target_id": 7,
+				"strength": 30.2678
+			},
+			{
+				"source_id": 3,
+				"target_id": 8,
+				"strength": 14.8934
+			},
+			{
+				"source_id": 3,
+				"target_id": 9,
+				"strength": 21.9214
+			},
+			{
+				"source_id": 3,
+				"target_id": 10,
+				"strength": 8.0444
+			},
+			{
+				"source_id": 3,
+				"target_id": 11,
+				"strength": 21.3380
+			},
+			{
+				"source_id": 3,
+				"target_id": 12,
+				"strength": 30.9720
+			},
+			{
+				"source_id": 3,
+				"target_id": 13,
+				"strength": 23.7983
+			},
+			{
+				"source_id": 3,
+				"target_id": 14,
+				"strength": 17.7877
+			},
+			{
+				"source_id": 3,
+				"target_id": 16,
+				"strength": 12.3104
+			},
+			{
+				"source_id": 3,
+				"target_id": 17,
+				"strength": 11.6088
+			},
+			{
+				"source_id": 3,
+				"target_id": 20,
+				"strength": 8.2792
+			},
+			{
+				"source_id": 3,
+				"target_id": 21,
+				"strength": 27.4200
+			},
+			{
+				"source_id": 3,
+				"target_id": 24,
+				"strength": 23.6169
+			},
+			{
+				"source_id": 3,
+				"target_id": 25,
+				"strength": 9.2862
+			},
+			{
+				"source_id": 3,
+				"target_id": 26,
+				"strength": 27.9510
+			},
+			{
+				"source_id": 3,
+				"target_id": 27,
+				"strength": 15.2333
+			},
+			{
+				"source_id": 3,
+				"target_id": 31,
+				"strength": 10.1399
+			},
+			{
+				"source_id": 3,
+				"target_id": 33,
+				"strength": 6.4394
+			},
+			{
+				"source_id": 3,
+				"target_id": 34,
+				"strength": 32.6809
+			},
+			{
+				"source_id": 3,
+				"target_id": 36,
+				"strength": 10.3181
+			},
+			{
+				"source_id": 3,
+				"target_id": 37,
+				"strength": 15.4784
+			},
+			{
+				"source_id": 3,
+				"target_id": 38,
+				"strength": 19.5707
+			},
+			{
+				"source_id": 3,
+				"target_id": 39,
+				"strength": 21.8757
+			},
+			{
+				"source_id": 3,
+				"target_id": 40,
+				"strength": 15.9215
+			},
+			{
+				"source_id": 3,
+				"target_id": 41,
+				"strength": 13.4579
+			},
+			{
+				"source_id": 3,
+				"target_id": 45,
+				"strength": 14.5659
+			},
+			{
+				"source_id": 3,
+				"target_id": 47,
+				"strength": 26.6775
+			},
+			{
+				"source_id": 3,
+				"target_id": 48,
+				"strength": 15.0696
+			},
+			{
+				"source_id": 3,
+				"target_id": 49,
+				"strength": 7.6598
+			},
+			{
+				"source_id": 4,
+				"target_id": 9,
+				"strength": 16.2905
+			},
+			{
+				"source_id": 4,
+				"target_id": 16,
+				"strength": 11.1214
+			},
+			{
+				"source_id": 4,
+				"target_id": 17,
+				"strength": 10.1130
+			},
+			{
+				"source_id": 4,
+				"target_id": 24,
+				"strength": 17.2328
+			},
+			{
+				"source_id": 4,
+				"target_id": 25,
+				"strength": 8.3894
+			},
+			{
+				"source_id": 4,
+				"target_id": 34,
+				"strength": 15.8978
+			},
+			{
+				"source_id": 4,
+				"target_id": 38,
+				"strength": 18.9434
+			},
+			{
+				"source_id": 4,
+				"target_id": 45,
+				"strength": 11.8431
+			},
+			{
+				"source_id": 5,
+				"target_id": 7,
+				"strength": 29.6364
+			},
+			{
+				"source_id": 5,
+				"target_id": 8,
+				"strength": 10.6749
+			},
+			{
+				"source_id": 5,
+				"target_id": 9,
+				"strength": 18.4637
+			},
+			{
+				"source_id": 5,
+				"target_id": 11,
+				"strength": 22.8571
+			},
+			{
+				"source_id": 5,
+				"target_id": 12,
+				"strength": 29.8240
+			},
+			{
+				"source_id": 5,
+				"target_id": 13,
+				"strength": 24.0535
+			},
+			{
+				"source_id": 5,
+				"target_id": 14,
+				"strength": 16.2186
+			},
+			{
+				"source_id": 5,
+				"target_id": 24,
+				"strength": 25.2982
+			},
+			{
+				"source_id": 5,
+				"target_id": 26,
+				"strength": 29.4485
+			},
+			{
+				"source_id": 5,
+				"target_id": 27,
+				"strength": 12.3744
+			},
+			{
+				"source_id": 5,
+				"target_id": 31,
+				"strength": 9.8058
+			},
+			{
+				"source_id": 5,
+				"target_id": 34,
+				"strength": 29.1730
+			},
+			{
+				"source_id": 5,
+				"target_id": 37,
+				"strength": 7.6980
+			},
+			{
+				"source_id": 5,
+				"target_id": 45,
+				"strength": 10.1419
+			},
+			{
+				"source_id": 5,
+				"target_id": 48,
+				"strength": 15.4303
+			},
+			{
+				"source_id": 6,
+				"target_id": 12,
+				"strength": 13.5564
+			},
+			{
+				"source_id": 6,
+				"target_id": 22,
+				"strength": 8.1312
+			},
+			{
+				"source_id": 6,
+				"target_id": 26,
+				"strength": 18.6235
+			},
+			{
+				"source_id": 6,
+				"target_id": 32,
+				"strength": 12.1967
+			},
+			{
+				"source_id": 6,
+				"target_id": 41,
+				"strength": 8.5186
+			},
+			{
+				"source_id": 7,
+				"target_id": 8,
+				"strength": 11.7172
+			},
+			{
+				"source_id": 7,
+				"target_id": 9,
+				"strength": 17.5644
+			},
+			{
+				"source_id": 7,
+				"target_id": 24,
+				"strength": 26.0329
+			},
+			{
+				"source_id": 7,
+				"target_id": 26,
+				"strength": 23.8916
+			},
+			{
+				"source_id": 7,
+				"target_id": 34,
+				"strength": 24.0161
+			},
+			{
+				"source_id": 7,
+				"target_id": 36,
+				"strength": 9.8571
+			},
+			{
+				"source_id": 7,
+				"target_id": 49,
+				"strength": 7.3176
+			},
+			{
+				"source_id": 8,
+				"target_id": 13,
+				"strength": 12.2271
+			},
+			{
+				"source_id": 9,
+				"target_id": 11,
+				"strength": 21.1014
+			},
+			{
+				"source_id": 9,
+				"target_id": 24,
+				"strength": 17.5162
+			},
+			{
+				"source_id": 9,
+				"target_id": 25,
+				"strength": 13.2647
+			},
+			{
+				"source_id": 9,
+				"target_id": 30,
+				"strength": 11.9808
+			},
+			{
+				"source_id": 9,
+				"target_id": 45,
+				"strength": 8.3225
+			},
+			{
+				"source_id": 9,
+				"target_id": 47,
+				"strength": 13.7973
+			},
+			{
+				"source_id": 10,
+				"target_id": 20,
+				"strength": 13.4535
+			},
+			{
+				"source_id": 10,
+				"target_id": 28,
+				"strength": 14.6119
+			},
+			{
+				"source_id": 11,
+				"target_id": 23,
+				"strength": 15.4047
+			},
+			{
+				"source_id": 11,
+				"target_id": 26,
+				"strength": 21.9492
+			},
+			{
+				"source_id": 11,
+				"target_id": 38,
+				"strength": 20.8570
+			},
+			{
+				"source_id": 11,
+				"target_id": 48,
+				"strength": 15.4303
+			},
+			{
+				"source_id": 11,
+				"target_id": 49,
+				"strength": 9.5238
+			},
+			{
+				"source_id": 12,
+				"target_id": 13,
+				"strength": 22.9927
+			},
+			{
+				"source_id": 12,
+				"target_id": 17,
+				"strength": 13.2453
+			},
+			{
+				"source_id": 12,
+				"target_id": 21,
+				"strength": 22.3054
+			},
+			{
+				"source_id": 12,
+				"target_id": 31,
+				"strength": 11.2480
+			},
+			{
+				"source_id": 12,
+				"target_id": 34,
+				"strength": 31.7905
+			},
+			{
+				"source_id": 12,
+				"target_id": 36,
+				"strength": 12.3613
+			},
+			{
+				"source_id": 12,
+				"target_id": 48,
+				"strength": 15.9298
+			},
+			{
+				"source_id": 12,
+				"target_id": 49,
+				"strength": 7.6472
+			},
+			{
+				"source_id": 13,
+				"target_id": 14,
+				"strength": 13.7919
+			},
+			{
+				"source_id": 13,
+				"target_id": 27,
+				"strength": 11.8114
+			},
+			{
+				"source_id": 13,
+				"target_id": 32,
+				"strength": 29.8807
+			},
+			{
+				"source_id": 13,
+				"target_id": 34,
+				"strength": 25.3396
+			},
+			{
+				"source_id": 14,
+				"target_id": 31,
+				"strength": 8.6747
+			},
+			{
+				"source_id": 14,
+				"target_id": 32,
+				"strength": 13.1876
+			},
+			{
+				"source_id": 14,
+				"target_id": 47,
+				"strength": 9.4438
+			},
+			{
+				"source_id": 16,
+				"target_id": 19,
+				"strength": 11.2938
+			},
+			{
+				"source_id": 16,
+				"target_id": 23,
+				"strength": 13.8642
+			},
+			{
+				"source_id": 16,
+				"target_id": 40,
+				"strength": 22.9216
+			},
+			{
+				"source_id": 17,
+				"target_id": 30,
+				"strength": 9.3659
+			},
+			{
+				"source_id": 17,
+				"target_id": 38,
+				"strength": 9.3659
+			},
+			{
+				"source_id": 19,
+				"target_id": 30,
+				"strength": 15.3897
+			},
+			{
+				"source_id": 19,
+				"target_id": 32,
+				"strength": 11.7851
+			},
+			{
+				"source_id": 19,
+				"target_id": 48,
+				"strength": 12.1988
+			},
+			{
+				"source_id": 20,
+				"target_id": 22,
+				"strength": 9.5482
+			},
+			{
+				"source_id": 20,
+				"target_id": 26,
+				"strength": 10.2512
+			},
+			{
+				"source_id": 21,
+				"target_id": 32,
+				"strength": 18.4466
+			},
+			{
+				"source_id": 21,
+				"target_id": 34,
+				"strength": 20.6284
+			},
+			{
+				"source_id": 22,
+				"target_id": 28,
+				"strength": 8.8889
+			},
+			{
+				"source_id": 23,
+				"target_id": 29,
+				"strength": 17.3019
+			},
+			{
+				"source_id": 23,
+				"target_id": 34,
+				"strength": 15.7290
+			},
+			{
+				"source_id": 23,
+				"target_id": 38,
+				"strength": 15.7435
+			},
+			{
+				"source_id": 23,
+				"target_id": 40,
+				"strength": 29.8852
+			},
+			{
+				"source_id": 24,
+				"target_id": 26,
+				"strength": 22.2688
+			},
+			{
+				"source_id": 24,
+				"target_id": 34,
+				"strength": 25.3696
+			},
+			{
+				"source_id": 24,
+				"target_id": 36,
+				"strength": 11.3592
+			},
+			{
+				"source_id": 25,
+				"target_id": 47,
+				"strength": 14.3799
+			},
+			{
+				"source_id": 26,
+				"target_id": 31,
+				"strength": 12.5550
+			},
+			{
+				"source_id": 26,
+				"target_id": 32,
+				"strength": 22.9039
+			},
+			{
+				"source_id": 26,
+				"target_id": 34,
+				"strength": 35.4846
+			},
+			{
+				"source_id": 26,
+				"target_id": 39,
+				"strength": 23.5369
+			},
+			{
+				"source_id": 26,
+				"target_id": 42,
+				"strength": 17.8307
+			},
+			{
+				"source_id": 27,
+				"target_id": 32,
+				"strength": 15.8114
+			},
+			{
+				"source_id": 28,
+				"target_id": 29,
+				"strength": 8.6977
+			},
+			{
+				"source_id": 28,
+				"target_id": 34,
+				"strength": 8.6977
+			},
+			{
+				"source_id": 28,
+				"target_id": 39,
+				"strength": 9.7870
+			},
+			{
+				"source_id": 29,
+				"target_id": 34,
+				"strength": 21.2766
+			},
+			{
+				"source_id": 29,
+				"target_id": 38,
+				"strength": 18.9299
+			},
+			{
+				"source_id": 29,
+				"target_id": 39,
+				"strength": 38.3060
+			},
+			{
+				"source_id": 29,
+				"target_id": 42,
+				"strength": 30.4702
+			},
+			{
+				"source_id": 30,
+				"target_id": 38,
+				"strength": 13.1579
+			},
+			{
+				"source_id": 30,
+				"target_id": 47,
+				"strength": 10.3905
+			},
+			{
+				"source_id": 31,
+				"target_id": 34,
+				"strength": 14.3032
+			},
+			{
+				"source_id": 32,
+				"target_id": 34,
+				"strength": 21.7443
+			},
+			{
+				"source_id": 32,
+				"target_id": 41,
+				"strength": 9.3124
+			},
+			{
+				"source_id": 32,
+				"target_id": 42,
+				"strength": 23.3550
+			},
+			{
+				"source_id": 34,
+				"target_id": 36,
+				"strength": 10.4793
+			},
+			{
+				"source_id": 34,
+				"target_id": 39,
+				"strength": 24.8989
+			},
+			{
+				"source_id": 34,
+				"target_id": 41,
+				"strength": 11.3901
+			},
+			{
+				"source_id": 34,
+				"target_id": 42,
+				"strength": 17.7743
+			},
+			{
+				"source_id": 37,
+				"target_id": 40,
+				"strength": 8.4215
+			},
+			{
+				"source_id": 37,
+				"target_id": 43,
+				"strength": 16.0375
+			},
+			{
+				"source_id": 37,
+				"target_id": 47,
+				"strength": 15.4083
+			},
+			{
+				"source_id": 38,
+				"target_id": 39,
+				"strength": 19.1706
+			},
+			{
+				"source_id": 38,
+				"target_id": 40,
+				"strength": 21.2962
+			},
+			{
+				"source_id": 39,
+				"target_id": 42,
+				"strength": 32.0005
+			},
+			{
+				"source_id": 42,
+				"target_id": 49,
+				"strength": 11.6052
+			}
+		]
+	}
+}

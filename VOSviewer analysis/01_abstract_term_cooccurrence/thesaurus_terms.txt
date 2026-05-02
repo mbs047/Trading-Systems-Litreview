@@ -1,0 +1,46 @@
+﻿label	replace by
+trading platforms	trading platform
+user interfaces	user interface
+user experiences	user experience
+financial markets	financial market
+stock markets	stock market
+decision support systems	decision support system
+mobile applications	mobile application
+machine-learning	machine learning
+deep-learning	deep learning
+block-chain	blockchain
+block chain	blockchain
+e commerce	e-commerce
+electronic commerce	e-commerce
+data visualisation	data visualization
+visualisation	visualization
+paper	
+papers	
+study	
+studies	
+result	
+results	
+method	
+methods	
+approach	
+approaches	
+article	
+articles	
+author	
+authors	
+average	
+applicability	
+finding	
+findings	
+future	
+purpose	
+copyright	
+elsevier	
+rights	
+chapter	
+chapters	
+conference	
+conferences	
+proceeding	
+proceedings	
+research	

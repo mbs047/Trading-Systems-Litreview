@@ -1,0 +1,85 @@
+﻿label	occurrences	avg_publication_year	avg_citations
+blockchain	37	2023.189	16.649
+machine learning	32	2022.844	17.156
+deep learning	14	2022.929	9.429
+e-commerce	12	2022.5	14.333
+data visualization	11	2023.091	5.455
+metaverse	9	2023.444	16.889
+stock market	9	2023.111	4.667
+fintech	8	2022.125	8.625
+lstm	8	2022.75	4.125
+security	8	2020.75	18.0
+sentiment analysis	8	2021.625	2.0
+artificial intelligence	7	2022.143	15.0
+big data	7	2020.286	3.714
+data mining	7	2021.0	0.714
+human-computer interaction	7	2022.429	1.286
+internet of things	7	2021.286	7.286
+nft	7	2023.714	19.0
+stock market prediction	7	2023.429	5.143
+trading	7	2022.429	3.143
+visualization	7	2021.714	16.0
+investment	6	2022.333	4.167
+smart contracts	6	2023.167	7.0
+usability	6	2021.333	8.833
+user experience	6	2023.333	4.167
+visual analytics	6	2020.667	4.333
+agent-based modeling	5	2018.2	4.0
+cryptocurrency	5	2023.6	8.4
+data analysis	5	2023.0	1.4
+finance	5	2021.0	13.2
+quantitative trading	5	2020.2	9.4
+risk management	5	2021.0	24.4
+smart contract	5	2023.2	10.6
+smart grid	5	2022.8	18.2
+social media	5	2019.4	82.2
+stock prediction	5	2024.0	20.8
+stock price prediction	5	2024.6	0.4
+time series forecasting	5	2024.6	3.2
+algorithmic trading	4	2025.0	0.0
+data trading	4	2024.75	0.75
+decision-making	4	2022.0	5.0
+demand response	4	2021.75	31.0
+energy trading	4	2023.0	3.5
+financial market	4	2020.5	9.0
+financial technology	4	2021.5	7.0
+genetic algorithm	4	2020.5	7.25
+large language model	4	2025.0	1.0
+long short-term memory (lstm)	4	2023.5	5.5
+optimization	4	2021.5	4.0
+portfolio optimization	4	2021.25	7.5
+predictive analytics	4	2025.0	0.0
+privacy	4	2022.5	4.5
+real-time data	4	2025.0	0.0
+anomaly detection	3	2020.333	1.0
+augmented reality	3	2024.333	2.333
+big data analytics	3	2024.0	3.667
+bitcoin	3	2022.0	4.0
+business intelligence	3	2021.667	1.667
+consortium blockchain	3	2022.333	13.333
+deep reinforcement learning	3	2022.0	39.667
+electronic markets	3	2019.0	2.333
+feature engineering	3	2021.0	6.0
+forecasting	3	2024.667	0.667
+gamification	3	2023.0	3.0
+hci	3	2024.333	1.0
+interoperability	3	2023.333	9.333
+investor sentiment	3	2022.667	108.0
+large language models	3	2025.0	0.0
+natural language processing	3	2023.0	1.333
+portfolio	3	2023.333	0.667
+prediction	3	2023.667	0.667
+recommendation system	3	2019.0	6.667
+requirements engineering	3	2019.667	3.333
+situation awareness	3	2017.0	10.667
+social trading	3	2020.333	14.0
+stackelberg game	3	2022.333	14.0
+stock trading	3	2024.0	1.0
+stocks	3	2025.667	0.0
+sustainability	3	2020.333	2.0
+text mining	3	2022.0	5.333
+time series analysis	3	2023.333	2.0
+traceability	3	2022.0	9.0
+trust	3	2022.0	13.0
+user interface	3	2023.667	0.667
+xai	3	2024.333	9.0
